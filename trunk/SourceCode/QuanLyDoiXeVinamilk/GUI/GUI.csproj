@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91E11A85-E0AE-4BE3-AB4C-794DAD236234}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CapNhatHopDenFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatHopDenFrm.designer.cs">
+      <DependentUpon>CapNhatHopDenFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatThongTinDaiLyFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatThongTinDaiLyFrm.designer.cs">
+      <DependentUpon>CapNhatThongTinDaiLyFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatThongTinNhanVienFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatThongTinNhanVienFrm.designer.cs">
+      <DependentUpon>CapNhatThongTinNhanVienFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CapNhatHopDenFrm.resx">
+      <DependentUpon>CapNhatHopDenFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatThongTinDaiLyFrm.resx">
+      <DependentUpon>CapNhatThongTinDaiLyFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatThongTinNhanVienFrm.resx">
+      <DependentUpon>CapNhatThongTinNhanVienFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemDaiLyFrm.resx">
+      <DependentUpon>ThemDaiLyFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemHopDenFrm.resx">
+      <DependentUpon>ThemHopDenFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemNhanVienFrm.resx">
+      <DependentUpon>ThemNhanVienFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeViPhamFrm.resx">
+      <DependentUpon>ThongKeViPhamFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimKiemDaiLyFrm.resx">
+      <DependentUpon>TimKiemDaiLyFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaDaiLyFrm.resx">
+      <DependentUpon>XoaDaiLyFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaHopDenFrm.resx">
+      <DependentUpon>XoaHopDenFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ThemDaiLyFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemDaiLyFrm.designer.cs">
+      <DependentUpon>ThemDaiLyFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemHopDenFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemHopDenFrm.designer.cs">
+      <DependentUpon>ThemHopDenFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemNhanVienFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemNhanVienFrm.designer.cs">
+      <DependentUpon>ThemNhanVienFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeViPhamFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeViPhamFrm.Designer.cs">
+      <DependentUpon>ThongKeViPhamFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimKiemDaiLyFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimKiemDaiLyFrm.Designer.cs">
+      <DependentUpon>TimKiemDaiLyFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaDaiLyFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaDaiLyFrm.Designer.cs">
+      <DependentUpon>XoaDaiLyFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaHopDenFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaHopDenFrm.Designer.cs">
+      <DependentUpon>XoaHopDenFrm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo vinamilk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThongKe1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XeTai3.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
