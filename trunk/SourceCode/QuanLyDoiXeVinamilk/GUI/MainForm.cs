@@ -45,63 +45,9 @@ namespace GUI
             tabMainTab.SelectedTab = tabHopDen;
         }
 
-        private void xóaHộpĐenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            XoaHopDenFrm frm = new XoaHopDenFrm();
-            //frm.MdiParent = this;
-            frm.Show();
-        }
-
-        private void thêmThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            tabMainTab.SelectedTab = tabHopDen;
-        }
-
-        private void xóaĐạiLýToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            XoaDaiLyFrm frm = new XoaDaiLyFrm();
-            frm.Show();
-        }
-
-        private void tìmKiếmĐạiLýToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TimKiemDaiLyFrm frm = new TimKiemDaiLyFrm();
-            frm.Show();
-        }
-
-        private void xeviPhạmToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ThongKeViPhamFrm frm = new ThongKeViPhamFrm();
-            frm.Show();
-        }
-
-        private void thêmHộpĐenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ThemHopDenFrm frm = new ThemHopDenFrm();
-            frm.Show();
-        }
-
-        private void cậpNhậtThôngTinHộpĐenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CapNhatHopDenFrm frm = new CapNhatHopDenFrm();
-            frm.Show();
-        }
-
-        private void thêmĐạiLýToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ThemDaiLyFrm frm = new ThemDaiLyFrm();
-            frm.Show();
-        }
-
-        private void cậpNhậtThôngTinĐạiLýToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CapNhatThongTinDaiLyFrm frm = new CapNhatThongTinDaiLyFrm();
-            frm.Show();
-        }
-
         private void thêmNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ThemNhanVienFrm frm = new ThemNhanVienFrm();
+            NhapNhanVienFrm frm = new NhapNhanVienFrm();
             frm.Show();
         }
 
@@ -111,24 +57,22 @@ namespace GUI
             frm.Show();
         }
 
-        private void tabPhanCong_Click(object sender, EventArgs e)
+        private void cậpNhậtThôngTinXeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            CapNhatThongTinXeFrm frm = new CapNhatThongTinXeFrm();
+            frm.Show();
         }
 
-        private void lbl_NgayChay_Click(object sender, EventArgs e)
+        private void xóaXeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            XoaXeFrm frm = new XoaXeFrm();
+            frm.Show();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void tiếpNhậnXeMớiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void grb_DanhSachQuangDuong_Enter(object sender, EventArgs e)
-        {
-
+            TiepNhanXeMoiFrm frm = new TiepNhanXeMoiFrm();
+            frm.Show();
         }
     }
 }

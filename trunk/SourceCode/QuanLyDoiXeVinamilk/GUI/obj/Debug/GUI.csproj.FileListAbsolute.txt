@@ -27,3 +27,19 @@ C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\G
 C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.TiepNhanDiaDiemFrm.resources
 C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.TiepNhanXeMoiFrm.resources
 C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.exe
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.pdb
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\ResolveAssemblyReference.cache
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.LapHoaDonGiaoHangFrm.resources
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.MainForm.resources
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.NhapMatHangFrm.resources
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.NhapNhanVienFrm.resources
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.Properties.Resources.resources
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.TiepNhanDiaDiemFrm.resources
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.TiepNhanXeMoiFrm.resources
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\GUI.exe
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\GUI.pdb
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.CapNhatThongTinNhanVienFrm.resources
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.CapNhatThongTinXeFrm.resources
+E:\Long's Documents\hoc ki 6\NMCNPM\Thuc hanh\Project\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.XoaXeFrm.resources

@@ -48,6 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapNhatThongTinNhanVienFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatThongTinNhanVienFrm.Designer.cs">
+      <DependentUpon>CapNhatThongTinNhanVienFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatThongTinXeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatThongTinXeFrm.Designer.cs">
+      <DependentUpon>CapNhatThongTinXeFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LapHoaDonGiaoHangFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +86,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CapNhatThongTinNhanVienFrm.resx">
+      <DependentUpon>CapNhatThongTinNhanVienFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatThongTinXeFrm.resx">
+      <DependentUpon>CapNhatThongTinXeFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="LapHoaDonGiaoHangFrm.resx">
       <DependentUpon>LapHoaDonGiaoHangFrm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -102,6 +122,10 @@
       <DependentUpon>TiepNhanXeMoiFrm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="XoaXeFrm.resx">
+      <DependentUpon>XoaXeFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -128,6 +152,12 @@
     <Compile Include="TiepNhanXeMoiFrm.Designer.cs">
       <DependentUpon>TiepNhanXeMoiFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="XoaXeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaXeFrm.Designer.cs">
+      <DependentUpon>XoaXeFrm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo vinamilk.jpg" />
@@ -140,6 +170,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\XeTai3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
