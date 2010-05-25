@@ -1,0 +1,10 @@
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\XuatDanhSach_DoiTac\bin\Debug\XuatDanhSach_DoiTac.exe
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\XuatDanhSach_DoiTac\bin\Debug\XuatDanhSach_DoiTac.pdb
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\XuatDanhSach_DoiTac\bin\Debug\XuatDanhSach_DoiTac.xml
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\XuatDanhSach_DoiTac\obj\Debug\ResolveAssemblyReference.cache
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\XuatDanhSach_DoiTac\obj\Debug\XuatDanhSach_DoiTac.MH_DanhSachDoiTac.resources
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\XuatDanhSach_DoiTac\obj\Debug\XuatDanhSach_DoiTac.Resources.resources
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\XuatDanhSach_DoiTac\obj\Debug\NhapXuat_DSDoiTac.vbproj.GenerateResource.Cache
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\XuatDanhSach_DoiTac\obj\Debug\XuatDanhSach_DoiTac.exe
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\XuatDanhSach_DoiTac\obj\Debug\XuatDanhSach_DoiTac.xml
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\XuatDanhSach_DoiTac\obj\Debug\XuatDanhSach_DoiTac.pdb

@@ -1,0 +1,10 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Xuat_DSNhanVienTheoDonVi.Resources.resources
+obj\Debug\Xuat_DSNhanVienTheoDonVi.vbproj.GenerateResource.Cache
+bin\Debug\Xuat_DSNhanVienTheoDonVi.exe
+bin\Debug\Xuat_DSNhanVienTheoDonVi.pdb
+bin\Debug\Xuat_DSNhanVienTheoDonVi.xml
+obj\Debug\Xuat_DSNhanVienTheoDonVi.exe
+obj\Debug\Xuat_DSNhanVienTheoDonVi.xml
+obj\Debug\Xuat_DSNhanVienTheoDonVi.pdb
+obj\Debug\Xuat_DSNhanVienTheoDonVi.MH_NhanVien.resources

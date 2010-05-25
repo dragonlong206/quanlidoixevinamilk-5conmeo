@@ -1,0 +1,10 @@
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\Xuat_DSNhanVienTheoDonVi\obj\Debug\Xuat_DSNhanVienTheoDonVi.exe
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\Xuat_DSNhanVienTheoDonVi\obj\Debug\Xuat_DSNhanVienTheoDonVi.xml
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\Xuat_DSNhanVienTheoDonVi\obj\Debug\Xuat_DSNhanVienTheoDonVi.pdb
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\Xuat_DSNhanVienTheoDonVi\bin\Debug\Xuat_DSNhanVienTheoDonVi.exe
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\Xuat_DSNhanVienTheoDonVi\bin\Debug\Xuat_DSNhanVienTheoDonVi.pdb
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\Xuat_DSNhanVienTheoDonVi\bin\Debug\Xuat_DSNhanVienTheoDonVi.xml
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\Xuat_DSNhanVienTheoDonVi\obj\Debug\ResolveAssemblyReference.cache
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\Xuat_DSNhanVienTheoDonVi\obj\Debug\Xuat_DSNhanVienTheoDonVi.MH_NhanVien.resources
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\Xuat_DSNhanVienTheoDonVi\obj\Debug\Xuat_DSNhanVienTheoDonVi.Resources.resources
+E:\Computer\2009-2010\NhapMon_CNPM\LapTrinhVB_theoAML\DonThe_XuLyGiaoDien\Xuat_DSNhanVienTheoDonVi\obj\Debug\Xuat_DSNhanVienTheoDonVi.vbproj.GenerateResource.Cache
