@@ -110,5 +110,25 @@ namespace GUI
             CapNhatThongTinNhanVienFrm frm = new CapNhatThongTinNhanVienFrm();
             frm.Show();
         }
+
+        private void tabPhanCong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_NgayChay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grb_DanhSachQuangDuong_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

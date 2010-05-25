@@ -16,3 +16,14 @@ E:\My Projects\TH hoc ky 6\NMCNPM\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.CapNhatT
 E:\My Projects\TH hoc ky 6\NMCNPM\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.ThemDaiLyFrm.resources
 E:\My Projects\TH hoc ky 6\NMCNPM\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.ThemHopDenFrm.resources
 E:\My Projects\TH hoc ky 6\NMCNPM\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.ThemNhanVienFrm.resources
+C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.exe
+C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.pdb
+C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.LapHoaDonGiaoHangFrm.resources
+C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.MainForm.resources
+C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.NhapMatHangFrm.resources
+C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.NhapNhanVienFrm.resources
+C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.TiepNhanDiaDiemFrm.resources
+C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.TiepNhanXeMoiFrm.resources
+C:\Users\H-Dragon\Desktop\Vinameo\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{91E11A85-E0AE-4BE3-AB4C-794DAD236234}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -48,23 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CapNhatHopDenFrm.cs">
+    <Compile Include="LapHoaDonGiaoHangFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapNhatHopDenFrm.designer.cs">
-      <DependentUpon>CapNhatHopDenFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CapNhatThongTinDaiLyFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CapNhatThongTinDaiLyFrm.designer.cs">
-      <DependentUpon>CapNhatThongTinDaiLyFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CapNhatThongTinNhanVienFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CapNhatThongTinNhanVienFrm.designer.cs">
-      <DependentUpon>CapNhatThongTinNhanVienFrm.cs</DependentUpon>
+    <Compile Include="LapHoaDonGiaoHangFrm.Designer.cs">
+      <DependentUpon>LapHoaDonGiaoHangFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -72,45 +60,47 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhapMatHangFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapMatHangFrm.Designer.cs">
+      <DependentUpon>NhapMatHangFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapNhanVienFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapNhanVienFrm.Designer.cs">
+      <DependentUpon>NhapNhanVienFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CapNhatHopDenFrm.resx">
-      <DependentUpon>CapNhatHopDenFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CapNhatThongTinDaiLyFrm.resx">
-      <DependentUpon>CapNhatThongTinDaiLyFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CapNhatThongTinNhanVienFrm.resx">
-      <DependentUpon>CapNhatThongTinNhanVienFrm.cs</DependentUpon>
+    <EmbeddedResource Include="LapHoaDonGiaoHangFrm.resx">
+      <DependentUpon>LapHoaDonGiaoHangFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapMatHangFrm.resx">
+      <DependentUpon>NhapMatHangFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapNhanVienFrm.resx">
+      <DependentUpon>NhapNhanVienFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThemDaiLyFrm.resx">
-      <DependentUpon>ThemDaiLyFrm.cs</DependentUpon>
+    <EmbeddedResource Include="TiepNhanDiaDiemFrm.resx">
+      <DependentUpon>TiepNhanDiaDiemFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ThemHopDenFrm.resx">
-      <DependentUpon>ThemHopDenFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThemNhanVienFrm.resx">
-      <DependentUpon>ThemNhanVienFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ThongKeViPhamFrm.resx">
-      <DependentUpon>ThongKeViPhamFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TimKiemDaiLyFrm.resx">
-      <DependentUpon>TimKiemDaiLyFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XoaDaiLyFrm.resx">
-      <DependentUpon>XoaDaiLyFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XoaHopDenFrm.resx">
-      <DependentUpon>XoaHopDenFrm.cs</DependentUpon>
+    <EmbeddedResource Include="TiepNhanXeMoiFrm.resx">
+      <DependentUpon>TiepNhanXeMoiFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -126,47 +116,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ThemDaiLyFrm.cs">
+    <Compile Include="TiepNhanDiaDiemFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThemDaiLyFrm.designer.cs">
-      <DependentUpon>ThemDaiLyFrm.cs</DependentUpon>
+    <Compile Include="TiepNhanDiaDiemFrm.Designer.cs">
+      <DependentUpon>TiepNhanDiaDiemFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThemHopDenFrm.cs">
+    <Compile Include="TiepNhanXeMoiFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ThemHopDenFrm.designer.cs">
-      <DependentUpon>ThemHopDenFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThemNhanVienFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ThemNhanVienFrm.designer.cs">
-      <DependentUpon>ThemNhanVienFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ThongKeViPhamFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ThongKeViPhamFrm.Designer.cs">
-      <DependentUpon>ThongKeViPhamFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TimKiemDaiLyFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TimKiemDaiLyFrm.Designer.cs">
-      <DependentUpon>TimKiemDaiLyFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XoaDaiLyFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="XoaDaiLyFrm.Designer.cs">
-      <DependentUpon>XoaDaiLyFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XoaHopDenFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="XoaHopDenFrm.Designer.cs">
-      <DependentUpon>XoaHopDenFrm.cs</DependentUpon>
+    <Compile Include="TiepNhanXeMoiFrm.Designer.cs">
+      <DependentUpon>TiepNhanXeMoiFrm.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
