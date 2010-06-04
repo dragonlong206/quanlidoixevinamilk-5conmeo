@@ -71,7 +71,7 @@ namespace GUI
 
         private void tiếpNhậnXeMớiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TiepNhanXeMoiFrm frm = new TiepNhanXeMoiFrm();
+            TiepNhanXeGUI frm = new TiepNhanXeGUI();
             frm.Show();
         }
     }

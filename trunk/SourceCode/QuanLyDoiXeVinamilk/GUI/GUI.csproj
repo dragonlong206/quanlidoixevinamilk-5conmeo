@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{91E11A85-E0AE-4BE3-AB4C-794DAD236234}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -118,8 +118,8 @@
       <DependentUpon>TiepNhanDiaDiemFrm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="TiepNhanXeMoiFrm.resx">
-      <DependentUpon>TiepNhanXeMoiFrm.cs</DependentUpon>
+    <EmbeddedResource Include="TiepNhanXeGUI.resx">
+      <DependentUpon>TiepNhanXeGUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaXeFrm.resx">
@@ -146,11 +146,11 @@
     <Compile Include="TiepNhanDiaDiemFrm.Designer.cs">
       <DependentUpon>TiepNhanDiaDiemFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TiepNhanXeMoiFrm.cs">
+    <Compile Include="TiepNhanXeGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TiepNhanXeMoiFrm.Designer.cs">
-      <DependentUpon>TiepNhanXeMoiFrm.cs</DependentUpon>
+    <Compile Include="TiepNhanXeGUI.Designer.cs">
+      <DependentUpon>TiepNhanXeGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="XoaXeFrm.cs">
       <SubType>Form</SubType>
@@ -182,6 +182,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{C50A7741-319F-4367-8F0F-1B3AC4D3493E}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{C7AB7C44-1952-403B-9947-D203A2A39431}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
