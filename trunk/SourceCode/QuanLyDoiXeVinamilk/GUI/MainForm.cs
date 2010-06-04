@@ -74,5 +74,11 @@ namespace GUI
             TiepNhanXeGUI frm = new TiepNhanXeGUI();
             frm.Show();
         }
+
+        private void quảnLýThôngTinhãngXeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_QuanLyHangXe frm = new frm_QuanLyHangXe();
+            frm.Show();
+        }
     }
 }
