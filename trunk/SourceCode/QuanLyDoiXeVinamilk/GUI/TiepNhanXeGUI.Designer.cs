@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class TiepNhanXeMoiFrm
+    partial class TiepNhanXeGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -73,7 +73,6 @@
             this.lbl_Title.Size = new System.Drawing.Size(218, 25);
             this.lbl_Title.TabIndex = 6;
             this.lbl_Title.Text = "TIẾP NHẬN XE MỚI";
-            this.lbl_Title.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // lbl_NgayTiepNhan
             // 
@@ -101,7 +100,6 @@
             this.dtp_NgayTiepNhan.Name = "dtp_NgayTiepNhan";
             this.dtp_NgayTiepNhan.Size = new System.Drawing.Size(117, 20);
             this.dtp_NgayTiepNhan.TabIndex = 8;
-            this.dtp_NgayTiepNhan.ValueChanged += new System.EventHandler(this.dtpNgayTiepNhan_ValueChanged);
             // 
             // txt_NhanVien
             // 
@@ -109,7 +107,6 @@
             this.txt_NhanVien.Name = "txt_NhanVien";
             this.txt_NhanVien.Size = new System.Drawing.Size(101, 20);
             this.txt_NhanVien.TabIndex = 0;
-            this.txt_NhanVien.TextChanged += new System.EventHandler(this.txtNhanVien_TextChanged);
             // 
             // grb_ThongTinXe
             // 
@@ -146,8 +143,10 @@
             // 
             this.cbo_TrongTai.FormattingEnabled = true;
             this.cbo_TrongTai.Items.AddRange(new object[] {
-            "Bình thường",
-            "Chính thức"});
+            "1 tấn",
+            "2 tấn",
+            "3 tấn",
+            "5 tấn"});
             this.cbo_TrongTai.Location = new System.Drawing.Point(340, 30);
             this.cbo_TrongTai.Name = "cbo_TrongTai";
             this.cbo_TrongTai.Size = new System.Drawing.Size(101, 21);
@@ -157,8 +156,9 @@
             // 
             this.cbo_LoaiHang.FormattingEnabled = true;
             this.cbo_LoaiHang.Items.AddRange(new object[] {
-            "Bình thường",
-            "Chính thức"});
+            "hàng thường",
+            "hàng nóng",
+            "hàng lạnh"});
             this.cbo_LoaiHang.Location = new System.Drawing.Point(111, 128);
             this.cbo_LoaiHang.Name = "cbo_LoaiHang";
             this.cbo_LoaiHang.Size = new System.Drawing.Size(101, 21);
@@ -168,8 +168,9 @@
             // 
             this.cbo_HangXe.FormattingEnabled = true;
             this.cbo_HangXe.Items.AddRange(new object[] {
-            "Bình thường",
-            "Chính thức"});
+            "TOYOTA",
+            "HONDA",
+            "MERCIDES"});
             this.cbo_HangXe.Location = new System.Drawing.Point(111, 80);
             this.cbo_HangXe.Name = "cbo_HangXe";
             this.cbo_HangXe.Size = new System.Drawing.Size(101, 21);
@@ -340,6 +341,7 @@
             this.btn_Luu.TabIndex = 2;
             this.btn_Luu.Text = "Lưu";
             this.btn_Luu.UseVisualStyleBackColor = true;
+            this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
             // 
             // btn_Huy
             // 
@@ -359,7 +361,7 @@
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             // 
-            // TiepNhanXeMoiFrm
+            // TiepNhanXeGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -373,10 +375,9 @@
             this.Controls.Add(this.lbl_NhanVien);
             this.Controls.Add(this.lbl_NgayTiepNhan);
             this.Controls.Add(this.lbl_Title);
-            this.Name = "TiepNhanXeMoiFrm";
+            this.Name = "TiepNhanXeGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TiepNhanXeMoiFrm";
-            this.Load += new System.EventHandler(this.TiepNhanXeMoiFrm_Load);
             this.grb_ThongTinXe.ResumeLayout(false);
             this.grb_ThongTinXe.PerformLayout();
             this.ResumeLayout(false);
