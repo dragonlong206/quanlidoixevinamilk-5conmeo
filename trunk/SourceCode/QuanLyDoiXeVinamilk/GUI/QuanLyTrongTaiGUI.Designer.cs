@@ -71,7 +71,7 @@
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(143, 23);
             this.btn_Sua.TabIndex = 1;
-            this.btn_Sua.Text = "Sửa tên trọng tải đã chọn";
+            this.btn_Sua.Text = "Sửa trọng tải đã chọn";
             this.btn_Sua.UseVisualStyleBackColor = true;
             // 
             // chk_ChonTatCa
