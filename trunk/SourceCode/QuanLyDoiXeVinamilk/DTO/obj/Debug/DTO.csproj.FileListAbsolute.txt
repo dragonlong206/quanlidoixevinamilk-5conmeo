@@ -1,5 +1,0 @@
-D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\DTO\bin\Debug\DTO.exe
-D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\DTO\bin\Debug\DTO.pdb
-D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\DTO\obj\Debug\ResolveAssemblyReference.cache
-D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\DTO\obj\Debug\DTO.exe
-D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\DTO\obj\Debug\DTO.pdb
