@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{91E11A85-E0AE-4BE3-AB4C-794DAD236234}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -205,11 +205,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUS\BUS.csproj">
-      <Project>{C50A7741-319F-4367-8F0F-1B3AC4D3493E}</Project>
+      <Project>{ABC0B368-ED22-4EB0-B2FD-C0829A755CE3}</Project>
       <Name>BUS</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{C7AB7C44-1952-403B-9947-D203A2A39431}</Project>
+      <Project>{0BAA7134-FE74-41E9-89A3-24A3FDAC8E00}</Project>
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>

@@ -59,11 +59,11 @@ D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\ob
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.TiepNhanXeGUI.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.XoaXeFrm.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
-D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\BUS.exe
-D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\DTO.exe
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\BUS.pdb
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\DTO.pdb
-D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\DAO.exe
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\DAO.pdb
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.frm_QuanLyHangXe.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.frm_QuanLyTrongTai.resources
+D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\BUS.dll
+D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\DTO.dll
+D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\DAO.dll
