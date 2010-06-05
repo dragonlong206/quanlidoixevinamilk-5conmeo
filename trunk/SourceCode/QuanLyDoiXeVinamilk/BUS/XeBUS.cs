@@ -13,39 +13,42 @@ namespace BUS
         {
             bool blnKetQua = true;
 
-            #region Doc DuLieu tu bang XE
+            #region Doc cau truc bang tu DataBase.
             String strChuoiLoc = "Select * From XE ";
-            strChuoiLoc += "Where BIENSO = " + aXe.BienSo;
+            //Khong ro vi sao cho nay ko thu thi duoc.
+            //strChuoiLoc += "Where BIENSO=" + aXe.BienSo;  
             DataTable tblBang = DAO.XeDAO.Doc(strChuoiLoc);
-            
+            if (tblBang == null)
+                return false;
+            #endregion
+
+            #region Cap nhat du lieu vao bang.
             DataRow rowDong;
-            if (tblBang.Rows.Count == 1)
+            if (false) //(tblBang.Rows.Count > 0)
             {
-                rowDong = tblBang.Rows[0];
+                //Truong hop BienSo xe da ton tai => Xu ly them.                
+                //return false;
             }
             else
             {
                 rowDong = tblBang.NewRow();
+
+                rowDong["BIENSO"] = aXe.BienSo;
+                rowDong["NGAYTIEPNHAN"] = aXe.NgayTiepNhan;
+                rowDong["NGAYDANGKIEM"] = aXe.NgayDangKiem;
+                rowDong["NAMSANXUAT"] = aXe.NamSanXuat;
+                rowDong["HIEUXE"] = aXe.HieuXe;
+                rowDong["SOKHUNG"] = aXe.SoKhung;
+                rowDong["SOMAY"] = aXe.SoMay;
+                rowDong["DUNGTICHBINH"] = aXe.DungTichBinh;   
+                rowDong["DINHMUC"] = aXe.DinhMuc;             
+                rowDong["MAHANGXE"] = aXe.MaHangXe;                     
+                rowDong["MATRONGTAI"] = aXe.MaTrongTai;                 
+                rowDong["MALOAIHANG"] = aXe.MaLoaiHang;                 
+                rowDong["MANHANVIENTIEPNHAN"] = aXe.MaNhanVienTiepNhan; 
+
                 tblBang.Rows.Add(rowDong);
-            }
-            return false;
-            #endregion
-
-            #region Cap nhat DuLieu vao bang
-            rowDong["BIENSO"] = aXe.BienSo;
-            rowDong["NGAYTIEPNHAN"] = aXe.NgayTiepNhan;
-            rowDong["NGAYDANGKIEM"] = aXe.NgayDangKiem;
-            rowDong["NAMSANXUAT"] = aXe.NamSanXuat;
-            rowDong["HIEUXE"] = aXe.HieuXe;
-            rowDong["SOKHUNG"] = aXe.SoKhung;
-            rowDong["SOMAY"] = aXe.SoMay;
-            //rowDong["DUNGTICHBINH"] = aXe.DungTichBinh;   //CSDL chua co.
-            //rowDong["DINHMUC"] = aXe.DinhMuc;             //CSDL chua co.
-            rowDong["MAHANGXE"] = aXe.MaHangXe;                     //Chua co du lieu nhap
-            rowDong["MATRONGTAI"] = aXe.MaTrongTai;                 //Chua co du lieu nhap
-            rowDong["MALOAIHANG"] = aXe.MaLoaiHang;                 //Chua co du lieu nhap
-            rowDong["MANHANVIENTIEPNHAN"] = aXe.MaNhanVienTiepNhan; //Chua co du lieu nhap
-
+            }                        
             blnKetQua = DAO.XeDAO.Ghi(tblBang, "XE");
             #endregion
 

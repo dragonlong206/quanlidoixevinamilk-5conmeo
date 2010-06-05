@@ -10,8 +10,8 @@ namespace DAO
 {
     public class XeDAO
     {
-        private static string strLoaiKetNoi = "Provider = Microsoft.Jet.OLEDB.4.0;";
-        private static string strCSDL = "..\\DataBase\\Db_QuanLyDoiXeVinamilk.accdb";
+        private static string strLoaiKetNoi = "Provider=Microsoft.Jet.OLEDB.4.0;";
+        private static string strCSDL = "Data Source = ..\\..\\..\\DataBase\\Db_QuanLyDoiXeVinamilk.mdb";
         private static string strChuoiKetNoi = strLoaiKetNoi + strCSDL;
 
         public static OleDbConnection MoKetNoi()
@@ -20,12 +20,11 @@ namespace DAO
 
             try
             {
-                contKetNoi = new OleDbConnection(strChuoiKetNoi);
+                contKetNoi = new OleDbConnection(strChuoiKetNoi);                
             }
             catch (System.Exception ex)
             {
-                //MessageBox.Show("Loi ket noi CSDL" + strChuoiKetNoi + ex.Message);
-                return null;
+                throw ex;
             }
 
             return contKetNoi;
@@ -34,17 +33,17 @@ namespace DAO
         public static DataTable Doc(String strChuoiLoc)
         {
             DataTable tblBang = new DataTable();
-
+            
             try
             {
-                OleDbConnection contKetNoi = MoKetNoi();
+                OleDbConnection contKetNoi = MoKetNoi();                
                 OleDbDataAdapter adaptBoThichUng = new OleDbDataAdapter(strChuoiLoc, contKetNoi);
+                adaptBoThichUng.FillSchema(tblBang, SchemaType.Source);
                 adaptBoThichUng.Fill(tblBang);
             }
             catch (System.Exception ex)
             {
-                //MessageBox.Show("Loi ket noi " + strChuoiLoc + ex.Message);
-                return null;
+                throw ex;
             }            
 
             return tblBang;
@@ -64,8 +63,7 @@ namespace DAO
             }
             catch (System.Exception ex)
             {
-                //MessageBox.Show("Loi ghi CSDL " + strChuoiLoc + ex.Message);
-                blnKetQua = false;
+                throw ex;
             }
             return blnKetQua;
         }

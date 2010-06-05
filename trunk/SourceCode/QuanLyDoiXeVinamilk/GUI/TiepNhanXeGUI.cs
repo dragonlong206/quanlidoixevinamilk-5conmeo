@@ -21,23 +21,28 @@ namespace GUI
             DTO.XeDTO aXe = NhapXe();
             if (aXe == null)
                 return; //khong lam gi ca.            
-
-            String strThongBao = "Loi at TienNhanXeGui.cs/btn_Luu_Click";
-            if (BUS.XeBUS.GhiXe(aXe))
+            
+            try
             {
-                strThongBao = "Tiep nhan xe thanh cong";
+                String strThongBao = "Bi loi ghi du lieu: vui long kiem tra du lieu nhap";
+                if (BUS.XeBUS.GhiXe(aXe))
+                {
+                    strThongBao = "Tiep nhan xe thanh cong";
+                }
+                MessageBox.Show(strThongBao);
             }
-            MessageBox.Show(strThongBao);
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Exception:" + ex.Message);
+            }
+            
         }
 
         private DTO.XeDTO NhapXe()
         {
             DTO.XeDTO aXe = new DTO.XeDTO();
-            if (!KiemTraNhap())
-            {
-                MessageBox.Show("Loi at TiepNhanXeGUI.cs\\NhapXe: KiemTraNhap = flase");
-                return null;
-            }
+            if (!KiemTraNhap())  //Cac dong thong bao cu the duoc thuc hien trong KiemTraNhap()                          
+                return null;            
 
             #region Gan gia tri tu giao dienvao aXe
             try
@@ -47,18 +52,22 @@ namespace GUI
                 aXe.NgayTiepNhan = DateTime.Parse(dtp_NgayTiepNhan.Text);
                 aXe.NgayDangKiem = DateTime.Parse(dtp_NgayDangKiem.Text);
                 aXe.NamSanXuat = int.Parse(txt_NamSanXuat.Text);
-                aXe.SoKhung = int.Parse(txt_SoKhung.Text);
-                aXe.SoMay = int.Parse(txt_SoMay.Text);
-                aXe.DungTichBinh = double.Parse(txt_DungTichBinh.Text);
-                aXe.DinhMuc = double.Parse(txt_DinhMucNhienLieu.Text);
+                aXe.SoKhung = txt_SoKhung.Text;
+                aXe.SoMay = txt_SoMay.Text;
+                aXe.DungTichBinh = float.Parse(txt_DungTichBinh.Text);
+                aXe.DinhMuc = float.Parse(txt_DinhMucNhienLieu.Text);
                 aXe.MaHangXe = BUS.HangXeBUS.GetMaHangXe(cbo_HangXe.Text);                //Sua truy xuat qua CSDL
                 aXe.MaTrongTai = BUS.TrongTaiBUS.GetMaTrongTai(cbo_TrongTai.Text);        //Sua truy xuat qua CSDL
                 aXe.MaLoaiHang = BUS.LoaiHangBUS.GetMaLoaiHang(cbo_LoaiHang.Text);        //Sua truy xuat qua CSDL
-                aXe.MaNhanVienTiepNhan = BUS.NhanVienBUS.GetMaNhanVien(txt_NhanVien.Text);//Sua truy xuat qua CSDL
+                aXe.MaNhanVienTiepNhan = BUS.NhanVienBUS.GetMaNhanVien(cbo_NhanVienTiepNhan.Text);//Sua truy xuat qua CSDL
+                //aXe.MaHangXe = this.cbo_HangXe.SelectedIndex;               //Chinh sua sau.
+                //aXe.MaLoaiHang = this.cbo_LoaiHang.SelectedIndex;
+                //aXe.MaNhanVienTiepNhan = this.cbo_NhanVienTiepNhan.SelectedIndex;
+                //aXe.MaTrongTai = this.cbo_TrongTai.SelectedIndex;
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show("Loi at TiepNhanXeGui.cs\\NhapXe " + ex.Message);
+                MessageBox.Show("Exception:" + ex.Message);
                 return null;
             }
             #endregion
@@ -71,6 +80,7 @@ namespace GUI
             bool blnKetQua = true;
 
             #region Kiem tra tinh hop le.
+            //KiemTra01: Kiem tra du lieu nhap co day du hay khong?
             blnKetQua &= !String.IsNullOrEmpty(txt_BienSo.Text);
             blnKetQua &= !String.IsNullOrEmpty(txt_HieuXe.Text);
             blnKetQua &= !String.IsNullOrEmpty(dtp_NgayTiepNhan.Text);
@@ -83,22 +93,61 @@ namespace GUI
             blnKetQua &= !String.IsNullOrEmpty(cbo_HangXe.Text);
             blnKetQua &= !String.IsNullOrEmpty(cbo_TrongTai.Text);
             blnKetQua &= !String.IsNullOrEmpty(cbo_LoaiHang.Text);
-            blnKetQua &= !String.IsNullOrEmpty(txt_NhanVien.Text);
+            blnKetQua &= !String.IsNullOrEmpty(cbo_NhanVienTiepNhan.Text);
+            if(!blnKetQua)
+            {
+                MessageBox.Show("Du lieu nhap vao khong day du\r\nVui long kiem tra lai");
+                return blnKetQua;
+            }
+
+            //KiemTra02: NgayDangKiem va NgayTiepNhan khong duoc vuot qua ngay hien tai.
+            blnKetQua &= DateTime.Parse(dtp_NgayDangKiem.Text) <= DateTime.Today;
+            blnKetQua &= DateTime.Parse(dtp_NgayTiepNhan.Text) <= DateTime.Today;
+            if(!blnKetQua)
+            {
+                MessageBox.Show("Ngay Dang Kiem hoac Ngay Tiep Nhan vuot qua ngay hien tai");
+                return blnKetQua;
+            }
+            //KiemTra03: Format ngay thang trong GiaoDien va DataBase khong thong nhat=> Loi
             #endregion
 
-            #region Kiem tra cac rang buoc.
-            if (blnKetQua)
+            #region Kiem tra cac rang buoc.                         
+            //RangBuoc01: Chi nhap cac xe trong thoi gian cho phep (vi du 10 nam tro lai):
+            int nNamSanXuat = int.Parse(txt_NamSanXuat.Text);
+            int nSoNamToiDa = BUS.ThamSoBUS.GetSoNamToiDa();
+            blnKetQua &= (DateTime.Today.Year - nNamSanXuat) <= nSoNamToiDa;
+            if (!blnKetQua)
             {
-                //RangBuoc01: Chi nhap cac xe trong thoi gian cho phep (vi du 10 nam tro lai):
-                int nNamSanXuat = int.Parse(txt_NamSanXuat.Text);
-                int nSoNamToiDa = BUS.ThamSoBUS.GetSoNamToiDa();
-                blnKetQua &= (DateTime.Today.Year - nNamSanXuat) <= nSoNamToiDa; //Xu ly them cho truy xuat CSDL.
-                if (!blnKetQua)
-                    MessageBox.Show("Chi tiep nhan cac xe trong vong " + nSoNamToiDa + " nam tro lai.");
+                MessageBox.Show("Chi tiep nhan cac xe trong vong " + nSoNamToiDa + " nam tro lai.");
+                return blnKetQua;
             }
+            //RangBuoc02: DinhMucNhienLieu phai nho hon hoac bang Dung Tich Binh.
+            blnKetQua &= float.Parse(txt_DinhMucNhienLieu.Text) <= float.Parse(txt_DungTichBinh.Text);
+            if(!blnKetQua)
+            {
+                MessageBox.Show("Dinh Muc Nhien Lieu phai nho hon hoac bang Dung Tich Binh");
+                return blnKetQua;
+            }
+
+            //RangBuoc03: NgayDangKiem phai nho hon hoac bang NgayTiepNhan.
+            /* Cai nay khong so sanh giua cac thang voi nhau duoc
+            blnKetQua &= DateTime.Parse(dtp_NgayDangKiem.Text) <= DateTime.Parse(dtp_NgayTiepNhan.Text);
+            if(!blnKetQua)
+            {
+                MessageBox.Show("Ngay Dang Kiem phai nho hon hoac bang Ngay Tiep Nhan");
+                return blnKetQua;
+            }
+            */
+
+            //RangBuoc04: Chi cho phep chon cac HangXe,NhanVien,... tu comboBox => Xy ly ve giao dien.            
             #endregion
 
             return blnKetQua;
-        }        
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }              
     }
 }

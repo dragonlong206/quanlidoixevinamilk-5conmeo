@@ -32,7 +32,6 @@
             this.lbl_NgayTiepNhan = new System.Windows.Forms.Label();
             this.lbl_NhanVien = new System.Windows.Forms.Label();
             this.dtp_NgayTiepNhan = new System.Windows.Forms.DateTimePicker();
-            this.txt_NhanVien = new System.Windows.Forms.TextBox();
             this.grb_ThongTinXe = new System.Windows.Forms.GroupBox();
             this.cbo_TrongTai = new System.Windows.Forms.ComboBox();
             this.cbo_LoaiHang = new System.Windows.Forms.ComboBox();
@@ -59,6 +58,7 @@
             this.btn_Luu = new System.Windows.Forms.Button();
             this.btn_Huy = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
+            this.cbo_NhanVienTiepNhan = new System.Windows.Forms.ComboBox();
             this.grb_ThongTinXe.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,13 +100,6 @@
             this.dtp_NgayTiepNhan.Name = "dtp_NgayTiepNhan";
             this.dtp_NgayTiepNhan.Size = new System.Drawing.Size(117, 20);
             this.dtp_NgayTiepNhan.TabIndex = 8;
-            // 
-            // txt_NhanVien
-            // 
-            this.txt_NhanVien.Location = new System.Drawing.Point(455, 52);
-            this.txt_NhanVien.Name = "txt_NhanVien";
-            this.txt_NhanVien.Size = new System.Drawing.Size(101, 20);
-            this.txt_NhanVien.TabIndex = 0;
             // 
             // grb_ThongTinXe
             // 
@@ -360,17 +353,30 @@
             this.btn_Thoat.TabIndex = 3;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            // 
+            // cbo_NhanVienTiepNhan
+            // 
+            this.cbo_NhanVienTiepNhan.FormattingEnabled = true;
+            this.cbo_NhanVienTiepNhan.Items.AddRange(new object[] {
+            "BÙI KIM HOA",
+            "NGUYỄN ANH",
+            "NGUYỄN KHUYẾN"});
+            this.cbo_NhanVienTiepNhan.Location = new System.Drawing.Point(459, 50);
+            this.cbo_NhanVienTiepNhan.Name = "cbo_NhanVienTiepNhan";
+            this.cbo_NhanVienTiepNhan.Size = new System.Drawing.Size(121, 21);
+            this.cbo_NhanVienTiepNhan.TabIndex = 9;
             // 
             // TiepNhanXeGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 383);
+            this.Controls.Add(this.cbo_NhanVienTiepNhan);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_Huy);
             this.Controls.Add(this.btn_Luu);
             this.Controls.Add(this.grb_ThongTinXe);
-            this.Controls.Add(this.txt_NhanVien);
             this.Controls.Add(this.dtp_NgayTiepNhan);
             this.Controls.Add(this.lbl_NhanVien);
             this.Controls.Add(this.lbl_NgayTiepNhan);
@@ -391,7 +397,6 @@
         private System.Windows.Forms.Label lbl_NgayTiepNhan;
         private System.Windows.Forms.Label lbl_NhanVien;
         private System.Windows.Forms.DateTimePicker dtp_NgayTiepNhan;
-        private System.Windows.Forms.TextBox txt_NhanVien;
         private System.Windows.Forms.GroupBox grb_ThongTinXe;
         private System.Windows.Forms.Label lbl_SoMay;
         private System.Windows.Forms.Label lbl_HieuXe;
@@ -418,5 +423,6 @@
         private System.Windows.Forms.ComboBox cbo_TrongTai;
         private System.Windows.Forms.ComboBox cbo_LoaiHang;
         private System.Windows.Forms.ComboBox cbo_HangXe;
+        private System.Windows.Forms.ComboBox cbo_NhanVienTiepNhan;
     }
 }

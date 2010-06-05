@@ -14,10 +14,10 @@ namespace DTO
         private DateTime m_timeNgayTiepNhan;
         private DateTime m_timeNgayDangKiem;
         private int m_nNamSanXuat;
-        private int m_nSoKhung;
-        private int m_nSoMay;
-        private double m_dDungTichBinh;
-        private double m_dDinhMuc;
+        private String m_nSoKhung;
+        private String m_nSoMay;
+        private float m_dDungTichBinh;
+        private float m_dDinhMuc;
         private int m_nMaHangXe;
         private int m_nMaTrongTai;
         private int m_nMaLoaiHang;
@@ -32,8 +32,8 @@ namespace DTO
             m_timeNgayTiepNhan = DateTime.Today;
             m_timeNgayDangKiem = DateTime.MaxValue;
             m_nNamSanXuat = -1;
-            m_nSoKhung = -1;
-            m_nSoMay = -1;
+            m_nSoKhung = String.Empty;
+            m_nSoMay = String.Empty;
             m_dDungTichBinh = -1;
             m_dDinhMuc = -1;
             m_nMaHangXe = -1;
@@ -74,25 +74,25 @@ namespace DTO
             set { m_nNamSanXuat = value; }
         }
 
-        public int SoKhung
+        public String SoKhung
         {
             get { return m_nSoKhung; }
             set { m_nSoKhung = value; }
         }
 
-        public int SoMay
+        public String SoMay
         {
             get { return m_nSoMay; }
             set { m_nSoMay = value; }
         }
 
-        public double DungTichBinh
+        public float DungTichBinh
         {
             get { return m_dDungTichBinh; }
             set { m_dDungTichBinh = value; }
         }
 
-        public double DinhMuc
+        public float DinhMuc
         {
             get { return m_dDinhMuc; }
             set { m_dDinhMuc = value; }
