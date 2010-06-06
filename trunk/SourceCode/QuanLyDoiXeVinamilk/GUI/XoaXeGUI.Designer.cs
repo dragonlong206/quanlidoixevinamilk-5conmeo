@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class XoaXeFrm
+    partial class XoaXeGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,19 @@
         {
             this.lbl_Title = new System.Windows.Forms.Label();
             this.grb_DanhSachXe = new System.Windows.Forms.GroupBox();
+            this.lsv_DanhSachXe = new System.Windows.Forms.ListView();
             this.grb_ThongTinXe = new System.Windows.Forms.GroupBox();
             this.txt_NhanVien = new System.Windows.Forms.TextBox();
             this.lbl_NhanVien = new System.Windows.Forms.Label();
             this.txt_SoMay = new System.Windows.Forms.TextBox();
+            this.txt_TrongTai = new System.Windows.Forms.TextBox();
+            this.txt_LoaiHang = new System.Windows.Forms.TextBox();
+            this.txt_HangXe = new System.Windows.Forms.TextBox();
+            this.txt_BienSo = new System.Windows.Forms.TextBox();
             this.txt_HieuXe = new System.Windows.Forms.TextBox();
             this.txt_NamSanXuat = new System.Windows.Forms.TextBox();
             this.txt_DinhMucNhienLieu = new System.Windows.Forms.TextBox();
+            this.txt_NgayDangKiem = new System.Windows.Forms.TextBox();
             this.txt_SoKhung = new System.Windows.Forms.TextBox();
             this.txt_DungTichBinh = new System.Windows.Forms.TextBox();
             this.lbl_DinhMucNhienLieu = new System.Windows.Forms.Label();
@@ -48,16 +54,12 @@
             this.lbl_NgayDangKiem = new System.Windows.Forms.Label();
             this.lbl_TrongTai = new System.Windows.Forms.Label();
             this.lbl_LoaiHang = new System.Windows.Forms.Label();
-            this.lbl_HangXe = new System.Windows.Forms.Label();
             this.lbl_BienSo = new System.Windows.Forms.Label();
-            this.txt_BienSo = new System.Windows.Forms.TextBox();
-            this.txt_HangXe = new System.Windows.Forms.TextBox();
-            this.txt_LoaiHang = new System.Windows.Forms.TextBox();
-            this.txt_TrongTai = new System.Windows.Forms.TextBox();
-            this.txt_NgayDangKiem = new System.Windows.Forms.TextBox();
-            this.lsv_DanhSachXe = new System.Windows.Forms.ListView();
+            this.lbl_HangXe = new System.Windows.Forms.Label();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
+            this.BienSo = new System.Windows.Forms.ColumnHeader();
+            this.HieuXe = new System.Windows.Forms.ColumnHeader();
             this.grb_DanhSachXe.SuspendLayout();
             this.grb_ThongTinXe.SuspendLayout();
             this.SuspendLayout();
@@ -83,6 +85,19 @@
             this.grb_DanhSachXe.TabIndex = 3;
             this.grb_DanhSachXe.TabStop = false;
             this.grb_DanhSachXe.Text = "Danh sách xe";
+            // 
+            // lsv_DanhSachXe
+            // 
+            this.lsv_DanhSachXe.CheckBoxes = true;
+            this.lsv_DanhSachXe.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.BienSo,
+            this.HieuXe});
+            this.lsv_DanhSachXe.Location = new System.Drawing.Point(7, 20);
+            this.lsv_DanhSachXe.Name = "lsv_DanhSachXe";
+            this.lsv_DanhSachXe.Size = new System.Drawing.Size(205, 300);
+            this.lsv_DanhSachXe.TabIndex = 0;
+            this.lsv_DanhSachXe.UseCompatibleStateImageBehavior = false;
+            this.lsv_DanhSachXe.View = System.Windows.Forms.View.Details;
             // 
             // grb_ThongTinXe
             // 
@@ -144,6 +159,40 @@
             this.txt_SoMay.TabIndex = 0;
             this.txt_SoMay.TabStop = false;
             // 
+            // txt_TrongTai
+            // 
+            this.txt_TrongTai.Location = new System.Drawing.Point(111, 180);
+            this.txt_TrongTai.Name = "txt_TrongTai";
+            this.txt_TrongTai.ReadOnly = true;
+            this.txt_TrongTai.Size = new System.Drawing.Size(101, 20);
+            this.txt_TrongTai.TabIndex = 0;
+            this.txt_TrongTai.TabStop = false;
+            // 
+            // txt_LoaiHang
+            // 
+            this.txt_LoaiHang.Location = new System.Drawing.Point(111, 129);
+            this.txt_LoaiHang.Name = "txt_LoaiHang";
+            this.txt_LoaiHang.ReadOnly = true;
+            this.txt_LoaiHang.Size = new System.Drawing.Size(101, 20);
+            this.txt_LoaiHang.TabIndex = 0;
+            this.txt_LoaiHang.TabStop = false;
+            // 
+            // txt_HangXe
+            // 
+            this.txt_HangXe.Location = new System.Drawing.Point(111, 84);
+            this.txt_HangXe.Name = "txt_HangXe";
+            this.txt_HangXe.ReadOnly = true;
+            this.txt_HangXe.Size = new System.Drawing.Size(101, 20);
+            this.txt_HangXe.TabIndex = 0;
+            this.txt_HangXe.TabStop = false;
+            // 
+            // txt_BienSo
+            // 
+            this.txt_BienSo.Location = new System.Drawing.Point(111, 32);
+            this.txt_BienSo.Name = "txt_BienSo";
+            this.txt_BienSo.Size = new System.Drawing.Size(101, 20);
+            this.txt_BienSo.TabIndex = 0;
+            // 
             // txt_HieuXe
             // 
             this.txt_HieuXe.Location = new System.Drawing.Point(111, 225);
@@ -170,6 +219,15 @@
             this.txt_DinhMucNhienLieu.Size = new System.Drawing.Size(101, 20);
             this.txt_DinhMucNhienLieu.TabIndex = 0;
             this.txt_DinhMucNhienLieu.TabStop = false;
+            // 
+            // txt_NgayDangKiem
+            // 
+            this.txt_NgayDangKiem.Location = new System.Drawing.Point(340, 32);
+            this.txt_NgayDangKiem.Name = "txt_NgayDangKiem";
+            this.txt_NgayDangKiem.ReadOnly = true;
+            this.txt_NgayDangKiem.Size = new System.Drawing.Size(101, 20);
+            this.txt_NgayDangKiem.TabIndex = 0;
+            this.txt_NgayDangKiem.TabStop = false;
             // 
             // txt_SoKhung
             // 
@@ -270,15 +328,6 @@
             this.lbl_LoaiHang.TabIndex = 20;
             this.lbl_LoaiHang.Text = "Loại hàng";
             // 
-            // lbl_HangXe
-            // 
-            this.lbl_HangXe.AutoSize = true;
-            this.lbl_HangXe.Location = new System.Drawing.Point(27, 91);
-            this.lbl_HangXe.Name = "lbl_HangXe";
-            this.lbl_HangXe.Size = new System.Drawing.Size(47, 13);
-            this.lbl_HangXe.TabIndex = 19;
-            this.lbl_HangXe.Text = "Hãng xe";
-            // 
             // lbl_BienSo
             // 
             this.lbl_BienSo.AutoSize = true;
@@ -288,57 +337,14 @@
             this.lbl_BienSo.TabIndex = 19;
             this.lbl_BienSo.Text = "Biển số";
             // 
-            // txt_BienSo
+            // lbl_HangXe
             // 
-            this.txt_BienSo.Location = new System.Drawing.Point(111, 32);
-            this.txt_BienSo.Name = "txt_BienSo";
-            this.txt_BienSo.Size = new System.Drawing.Size(101, 20);
-            this.txt_BienSo.TabIndex = 0;
-            // 
-            // txt_HangXe
-            // 
-            this.txt_HangXe.Location = new System.Drawing.Point(111, 84);
-            this.txt_HangXe.Name = "txt_HangXe";
-            this.txt_HangXe.ReadOnly = true;
-            this.txt_HangXe.Size = new System.Drawing.Size(101, 20);
-            this.txt_HangXe.TabIndex = 0;
-            this.txt_HangXe.TabStop = false;
-            // 
-            // txt_LoaiHang
-            // 
-            this.txt_LoaiHang.Location = new System.Drawing.Point(111, 129);
-            this.txt_LoaiHang.Name = "txt_LoaiHang";
-            this.txt_LoaiHang.ReadOnly = true;
-            this.txt_LoaiHang.Size = new System.Drawing.Size(101, 20);
-            this.txt_LoaiHang.TabIndex = 0;
-            this.txt_LoaiHang.TabStop = false;
-            // 
-            // txt_TrongTai
-            // 
-            this.txt_TrongTai.Location = new System.Drawing.Point(111, 180);
-            this.txt_TrongTai.Name = "txt_TrongTai";
-            this.txt_TrongTai.ReadOnly = true;
-            this.txt_TrongTai.Size = new System.Drawing.Size(101, 20);
-            this.txt_TrongTai.TabIndex = 0;
-            this.txt_TrongTai.TabStop = false;
-            // 
-            // txt_NgayDangKiem
-            // 
-            this.txt_NgayDangKiem.Location = new System.Drawing.Point(340, 32);
-            this.txt_NgayDangKiem.Name = "txt_NgayDangKiem";
-            this.txt_NgayDangKiem.ReadOnly = true;
-            this.txt_NgayDangKiem.Size = new System.Drawing.Size(101, 20);
-            this.txt_NgayDangKiem.TabIndex = 0;
-            this.txt_NgayDangKiem.TabStop = false;
-            // 
-            // lsv_DanhSachXe
-            // 
-            this.lsv_DanhSachXe.CheckBoxes = true;
-            this.lsv_DanhSachXe.Location = new System.Drawing.Point(7, 20);
-            this.lsv_DanhSachXe.Name = "lsv_DanhSachXe";
-            this.lsv_DanhSachXe.Size = new System.Drawing.Size(205, 300);
-            this.lsv_DanhSachXe.TabIndex = 0;
-            this.lsv_DanhSachXe.UseCompatibleStateImageBehavior = false;
+            this.lbl_HangXe.AutoSize = true;
+            this.lbl_HangXe.Location = new System.Drawing.Point(27, 91);
+            this.lbl_HangXe.Name = "lbl_HangXe";
+            this.lbl_HangXe.Size = new System.Drawing.Size(47, 13);
+            this.lbl_HangXe.TabIndex = 19;
+            this.lbl_HangXe.Text = "Hãng xe";
             // 
             // btn_Xoa
             // 
@@ -348,6 +354,7 @@
             this.btn_Xoa.TabIndex = 1;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Thoat
             // 
@@ -359,7 +366,17 @@
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
-            // XoaXeFrm
+            // BienSo
+            // 
+            this.BienSo.Text = "Biển Số";
+            this.BienSo.Width = 102;
+            // 
+            // HieuXe
+            // 
+            this.HieuXe.Text = "Hiệu Xe";
+            this.HieuXe.Width = 144;
+            // 
+            // XoaXeGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -370,9 +387,10 @@
             this.Controls.Add(this.grb_DanhSachXe);
             this.Controls.Add(this.lbl_Title);
             this.MaximizeBox = false;
-            this.Name = "XoaXeFrm";
+            this.Name = "XoaXeGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XoaXeFrm";
+            this.Load += new System.EventHandler(this.XoaXeGUI_Load);
             this.grb_DanhSachXe.ResumeLayout(false);
             this.grb_ThongTinXe.ResumeLayout(false);
             this.grb_ThongTinXe.PerformLayout();
@@ -413,5 +431,7 @@
         private System.Windows.Forms.ListView lsv_DanhSachXe;
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.ColumnHeader BienSo;
+        private System.Windows.Forms.ColumnHeader HieuXe;
     }
 }

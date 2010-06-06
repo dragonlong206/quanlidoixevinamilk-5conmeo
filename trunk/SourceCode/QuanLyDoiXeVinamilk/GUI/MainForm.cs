@@ -65,7 +65,7 @@ namespace GUI
 
         private void xóaXeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            XoaXeFrm frm = new XoaXeFrm();
+            XoaXeGUI frm = new XoaXeGUI();
             frm.Show();
         }
 

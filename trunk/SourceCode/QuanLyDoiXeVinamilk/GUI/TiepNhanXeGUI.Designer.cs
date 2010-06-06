@@ -94,7 +94,7 @@
             // 
             // dtp_NgayTiepNhan
             // 
-            this.dtp_NgayTiepNhan.CustomFormat = "dd/MM/yyyy";
+            this.dtp_NgayTiepNhan.CustomFormat = "MM/dd/yyyy";
             this.dtp_NgayTiepNhan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_NgayTiepNhan.Location = new System.Drawing.Point(134, 51);
             this.dtp_NgayTiepNhan.Name = "dtp_NgayTiepNhan";
@@ -144,6 +144,7 @@
             this.cbo_TrongTai.Name = "cbo_TrongTai";
             this.cbo_TrongTai.Size = new System.Drawing.Size(101, 21);
             this.cbo_TrongTai.TabIndex = 1;
+            this.cbo_TrongTai.Text = "3 tấn";
             // 
             // cbo_LoaiHang
             // 
@@ -156,6 +157,7 @@
             this.cbo_LoaiHang.Name = "cbo_LoaiHang";
             this.cbo_LoaiHang.Size = new System.Drawing.Size(101, 21);
             this.cbo_LoaiHang.TabIndex = 6;
+            this.cbo_LoaiHang.Text = "hàng thường";
             // 
             // cbo_HangXe
             // 
@@ -168,6 +170,7 @@
             this.cbo_HangXe.Name = "cbo_HangXe";
             this.cbo_HangXe.Size = new System.Drawing.Size(101, 21);
             this.cbo_HangXe.TabIndex = 3;
+            this.cbo_HangXe.Text = "TOYOTA";
             // 
             // txt_SoMay
             // 
@@ -175,6 +178,7 @@
             this.txt_SoMay.Name = "txt_SoMay";
             this.txt_SoMay.Size = new System.Drawing.Size(101, 20);
             this.txt_SoMay.TabIndex = 8;
+            this.txt_SoMay.Text = "2323";
             // 
             // txt_HieuXe
             // 
@@ -182,6 +186,7 @@
             this.txt_HieuXe.Name = "txt_HieuXe";
             this.txt_HieuXe.Size = new System.Drawing.Size(101, 20);
             this.txt_HieuXe.TabIndex = 5;
+            this.txt_HieuXe.Text = "TEST";
             // 
             // txt_NamSanXuat
             // 
@@ -189,6 +194,7 @@
             this.txt_NamSanXuat.Name = "txt_NamSanXuat";
             this.txt_NamSanXuat.Size = new System.Drawing.Size(101, 20);
             this.txt_NamSanXuat.TabIndex = 2;
+            this.txt_NamSanXuat.Text = "2007";
             // 
             // txt_DinhMucNhienLieu
             // 
@@ -196,6 +202,7 @@
             this.txt_DinhMucNhienLieu.Name = "txt_DinhMucNhienLieu";
             this.txt_DinhMucNhienLieu.Size = new System.Drawing.Size(101, 20);
             this.txt_DinhMucNhienLieu.TabIndex = 10;
+            this.txt_DinhMucNhienLieu.Text = "12";
             // 
             // txt_SoKhung
             // 
@@ -203,10 +210,11 @@
             this.txt_SoKhung.Name = "txt_SoKhung";
             this.txt_SoKhung.Size = new System.Drawing.Size(101, 20);
             this.txt_SoKhung.TabIndex = 7;
+            this.txt_SoKhung.Text = "8811";
             // 
             // dtp_NgayDangKiem
             // 
-            this.dtp_NgayDangKiem.CustomFormat = "dd/MM/yyyy";
+            this.dtp_NgayDangKiem.CustomFormat = "MM/dd/yyyy";
             this.dtp_NgayDangKiem.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_NgayDangKiem.Location = new System.Drawing.Point(340, 82);
             this.dtp_NgayDangKiem.Name = "dtp_NgayDangKiem";
@@ -219,6 +227,7 @@
             this.txt_DungTichBinh.Name = "txt_DungTichBinh";
             this.txt_DungTichBinh.Size = new System.Drawing.Size(101, 20);
             this.txt_DungTichBinh.TabIndex = 9;
+            this.txt_DungTichBinh.Text = "15";
             // 
             // lbl_DinhMucNhienLieu
             // 
@@ -244,6 +253,7 @@
             this.txt_BienSo.Name = "txt_BienSo";
             this.txt_BienSo.Size = new System.Drawing.Size(101, 20);
             this.txt_BienSo.TabIndex = 0;
+            this.txt_BienSo.Text = "57K8-7865";
             // 
             // lbl_SoMay
             // 
@@ -344,6 +354,7 @@
             this.btn_Huy.TabIndex = 4;
             this.btn_Huy.Text = "Hủy";
             this.btn_Huy.UseVisualStyleBackColor = true;
+            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
             // btn_Thoat
             // 

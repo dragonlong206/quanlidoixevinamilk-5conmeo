@@ -25,7 +25,7 @@ namespace GUI
             try
             {
                 String strThongBao = "Bi loi ghi du lieu: vui long kiem tra du lieu nhap";
-                if (BUS.XeBUS.GhiXe(aXe))
+                if (BUS.XeBUS.ThemXe(aXe))
                 {
                     strThongBao = "Tiep nhan xe thanh cong";
                 }
@@ -107,8 +107,7 @@ namespace GUI
             {
                 MessageBox.Show("Ngay Dang Kiem hoac Ngay Tiep Nhan vuot qua ngay hien tai");
                 return blnKetQua;
-            }
-            //KiemTra03: Format ngay thang trong GiaoDien va DataBase khong thong nhat=> Loi
+            }           
             #endregion
 
             #region Kiem tra cac rang buoc.                         
@@ -129,15 +128,13 @@ namespace GUI
                 return blnKetQua;
             }
 
-            //RangBuoc03: NgayDangKiem phai nho hon hoac bang NgayTiepNhan.
-            /* Cai nay khong so sanh giua cac thang voi nhau duoc
+            //RangBuoc03: NgayDangKiem phai nho hon hoac bang NgayTiepNhan.            
             blnKetQua &= DateTime.Parse(dtp_NgayDangKiem.Text) <= DateTime.Parse(dtp_NgayTiepNhan.Text);
             if(!blnKetQua)
             {
                 MessageBox.Show("Ngay Dang Kiem phai nho hon hoac bang Ngay Tiep Nhan");
                 return blnKetQua;
-            }
-            */
+            }            
 
             //RangBuoc04: Chi cho phep chon cac HangXe,NhanVien,... tu comboBox => Xy ly ve giao dien.            
             #endregion
@@ -148,6 +145,22 @@ namespace GUI
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_Huy_Click(object sender, EventArgs e)
+        {
+            txt_BienSo.Text = String.Empty;
+            txt_DinhMucNhienLieu.Text = String.Empty;
+            txt_DungTichBinh.Text = String.Empty;
+            txt_HieuXe.Text = String.Empty;
+            txt_NamSanXuat.Text = String.Empty;
+            txt_SoKhung.Text = String.Empty;
+            txt_SoMay.Text = String.Empty;
+            cbo_HangXe.Text = String.Empty;
+            cbo_LoaiHang.Text = String.Empty;
+            cbo_NhanVienTiepNhan.Text = String.Empty;
+            cbo_TrongTai.Text = String.Empty;
+            dtp_NgayDangKiem.Text = String.Empty;
         }              
     }
 }

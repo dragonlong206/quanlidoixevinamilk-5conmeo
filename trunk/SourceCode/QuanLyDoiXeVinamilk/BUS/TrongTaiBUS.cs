@@ -24,5 +24,22 @@ namespace BUS
                     return -1;
             }
         }
+
+        public static String GetTenTrongTai(int nMaTrongTai)
+        {
+            switch(nMaTrongTai)
+            {
+                case 1:
+                    return "1 tấn";
+                case 2:
+                    return "2 tấn";
+                case 3:
+                    return "3 tấn";
+                case 4:
+                    return "5 tấn";
+                default:
+                    return "erorr!";
+            }
+        }
     }
 }

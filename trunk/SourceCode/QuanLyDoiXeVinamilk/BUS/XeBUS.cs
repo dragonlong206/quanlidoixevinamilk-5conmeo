@@ -1,58 +1,50 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.OleDb;
+using DAO;
+using DTO;
 
 namespace BUS
 {
     public class XeBUS
-    {        
-        public static bool GhiXe(DTO.XeDTO aXe)
+    {
+        public static Boolean ThemXe(XeDTO xe)
         {
-            bool blnKetQua = true;
-
-            #region Doc cau truc bang tu DataBase.
-            String strChuoiLoc = "Select * From XE ";
-            //Khong ro vi sao cho nay ko thu thi duoc.
-            //strChuoiLoc += "Where BIENSO=" + aXe.BienSo;  
-            DataTable tblBang = DAO.XeDAO.Doc(strChuoiLoc);
-            if (tblBang == null)
-                return false;
-            #endregion
-
-            #region Cap nhat du lieu vao bang.
-            DataRow rowDong;
-            if (false) //(tblBang.Rows.Count > 0)
+            Boolean blnDaThemDuoc = false;
+            try
             {
-                //Truong hop BienSo xe da ton tai => Xu ly them.                
-                //return false;
+                blnDaThemDuoc = XeDAO.ThemXe(xe);
             }
-            else
+            catch (Exception ex)
             {
-                rowDong = tblBang.NewRow();
+                throw ex;
+            }
 
-                rowDong["BIENSO"] = aXe.BienSo;
-                rowDong["NGAYTIEPNHAN"] = aXe.NgayTiepNhan;
-                rowDong["NGAYDANGKIEM"] = aXe.NgayDangKiem;
-                rowDong["NAMSANXUAT"] = aXe.NamSanXuat;
-                rowDong["HIEUXE"] = aXe.HieuXe;
-                rowDong["SOKHUNG"] = aXe.SoKhung;
-                rowDong["SOMAY"] = aXe.SoMay;
-                rowDong["DUNGTICHBINH"] = aXe.DungTichBinh;   
-                rowDong["DINHMUC"] = aXe.DinhMuc;             
-                rowDong["MAHANGXE"] = aXe.MaHangXe;                     
-                rowDong["MATRONGTAI"] = aXe.MaTrongTai;                 
-                rowDong["MALOAIHANG"] = aXe.MaLoaiHang;                 
-                rowDong["MANHANVIENTIEPNHAN"] = aXe.MaNhanVienTiepNhan; 
+            return blnDaThemDuoc;
+        }
 
-                tblBang.Rows.Add(rowDong);
-            }                        
-            blnKetQua = DAO.XeDAO.Ghi(tblBang, "XE");
-            #endregion
-
+        public static Boolean XoaXe(DTO.XeDTO aXe)
+        {
+            Boolean blnKetQua = false;
+            try
+            {
+                DAO.XeDAO.XoaXe(aXe);
+            }
+            catch (System.Exception ex)
+            {
+            	throw ex;
+            }            
             return blnKetQua;
+        }
+
+        public static List<DTO.XeDTO> DocDanhSachXe()
+        {
+            List<DTO.XeDTO> lstXe = DAO.XeDAO.DocDanhSachXe();
+            return lstXe;
         }
     }
 }

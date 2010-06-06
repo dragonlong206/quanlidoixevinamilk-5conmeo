@@ -22,5 +22,20 @@ namespace BUS
                     return -1;
             }
         }
+
+        public static String GetTenNhanVien(int nMaNhanVien)
+        {
+            switch(nMaNhanVien)
+            {
+                case 1:
+                    return "BÙI KIM HOA";
+                case 2:
+                    return "NGUYỄN ANH";
+                case 3:
+                    return "NGUYỄN KHUYẾN";
+                default:
+                    return "ERORR!";
+            }
+        }
     }
 }
