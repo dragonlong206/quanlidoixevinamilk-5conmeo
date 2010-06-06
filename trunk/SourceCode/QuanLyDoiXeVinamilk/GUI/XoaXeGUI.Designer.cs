@@ -31,6 +31,8 @@
             this.lbl_Title = new System.Windows.Forms.Label();
             this.grb_DanhSachXe = new System.Windows.Forms.GroupBox();
             this.lsv_DanhSachXe = new System.Windows.Forms.ListView();
+            this.BienSo = new System.Windows.Forms.ColumnHeader();
+            this.HieuXe = new System.Windows.Forms.ColumnHeader();
             this.grb_ThongTinXe = new System.Windows.Forms.GroupBox();
             this.txt_NhanVien = new System.Windows.Forms.TextBox();
             this.lbl_NhanVien = new System.Windows.Forms.Label();
@@ -58,8 +60,6 @@
             this.lbl_HangXe = new System.Windows.Forms.Label();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
-            this.BienSo = new System.Windows.Forms.ColumnHeader();
-            this.HieuXe = new System.Windows.Forms.ColumnHeader();
             this.grb_DanhSachXe.SuspendLayout();
             this.grb_ThongTinXe.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +98,17 @@
             this.lsv_DanhSachXe.TabIndex = 0;
             this.lsv_DanhSachXe.UseCompatibleStateImageBehavior = false;
             this.lsv_DanhSachXe.View = System.Windows.Forms.View.Details;
+            this.lsv_DanhSachXe.SelectedIndexChanged += new System.EventHandler(this.lsv_DanhSachXe_SelectedIndexChanged);
+            // 
+            // BienSo
+            // 
+            this.BienSo.Text = "Biển Số";
+            this.BienSo.Width = 102;
+            // 
+            // HieuXe
+            // 
+            this.HieuXe.Text = "Hiệu Xe";
+            this.HieuXe.Width = 144;
             // 
             // grb_ThongTinXe
             // 
@@ -365,16 +376,6 @@
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
-            // 
-            // BienSo
-            // 
-            this.BienSo.Text = "Biển Số";
-            this.BienSo.Width = 102;
-            // 
-            // HieuXe
-            // 
-            this.HieuXe.Text = "Hiệu Xe";
-            this.HieuXe.Width = 144;
             // 
             // XoaXeGUI
             // 

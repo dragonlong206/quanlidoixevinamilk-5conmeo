@@ -67,7 +67,7 @@ namespace DAO
                                       Where BienSo = ?";
 
                 int nRecord = SqlDataAccessHelper.ExcuteNonQuery(strCommand, arrParams);
-                if (nRecord == 1) // Số dòng insert được
+                if (nRecord == 1) 
                 {
                     blnKetQua = true;
                 }
