@@ -32,7 +32,7 @@ namespace BUS
             Boolean blnKetQua = false;
             try
             {
-                DAO.XeDAO.XoaXe(aXe);
+                blnKetQua = DAO.XeDAO.XoaXe(aXe);
             }
             catch (System.Exception ex)
             {

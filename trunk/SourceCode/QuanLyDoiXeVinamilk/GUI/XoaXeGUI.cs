@@ -45,6 +45,7 @@ namespace GUI
         {
             ListViewItem itemKetQua = new ListViewItem(aXe.BienSo);
             itemKetQua.SubItems.Add(aXe.HieuXe);
+            itemKetQua.Tag = aXe;   //Chu y neu thieu cai nay se khong xoa duoc.
             return itemKetQua;
         }
 
@@ -72,7 +73,7 @@ namespace GUI
             {            
                 try
                 {
-                    foreach (ListViewItem itemXe in lsv_DanhSachXe.Items)
+                    foreach (ListViewItem itemXe in lsv_DanhSachXe.SelectedItems)
                     {
                         DTO.XeDTO aXe = (DTO.XeDTO)itemXe.Tag;
                         if (BUS.XeBUS.XoaXe(aXe))

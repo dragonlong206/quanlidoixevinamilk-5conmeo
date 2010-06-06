@@ -57,7 +57,6 @@ D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\ob
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.Properties.Resources.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.TiepNhanDiaDiemFrm.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.TiepNhanXeGUI.resources
-D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.XoaXeFrm.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.csproj.GenerateResource.Cache
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\BUS.pdb
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\DTO.pdb
@@ -67,3 +66,4 @@ D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bi
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\DTO.dll
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\DAO.dll
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\DAO.pdb
+D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.XoaXeGUI.resources
