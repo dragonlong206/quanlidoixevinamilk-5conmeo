@@ -47,13 +47,13 @@ namespace GUI
 
         private void thêmNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NhapNhanVienFrm frm = new NhapNhanVienFrm();
+            frm_TiepNhanNhanVien frm = new frm_TiepNhanNhanVien();
             frm.Show();
         }
 
         private void cậpNhậtThôngTinNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CapNhatThongTinNhanVienFrm frm = new CapNhatThongTinNhanVienFrm();
+            frm_CapNhatThongTinNhanVien frm = new frm_CapNhatThongTinNhanVien();
             frm.Show();
         }
 
@@ -78,6 +78,36 @@ namespace GUI
         private void quảnLýThôngTinhãngXeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_QuanLyHangXe frm = new frm_QuanLyHangXe();
+            frm.Show();
+        }
+
+        private void thêmĐạiLýToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_TiepNhanDiaDiem frm = new frm_TiepNhanDiaDiem();
+            frm.Show();
+        }
+
+        private void cậpNhậtThôngTinĐịaĐiểmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CapNhatDiaDiem frm = new frm_CapNhatDiaDiem();
+            frm.Show();
+        }
+
+        private void xóaĐịaĐiểmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_XoaDiaDiem frm = new frm_XoaDiaDiem();
+            frm.Show();
+        }
+
+        private void xóaNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_XoaNhanVien frm = new frm_XoaNhanVien();
+            frm.Show();
+        }
+
+        private void quảnLýLoạiĐịaĐiểmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_LoaiDiaDiem frm = new frm_LoaiDiaDiem();
             frm.Show();
         }
     }

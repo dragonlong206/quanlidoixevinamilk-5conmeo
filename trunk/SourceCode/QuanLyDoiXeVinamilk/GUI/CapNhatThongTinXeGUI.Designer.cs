@@ -31,6 +31,10 @@
             this.lbl_Title = new System.Windows.Forms.Label();
             this.lbl_BienSo = new System.Windows.Forms.Label();
             this.grb_ThongTinXe = new System.Windows.Forms.GroupBox();
+            this.txt_SoMay = new System.Windows.Forms.TextBox();
+            this.lbl_SoMay = new System.Windows.Forms.Label();
+            this.dtp_NgayTiepNhan = new System.Windows.Forms.DateTimePicker();
+            this.cbo_NhanVien = new System.Windows.Forms.ComboBox();
             this.txt_SoKhung = new System.Windows.Forms.TextBox();
             this.lbl_SoKhung = new System.Windows.Forms.Label();
             this.cbo_TrongTai = new System.Windows.Forms.ComboBox();
@@ -61,10 +65,6 @@
             this.btn_TimKiem = new System.Windows.Forms.Button();
             this.txt_HieuXe_TimKiem = new System.Windows.Forms.TextBox();
             this.lbl_HieuXe_TimKiem = new System.Windows.Forms.Label();
-            this.cbo_NhanVien = new System.Windows.Forms.ComboBox();
-            this.dtp_NgayTiepNhan = new System.Windows.Forms.DateTimePicker();
-            this.lbl_SoMay = new System.Windows.Forms.Label();
-            this.txt_SoMay = new System.Windows.Forms.TextBox();
             this.lsv_DanhSachXe = new System.Windows.Forms.ListView();
             this.STT = new System.Windows.Forms.ColumnHeader();
             this.BienSo = new System.Windows.Forms.ColumnHeader();
@@ -124,12 +124,49 @@
             this.grb_ThongTinXe.Controls.Add(this.lbl_NgayDangKiem);
             this.grb_ThongTinXe.Controls.Add(this.lbl_TrongTai);
             this.grb_ThongTinXe.Controls.Add(this.lbl_LoaiHang);
-            this.grb_ThongTinXe.Location = new System.Drawing.Point(22, 246);
+            this.grb_ThongTinXe.Location = new System.Drawing.Point(22, 254);
             this.grb_ThongTinXe.Name = "grb_ThongTinXe";
             this.grb_ThongTinXe.Size = new System.Drawing.Size(664, 230);
             this.grb_ThongTinXe.TabIndex = 1;
             this.grb_ThongTinXe.TabStop = false;
             this.grb_ThongTinXe.Text = "Thông tin xe";
+            // 
+            // txt_SoMay
+            // 
+            this.txt_SoMay.Location = new System.Drawing.Point(539, 179);
+            this.txt_SoMay.Name = "txt_SoMay";
+            this.txt_SoMay.Size = new System.Drawing.Size(101, 20);
+            this.txt_SoMay.TabIndex = 46;
+            // 
+            // lbl_SoMay
+            // 
+            this.lbl_SoMay.AutoSize = true;
+            this.lbl_SoMay.Location = new System.Drawing.Point(461, 186);
+            this.lbl_SoMay.Name = "lbl_SoMay";
+            this.lbl_SoMay.Size = new System.Drawing.Size(42, 13);
+            this.lbl_SoMay.TabIndex = 45;
+            this.lbl_SoMay.Text = "Số máy";
+            // 
+            // dtp_NgayTiepNhan
+            // 
+            this.dtp_NgayTiepNhan.CustomFormat = "MM/dd/yyyy";
+            this.dtp_NgayTiepNhan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_NgayTiepNhan.Location = new System.Drawing.Point(340, 78);
+            this.dtp_NgayTiepNhan.Name = "dtp_NgayTiepNhan";
+            this.dtp_NgayTiepNhan.Size = new System.Drawing.Size(101, 20);
+            this.dtp_NgayTiepNhan.TabIndex = 44;
+            // 
+            // cbo_NhanVien
+            // 
+            this.cbo_NhanVien.FormattingEnabled = true;
+            this.cbo_NhanVien.Items.AddRange(new object[] {
+            "Bùi Kim Hoa",
+            "Nguyễn Anh",
+            "Nguyễn Khuyến"});
+            this.cbo_NhanVien.Location = new System.Drawing.Point(111, 183);
+            this.cbo_NhanVien.Name = "cbo_NhanVien";
+            this.cbo_NhanVien.Size = new System.Drawing.Size(101, 21);
+            this.cbo_NhanVien.TabIndex = 43;
             // 
             // txt_SoKhung
             // 
@@ -341,7 +378,7 @@
             // btn_Thoat
             // 
             this.btn_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Thoat.Location = new System.Drawing.Point(388, 498);
+            this.btn_Thoat.Location = new System.Drawing.Point(611, 498);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
             this.btn_Thoat.TabIndex = 3;
@@ -352,7 +389,7 @@
             // btn_Luu
             // 
             this.btn_Luu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Luu.Location = new System.Drawing.Point(231, 498);
+            this.btn_Luu.Location = new System.Drawing.Point(311, 498);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(75, 23);
             this.btn_Luu.TabIndex = 2;
@@ -362,7 +399,7 @@
             // 
             // grb_KetQuaTongQuan
             // 
-            this.grb_KetQuaTongQuan.Location = new System.Drawing.Point(22, 114);
+            this.grb_KetQuaTongQuan.Location = new System.Drawing.Point(22, 122);
             this.grb_KetQuaTongQuan.Name = "grb_KetQuaTongQuan";
             this.grb_KetQuaTongQuan.Size = new System.Drawing.Size(664, 126);
             this.grb_KetQuaTongQuan.TabIndex = 24;
@@ -378,7 +415,7 @@
             this.grb_TieuChiTimKiem.Controls.Add(this.cbo_HangXe_TimKiem);
             this.grb_TieuChiTimKiem.Controls.Add(this.lbl_HieuXe_TimKiem);
             this.grb_TieuChiTimKiem.Controls.Add(this.lbl_HangXe_TimKiem);
-            this.grb_TieuChiTimKiem.Location = new System.Drawing.Point(22, 29);
+            this.grb_TieuChiTimKiem.Location = new System.Drawing.Point(22, 37);
             this.grb_TieuChiTimKiem.Name = "grb_TieuChiTimKiem";
             this.grb_TieuChiTimKiem.Size = new System.Drawing.Size(661, 79);
             this.grb_TieuChiTimKiem.TabIndex = 25;
@@ -413,43 +450,6 @@
             this.lbl_HieuXe_TimKiem.Size = new System.Drawing.Size(43, 13);
             this.lbl_HieuXe_TimKiem.TabIndex = 25;
             this.lbl_HieuXe_TimKiem.Text = "Hiệu xe";
-            // 
-            // cbo_NhanVien
-            // 
-            this.cbo_NhanVien.FormattingEnabled = true;
-            this.cbo_NhanVien.Items.AddRange(new object[] {
-            "Bùi Kim Hoa",
-            "Nguyễn Anh",
-            "Nguyễn Khuyến"});
-            this.cbo_NhanVien.Location = new System.Drawing.Point(111, 183);
-            this.cbo_NhanVien.Name = "cbo_NhanVien";
-            this.cbo_NhanVien.Size = new System.Drawing.Size(101, 21);
-            this.cbo_NhanVien.TabIndex = 43;
-            // 
-            // dtp_NgayTiepNhan
-            // 
-            this.dtp_NgayTiepNhan.CustomFormat = "MM/dd/yyyy";
-            this.dtp_NgayTiepNhan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_NgayTiepNhan.Location = new System.Drawing.Point(340, 78);
-            this.dtp_NgayTiepNhan.Name = "dtp_NgayTiepNhan";
-            this.dtp_NgayTiepNhan.Size = new System.Drawing.Size(101, 20);
-            this.dtp_NgayTiepNhan.TabIndex = 44;
-            // 
-            // lbl_SoMay
-            // 
-            this.lbl_SoMay.AutoSize = true;
-            this.lbl_SoMay.Location = new System.Drawing.Point(461, 186);
-            this.lbl_SoMay.Name = "lbl_SoMay";
-            this.lbl_SoMay.Size = new System.Drawing.Size(42, 13);
-            this.lbl_SoMay.TabIndex = 45;
-            this.lbl_SoMay.Text = "Số máy";
-            // 
-            // txt_SoMay
-            // 
-            this.txt_SoMay.Location = new System.Drawing.Point(539, 179);
-            this.txt_SoMay.Name = "txt_SoMay";
-            this.txt_SoMay.Size = new System.Drawing.Size(101, 20);
-            this.txt_SoMay.TabIndex = 46;
             // 
             // lsv_DanhSachXe
             // 

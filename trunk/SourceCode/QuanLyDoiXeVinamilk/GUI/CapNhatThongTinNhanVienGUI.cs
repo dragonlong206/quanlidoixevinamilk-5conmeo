@@ -9,11 +9,16 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frm_TiepNhanDiaDiem : Form
+    public partial class frm_CapNhatThongTinNhanVien : Form
     {
-        public frm_TiepNhanDiaDiem()
+        public frm_CapNhatThongTinNhanVien()
         {
             InitializeComponent();
+        }
+
+        private void lblHoTen_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

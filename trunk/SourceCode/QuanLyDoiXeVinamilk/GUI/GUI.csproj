@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{91E11A85-E0AE-4BE3-AB4C-794DAD236234}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -48,11 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CapNhatThongTinNhanVienFrm.cs">
+    <Compile Include="CapNhatDiaDiemGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapNhatThongTinNhanVienFrm.Designer.cs">
-      <DependentUpon>CapNhatThongTinNhanVienFrm.cs</DependentUpon>
+    <Compile Include="CapNhatDiaDiemGUI.Designer.cs">
+      <DependentUpon>CapNhatDiaDiemGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatThongTinNhanVienGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatThongTinNhanVienGUI.Designer.cs">
+      <DependentUpon>CapNhatThongTinNhanVienGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="CapNhatThongTinXeGUI.cs">
       <SubType>Form</SubType>
@@ -66,10 +72,22 @@
     <Compile Include="LapHoaDonGiaoHangFrm.Designer.cs">
       <DependentUpon>LapHoaDonGiaoHangFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="LoaiDiaDiemGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="LoaiDiaDiemGUI.Designer.cs">
+      <DependentUpon>LoaiDiaDiemGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoaiHangGUI.Designer.cs">
+      <DependentUpon>LoaiHangGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NhapMatHangFrm.cs">
@@ -86,8 +104,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CapNhatThongTinNhanVienFrm.resx">
-      <DependentUpon>CapNhatThongTinNhanVienFrm.cs</DependentUpon>
+    <EmbeddedResource Include="CapNhatDiaDiemGUI.resx">
+      <DependentUpon>CapNhatDiaDiemGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatThongTinNhanVienGUI.resx">
+      <DependentUpon>CapNhatThongTinNhanVienGUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CapNhatThongTinXeGUI.resx">
@@ -98,7 +120,15 @@
       <DependentUpon>LapHoaDonGiaoHangFrm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="LoaiDiaDiemGUI.resx">
+      <DependentUpon>LoaiDiaDiemGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoaiHangGUI.resx">
+      <DependentUpon>LoaiHangGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapMatHangFrm.resx">
@@ -126,8 +156,20 @@
       <DependentUpon>TiepNhanDiaDiemGUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="TiepNhanNhanVienGUI.resx">
+      <DependentUpon>TiepNhanNhanVienGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="TiepNhanXeGUI.resx">
       <DependentUpon>TiepNhanXeGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaDiaDiemGUI.resx">
+      <DependentUpon>XoaDiaDiemGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaNhanVienGUI.resx">
+      <DependentUpon>XoaNhanVienGUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaXeGUI.resx">
@@ -166,11 +208,29 @@
     <Compile Include="QuanLyHangXeGUI.Designer.cs">
       <DependentUpon>QuanLyHangXeGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="TiepNhanNhanVienGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiepNhanNhanVienGUI.Designer.cs">
+      <DependentUpon>TiepNhanNhanVienGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="TiepNhanXeGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TiepNhanXeGUI.Designer.cs">
       <DependentUpon>TiepNhanXeGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaDiaDiemGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaDiaDiemGUI.Designer.cs">
+      <DependentUpon>XoaDiaDiemGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaNhanVienGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaNhanVienGUI.Designer.cs">
+      <DependentUpon>XoaNhanVienGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="XoaXeGUI.cs">
       <SubType>Form</SubType>

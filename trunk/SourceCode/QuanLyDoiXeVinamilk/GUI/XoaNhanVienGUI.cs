@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frm_TiepNhanDiaDiem : Form
+    public partial class frm_XoaNhanVien : Form
     {
-        public frm_TiepNhanDiaDiem()
+        public frm_XoaNhanVien()
         {
             InitializeComponent();
         }
