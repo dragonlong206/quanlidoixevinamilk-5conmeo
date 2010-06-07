@@ -35,7 +35,7 @@ namespace BUS
                 case 3:
                     return "MERCIDES";
                 default:
-                    return "ERORR!";
+                    return "Erorr!";
             }
         }
     }

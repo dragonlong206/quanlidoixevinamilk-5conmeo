@@ -27,6 +27,21 @@ namespace BUS
             return blnDaThemDuoc;
         }
 
+        public static Boolean CapNhatXe(DTO.XeDTO aXe)
+        {
+            Boolean blnDaThemDuoc = false;
+            try
+            {
+                blnDaThemDuoc = XeDAO.CapNhatXe(aXe);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return blnDaThemDuoc;
+        }
+
         public static Boolean XoaXe(DTO.XeDTO aXe)
         {
             Boolean blnKetQua = false;

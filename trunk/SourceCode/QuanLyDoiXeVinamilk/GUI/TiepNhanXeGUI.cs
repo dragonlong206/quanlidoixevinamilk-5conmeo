@@ -34,8 +34,7 @@ namespace GUI
             catch (System.Exception ex)
             {
                 MessageBox.Show("Exception:" + ex.Message);
-            }
-            
+            }            
         }
 
         private DTO.XeDTO NhapXe()

@@ -43,31 +43,34 @@ namespace GUI
             }
 
             lsv_DanhSachXe.Items.Clear();
+            int nSoThuTu = 1;
             foreach (DTO.XeDTO aXeTam in lstXe)
             {
-                lsv_DanhSachXe.Items.Add(TheHienListItem(aXeTam));
+                lsv_DanhSachXe.Items.Add(TheHienListItem(nSoThuTu, aXeTam));
+                nSoThuTu++;
             }
         }
 
-        private ListViewItem TheHienListItem(DTO.XeDTO aXe)
+        private ListViewItem TheHienListItem(int nSoThuTu, DTO.XeDTO aXe)
         {
-            ListViewItem itemKetQua = new ListViewItem(aXe.BienSo);
-            itemKetQua.SubItems.Add(aXe.HieuXe);
+            ListViewItem itemKetQua = new ListViewItem(nSoThuTu.ToString());
+            itemKetQua.SubItems.Add(aXe.BienSo);            
             itemKetQua.Tag = aXe;
 
             //Cac truong sau khong the hien ra, nhung luu lai vao ListView
-            //De tien cho viec the hien thong tin chi tiet o cac TextBox.
-            itemKetQua.SubItems.Add(aXe.NgayTiepNhan.ToString());
-            itemKetQua.SubItems.Add(aXe.NamSanXuat.ToString());
-            itemKetQua.SubItems.Add(aXe.NgayDangKiem.ToString());
-            itemKetQua.SubItems.Add(aXe.DungTichBinh.ToString());
-            itemKetQua.SubItems.Add(aXe.DinhMuc.ToString());
-            itemKetQua.SubItems.Add(aXe.SoKhung);
-            itemKetQua.SubItems.Add(aXe.SoMay);
+            //De tien cho viec the hien thong tin chi tiet o cac TextBox.            
             itemKetQua.SubItems.Add(BUS.HangXeBUS.GetTenHangXe(aXe.MaHangXe));
+            itemKetQua.SubItems.Add(aXe.HieuXe);
             itemKetQua.SubItems.Add(BUS.LoaiHangBUS.GetTenLoaiHang(aXe.MaLoaiHang));
             itemKetQua.SubItems.Add(BUS.TrongTaiBUS.GetTenTrongTai(aXe.MaTrongTai));
             itemKetQua.SubItems.Add(BUS.NhanVienBUS.GetTenNhanVien(aXe.MaNhanVienTiepNhan));
+            itemKetQua.SubItems.Add(aXe.DinhMuc.ToString());
+            itemKetQua.SubItems.Add(aXe.NgayTiepNhan.ToString());
+            itemKetQua.SubItems.Add(aXe.NgayDangKiem.ToString());
+            itemKetQua.SubItems.Add(aXe.NamSanXuat.ToString());
+            itemKetQua.SubItems.Add(aXe.DungTichBinh.ToString());
+            itemKetQua.SubItems.Add(aXe.SoKhung);
+            itemKetQua.SubItems.Add(aXe.SoMay);   
 
             return itemKetQua;
         }

@@ -5,3 +5,10 @@ D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\DAO\ob
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\DAO\obj\Debug\DAO.pdb
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\DAO\bin\Debug\DTO.dll
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\DAO\bin\Debug\DTO.pdb
+D:\SourceCode\QuanLyDoiXeVinamilk\DAO\bin\Debug\DAO.dll
+D:\SourceCode\QuanLyDoiXeVinamilk\DAO\bin\Debug\DAO.pdb
+D:\SourceCode\QuanLyDoiXeVinamilk\DAO\bin\Debug\DTO.dll
+D:\SourceCode\QuanLyDoiXeVinamilk\DAO\bin\Debug\DTO.pdb
+D:\SourceCode\QuanLyDoiXeVinamilk\DAO\obj\Debug\ResolveAssemblyReference.cache
+D:\SourceCode\QuanLyDoiXeVinamilk\DAO\obj\Debug\DAO.dll
+D:\SourceCode\QuanLyDoiXeVinamilk\DAO\obj\Debug\DAO.pdb

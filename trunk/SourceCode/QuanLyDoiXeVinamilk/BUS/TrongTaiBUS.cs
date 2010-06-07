@@ -12,13 +12,13 @@ namespace BUS
         {
             switch(strTrongTai)
             {
-                case "1 tấn":
+                case "1 Tấn":
                     return 1;
-                case "2 tấn":
+                case "2 Tấn":
                     return 2;
-                case "3 tấn":
+                case "3 Tấn":
                     return 3;
-                case "5 tấn":
+                case "5 Tấn":
                     return 4;
                 default:
                     return -1;
@@ -30,13 +30,13 @@ namespace BUS
             switch(nMaTrongTai)
             {
                 case 1:
-                    return "1 tấn";
+                    return "1 Tấn";
                 case 2:
-                    return "2 tấn";
+                    return "2 Tấn";
                 case 3:
-                    return "3 tấn";
+                    return "3 Tấn";
                 case 4:
-                    return "5 tấn";
+                    return "5 Tấn";
                 default:
                     return "erorr!";
             }

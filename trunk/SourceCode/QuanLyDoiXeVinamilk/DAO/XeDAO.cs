@@ -11,28 +11,28 @@ namespace DAO
 {
     public class XeDAO
     {
-        #region 1.Insert
+        #region 1.Thêm
 
-        public static Boolean ThemXe(XeDTO xe)
+        public static Boolean ThemXe(DTO.XeDTO aXe)
         {
             Boolean blnDaThemDuoc = false;
 
             try
             {
                 List<OleDbParameter> arrParams = new List<OleDbParameter>();
-                arrParams.Add(new OleDbParameter("@BienSo", xe.BienSo));
-                arrParams.Add(new OleDbParameter("@DinhMuc", xe.DinhMuc));
-                arrParams.Add(new OleDbParameter("@DungTichBinh", xe.DungTichBinh));
-                arrParams.Add(new OleDbParameter("@HieuXe", xe.HieuXe));
-                arrParams.Add(new OleDbParameter("@MaHangXe", xe.MaHangXe));
-                arrParams.Add(new OleDbParameter("@MaLoaiHang", xe.MaLoaiHang));
-                arrParams.Add(new OleDbParameter("@MaNhanVienTiepNhan", xe.MaNhanVienTiepNhan));
-                arrParams.Add(new OleDbParameter("@MaTrongTai", xe.MaTrongTai));
-                arrParams.Add(new OleDbParameter("@NamSanXuat", xe.NamSanXuat));
-                arrParams.Add(new OleDbParameter("@NgayDangKiem", xe.NgayDangKiem));
-                arrParams.Add(new OleDbParameter("@NgayTiepNhan", xe.NgayTiepNhan));
-                arrParams.Add(new OleDbParameter("@SoKhung", xe.SoKhung));
-                arrParams.Add(new OleDbParameter("@SoMay", xe.SoMay));
+                arrParams.Add(new OleDbParameter("@BienSo", aXe.BienSo));
+                arrParams.Add(new OleDbParameter("@DinhMuc", aXe.DinhMuc));
+                arrParams.Add(new OleDbParameter("@DungTichBinh", aXe.DungTichBinh));
+                arrParams.Add(new OleDbParameter("@HieuXe", aXe.HieuXe));
+                arrParams.Add(new OleDbParameter("@MaHangXe", aXe.MaHangXe));
+                arrParams.Add(new OleDbParameter("@MaLoaiHang", aXe.MaLoaiHang));
+                arrParams.Add(new OleDbParameter("@MaNhanVienTiepNhan", aXe.MaNhanVienTiepNhan));
+                arrParams.Add(new OleDbParameter("@MaTrongTai", aXe.MaTrongTai));
+                arrParams.Add(new OleDbParameter("@NamSanXuat", aXe.NamSanXuat));
+                arrParams.Add(new OleDbParameter("@NgayDangKiem", aXe.NgayDangKiem));
+                arrParams.Add(new OleDbParameter("@NgayTiepNhan", aXe.NgayTiepNhan));
+                arrParams.Add(new OleDbParameter("@SoKhung", aXe.SoKhung));
+                arrParams.Add(new OleDbParameter("@SoMay", aXe.SoMay));
 
                 String strCommand = @"Insert into XE(BienSo, DinhMuc, DungTichBinh, HieuXe, MaHangXe, MaLoaiHang, MaNhanVienTiepNhan, 
                                     MaTrongTai, NamSanXuat, NgayDangKiem, NgayTiepNhan, SoKhung, SoMay)
@@ -54,7 +54,7 @@ namespace DAO
 
         #endregion
 
-        #region 2.Delete
+        #region 2.Xoá
         public static Boolean XoaXe(DTO.XeDTO aXe)
         {
             Boolean blnKetQua = false;
@@ -81,7 +81,49 @@ namespace DAO
         }
         #endregion
 
-        #region 3.Update
+        #region 3.Cập nhật.
+
+        public static Boolean CapNhatXe(DTO.XeDTO aXe)
+        {
+            Boolean blnDaThemDuoc = false;
+
+            try
+            {
+                List<OleDbParameter> arrParams = new List<OleDbParameter>();                                
+                arrParams.Add(new OleDbParameter("@DinhMuc", aXe.DinhMuc));
+                arrParams.Add(new OleDbParameter("@DungTichBinh", aXe.DungTichBinh));
+                arrParams.Add(new OleDbParameter("@HieuXe", aXe.HieuXe));
+                arrParams.Add(new OleDbParameter("@MaHangXe", aXe.MaHangXe));
+                arrParams.Add(new OleDbParameter("@MaLoaiHang", aXe.MaLoaiHang));
+                arrParams.Add(new OleDbParameter("@MaNhanVienTiepNhan", aXe.MaNhanVienTiepNhan));
+                arrParams.Add(new OleDbParameter("@MaTrongTai", aXe.MaTrongTai));
+                arrParams.Add(new OleDbParameter("@NamSanXuat", aXe.NamSanXuat));
+                arrParams.Add(new OleDbParameter("@NgayDangKiem", aXe.NgayDangKiem));
+                arrParams.Add(new OleDbParameter("@NgayTiepNhan", aXe.NgayTiepNhan));
+                arrParams.Add(new OleDbParameter("@SoKhung", aXe.SoKhung));
+                arrParams.Add(new OleDbParameter("@SoMay", aXe.SoMay));
+                arrParams.Add(new OleDbParameter("@BienSo", aXe.BienSo));
+
+                String strCommand = @"Update XE
+                                      Set DinhMuc = ?, DungTichBinh = ?, HieuXe = ?, MaHangXe = ?, MaLoaiHang = ?,
+                                          MaNhanVienTiepNhan = ?, MaTrongTai = ?, NamSanXuat = ?, NgayDangKiem = ?,
+                                          NgayTiepNhan = ?, SoKhung = ?, SoMay = ?
+                                      Where BienSo = aXe.BienSo";   
+
+                int nRecord = SqlDataAccessHelper.ExcuteNonQuery(strCommand, arrParams);
+                if (nRecord == 1) // Số dòng insert được
+                {
+                    blnDaThemDuoc = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return blnDaThemDuoc;
+        }
+
         #endregion
 
         #region 4.Select

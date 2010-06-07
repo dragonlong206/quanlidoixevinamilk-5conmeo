@@ -12,11 +12,11 @@ namespace BUS
         {
             switch(strTenNhanVien)
             {
-                case "BÙI KIM HOA":
+                case "Bùi Kim Hoa":
                     return 1;
-                case "NGUYỄN ANH":
+                case "Nguyễn Anh":
                     return 2;
-                case "NGUYỄN KHUYẾN":
+                case "Nguyễn Khuyến":
                     return 3;
                 default:
                     return -1;
@@ -28,13 +28,13 @@ namespace BUS
             switch(nMaNhanVien)
             {
                 case 1:
-                    return "BÙI KIM HOA";
+                    return "Bùi Kim Hoa";
                 case 2:
-                    return "NGUYỄN ANH";
+                    return "Nguyễn Anh";
                 case 3:
-                    return "NGUYỄN KHUYẾN";
+                    return "Nguyễn Khuyến";
                 default:
-                    return "ERORR!";
+                    return "Erorr!";
             }
         }
     }

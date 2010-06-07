@@ -136,28 +136,28 @@
             // 
             this.cbo_TrongTai.FormattingEnabled = true;
             this.cbo_TrongTai.Items.AddRange(new object[] {
-            "1 tấn",
-            "2 tấn",
-            "3 tấn",
-            "5 tấn"});
+            "1 Tấn",
+            "2 Tấn",
+            "3 Tấn",
+            "5 Tấn"});
             this.cbo_TrongTai.Location = new System.Drawing.Point(340, 30);
             this.cbo_TrongTai.Name = "cbo_TrongTai";
             this.cbo_TrongTai.Size = new System.Drawing.Size(101, 21);
             this.cbo_TrongTai.TabIndex = 1;
-            this.cbo_TrongTai.Text = "3 tấn";
+            this.cbo_TrongTai.Text = "3 Tấn";
             // 
             // cbo_LoaiHang
             // 
             this.cbo_LoaiHang.FormattingEnabled = true;
             this.cbo_LoaiHang.Items.AddRange(new object[] {
-            "hàng thường",
-            "hàng nóng",
-            "hàng lạnh"});
+            "Hàng Thường",
+            "Hàng Nóng",
+            "Hàng Lạnh"});
             this.cbo_LoaiHang.Location = new System.Drawing.Point(111, 128);
             this.cbo_LoaiHang.Name = "cbo_LoaiHang";
             this.cbo_LoaiHang.Size = new System.Drawing.Size(101, 21);
             this.cbo_LoaiHang.TabIndex = 6;
-            this.cbo_LoaiHang.Text = "hàng thường";
+            this.cbo_LoaiHang.Text = "Hàng Thường";
             // 
             // cbo_HangXe
             // 
@@ -338,6 +338,7 @@
             // 
             // btn_Luu
             // 
+            this.btn_Luu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Luu.Location = new System.Drawing.Point(399, 348);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(75, 23);
@@ -348,6 +349,7 @@
             // 
             // btn_Huy
             // 
+            this.btn_Huy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Huy.Location = new System.Drawing.Point(505, 348);
             this.btn_Huy.Name = "btn_Huy";
             this.btn_Huy.Size = new System.Drawing.Size(75, 23);
@@ -358,6 +360,7 @@
             // 
             // btn_Thoat
             // 
+            this.btn_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Thoat.Location = new System.Drawing.Point(612, 348);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
@@ -370,9 +373,9 @@
             // 
             this.cbo_NhanVienTiepNhan.FormattingEnabled = true;
             this.cbo_NhanVienTiepNhan.Items.AddRange(new object[] {
-            "BÙI KIM HOA",
-            "NGUYỄN ANH",
-            "NGUYỄN KHUYẾN"});
+            "Bùi Kim Hoa",
+            "Nguyễn Anh",
+            "Nguyễn Khuyến"});
             this.cbo_NhanVienTiepNhan.Location = new System.Drawing.Point(459, 50);
             this.cbo_NhanVienTiepNhan.Name = "cbo_NhanVienTiepNhan";
             this.cbo_NhanVienTiepNhan.Size = new System.Drawing.Size(121, 21);

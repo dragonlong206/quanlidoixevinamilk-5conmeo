@@ -59,7 +59,7 @@ namespace GUI
 
         private void cậpNhậtThôngTinXeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CapNhatThongTinXeFrm frm = new CapNhatThongTinXeFrm();
+            CapNhatThongTinXeGUI frm = new CapNhatThongTinXeGUI();
             frm.Show();
         }
 

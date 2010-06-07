@@ -31,8 +31,8 @@
             this.lbl_Title = new System.Windows.Forms.Label();
             this.grb_DanhSachXe = new System.Windows.Forms.GroupBox();
             this.lsv_DanhSachXe = new System.Windows.Forms.ListView();
+            this.STT = new System.Windows.Forms.ColumnHeader();
             this.BienSo = new System.Windows.Forms.ColumnHeader();
-            this.HieuXe = new System.Windows.Forms.ColumnHeader();
             this.grb_ThongTinXe = new System.Windows.Forms.GroupBox();
             this.txt_NhanVien = new System.Windows.Forms.TextBox();
             this.lbl_NhanVien = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.lbl_Title.AutoSize = true;
             this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Title.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_Title.Location = new System.Drawing.Point(300, 9);
+            this.lbl_Title.Location = new System.Drawing.Point(270, 8);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(96, 25);
             this.lbl_Title.TabIndex = 4;
@@ -81,7 +81,7 @@
             this.grb_DanhSachXe.Controls.Add(this.lsv_DanhSachXe);
             this.grb_DanhSachXe.Location = new System.Drawing.Point(12, 36);
             this.grb_DanhSachXe.Name = "grb_DanhSachXe";
-            this.grb_DanhSachXe.Size = new System.Drawing.Size(218, 328);
+            this.grb_DanhSachXe.Size = new System.Drawing.Size(178, 328);
             this.grb_DanhSachXe.TabIndex = 3;
             this.grb_DanhSachXe.TabStop = false;
             this.grb_DanhSachXe.Text = "Danh sách xe";
@@ -90,25 +90,26 @@
             // 
             this.lsv_DanhSachXe.CheckBoxes = true;
             this.lsv_DanhSachXe.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.BienSo,
-            this.HieuXe});
+            this.STT,
+            this.BienSo});
+            this.lsv_DanhSachXe.FullRowSelect = true;
             this.lsv_DanhSachXe.Location = new System.Drawing.Point(7, 20);
             this.lsv_DanhSachXe.Name = "lsv_DanhSachXe";
-            this.lsv_DanhSachXe.Size = new System.Drawing.Size(205, 300);
+            this.lsv_DanhSachXe.Size = new System.Drawing.Size(163, 300);
             this.lsv_DanhSachXe.TabIndex = 0;
             this.lsv_DanhSachXe.UseCompatibleStateImageBehavior = false;
             this.lsv_DanhSachXe.View = System.Windows.Forms.View.Details;
             this.lsv_DanhSachXe.SelectedIndexChanged += new System.EventHandler(this.lsv_DanhSachXe_SelectedIndexChanged);
             // 
+            // STT
+            // 
+            this.STT.Text = "STT";
+            this.STT.Width = 50;
+            // 
             // BienSo
             // 
             this.BienSo.Text = "Biển Số";
-            this.BienSo.Width = 102;
-            // 
-            // HieuXe
-            // 
-            this.HieuXe.Text = "Hiệu Xe";
-            this.HieuXe.Width = 144;
+            this.BienSo.Width = 144;
             // 
             // grb_ThongTinXe
             // 
@@ -136,7 +137,7 @@
             this.grb_ThongTinXe.Controls.Add(this.lbl_LoaiHang);
             this.grb_ThongTinXe.Controls.Add(this.lbl_BienSo);
             this.grb_ThongTinXe.Controls.Add(this.lbl_HangXe);
-            this.grb_ThongTinXe.Location = new System.Drawing.Point(236, 36);
+            this.grb_ThongTinXe.Location = new System.Drawing.Point(196, 36);
             this.grb_ThongTinXe.Name = "grb_ThongTinXe";
             this.grb_ThongTinXe.Size = new System.Drawing.Size(461, 328);
             this.grb_ThongTinXe.TabIndex = 0;
@@ -359,6 +360,7 @@
             // 
             // btn_Xoa
             // 
+            this.btn_Xoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Xoa.Location = new System.Drawing.Point(12, 382);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(75, 23);
@@ -369,7 +371,8 @@
             // 
             // btn_Thoat
             // 
-            this.btn_Thoat.Location = new System.Drawing.Point(622, 382);
+            this.btn_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Thoat.Location = new System.Drawing.Point(582, 382);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
             this.btn_Thoat.TabIndex = 2;
@@ -381,7 +384,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 417);
+            this.ClientSize = new System.Drawing.Size(666, 417);
             this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.btn_Xoa);
             this.Controls.Add(this.grb_ThongTinXe);
@@ -432,7 +435,7 @@
         private System.Windows.Forms.ListView lsv_DanhSachXe;
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.ColumnHeader STT;
         private System.Windows.Forms.ColumnHeader BienSo;
-        private System.Windows.Forms.ColumnHeader HieuXe;
     }
 }
