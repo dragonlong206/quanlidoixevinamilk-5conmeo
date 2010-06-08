@@ -26,8 +26,8 @@ namespace GUI
         private void CapNhatThongTinXeGUI_Load(object sender, EventArgs e)
         {
             try
-            {
-                List<DTO.XeDTO> lstXe = BUS.XeBUS.DocDanhSachXe();
+            {                
+                List<DTO.XeDTO> lstXe = BUS.XeBUS.DocDanhSachXe(String.Empty);                
                 XuatDanhSachXe(lstXe);
             }
             catch (System.Exception ex)
@@ -38,6 +38,9 @@ namespace GUI
 
         private void XuatDanhSachXe(List<DTO.XeDTO> lstXe)
         {
+            if (lstXe == null)
+                return;     //khong lam gi ca.
+
             DTO.XeDTO aXe = lstXe[0];
             if (aXe != null)
             {
@@ -231,6 +234,55 @@ namespace GUI
             #endregion
 
             return blnKetQua;
+        }
+
+        #endregion
+
+        #region Tra Cuu Xe
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            String strTieuChiTimKiem = NhapThamSoTimKiem();            
+            
+            try
+            {
+                List<DTO.XeDTO> lstXe = BUS.XeBUS.DocDanhSachXe(strTieuChiTimKiem);
+                XuatDanhSachXe(lstXe);
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex.Message);
+            }            
+        }
+
+        private String NhapThamSoTimKiem()
+        {
+            String strTieuChiTimKiem = String.Empty;
+
+            Boolean blnKiemTra = false;
+            if (txt_BienSo_TimKiem.Text != String.Empty)
+            {
+                strTieuChiTimKiem += " BienSo Like '%" + txt_BienSo_TimKiem.Text + "%'";
+                blnKiemTra = true;
+            }
+            if (txt_HieuXe_TimKiem.Text != String.Empty)
+            {
+                if (blnKiemTra)
+                    strTieuChiTimKiem += " And";
+                strTieuChiTimKiem += " HieuXe Like '" + txt_HieuXe_TimKiem.Text + "%'";
+                blnKiemTra = true;
+            }
+            if (cbo_HangXe_TimKiem.Text != String.Empty)
+            {
+                if (blnKiemTra)
+                    strTieuChiTimKiem += " And";
+                strTieuChiTimKiem += " MaHangXe = " + BUS.HangXeBUS.GetMaHangXe(cbo_HangXe_TimKiem.Text);
+                blnKiemTra = true;
+            }
+            if (blnKiemTra)
+                strTieuChiTimKiem = " Where" + strTieuChiTimKiem;
+            
+            return strTieuChiTimKiem;
         }
 
         #endregion

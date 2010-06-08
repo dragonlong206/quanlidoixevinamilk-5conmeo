@@ -24,7 +24,7 @@ namespace GUI
         {
             try
             {
-                List<DTO.XeDTO> lstXe = XeBUS.DocDanhSachXe();
+                List<DTO.XeDTO> lstXe = XeBUS.DocDanhSachXe(String.Empty);
                 XuatDanhSachXe(lstXe);
             }
             catch (System.Exception ex)
