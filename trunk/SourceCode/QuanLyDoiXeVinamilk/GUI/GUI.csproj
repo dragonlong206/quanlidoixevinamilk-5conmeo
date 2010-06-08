@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{91E11A85-E0AE-4BE3-AB4C-794DAD236234}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -53,6 +53,12 @@
     </Compile>
     <Compile Include="CapNhatDiaDiemGUI.designer.cs">
       <DependentUpon>CapNhatDiaDiemGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatMatHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatMatHangGUI.Designer.cs">
+      <DependentUpon>CapNhatMatHangGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="CapNhatThongTinNhanVienGUI.cs">
       <SubType>Form</SubType>
@@ -107,6 +113,10 @@
     <EmbeddedResource Include="CapNhatDiaDiemGUI.resx">
       <DependentUpon>CapNhatDiaDiemGUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatMatHangGUI.resx">
+      <DependentUpon>CapNhatMatHangGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapNhatThongTinNhanVienGUI.resx">
       <DependentUpon>CapNhatThongTinNhanVienGUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,6 +158,10 @@
       <DependentUpon>QuanLyTrongTaiGUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThemMatHangGUI.resx">
+      <DependentUpon>ThemMatHangGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="TiepNhanDiaDiemGUI.resx">
       <DependentUpon>TiepNhanDiaDiemGUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +174,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XoaDiaDiemGUI.resx">
       <DependentUpon>XoaDiaDiemGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaMatHangGUI.resx">
+      <DependentUpon>XoaMatHangGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaNhanVienGUI.resx">
       <DependentUpon>XoaNhanVienGUI.cs</DependentUpon>
@@ -194,6 +212,12 @@
     <Compile Include="QuanLyHangXeGUI.Designer.cs">
       <DependentUpon>QuanLyHangXeGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemMatHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemMatHangGUI.Designer.cs">
+      <DependentUpon>ThemMatHangGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="TiepNhanDiaDiemGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +241,12 @@
     </Compile>
     <Compile Include="XoaDiaDiemGUI.designer.cs">
       <DependentUpon>XoaDiaDiemGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaMatHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaMatHangGUI.Designer.cs">
+      <DependentUpon>XoaMatHangGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="XoaNhanVienGUI.cs">
       <SubType>Form</SubType>
@@ -264,6 +294,9 @@
       <Project>{0BAA7134-FE74-41E9-89A3-24A3FDAC8E00}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import Data Blue.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

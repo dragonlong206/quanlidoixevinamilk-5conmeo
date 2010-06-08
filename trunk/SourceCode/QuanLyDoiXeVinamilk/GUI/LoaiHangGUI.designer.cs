@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class LoaiHangGUI
+    partial class frm_LoaiHang
     {
         /// <summary>
         /// Required designer variable.
@@ -119,7 +119,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(44, 73);
+            this.btnXoa.Location = new System.Drawing.Point(44, 81);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(168, 23);
             this.btnXoa.TabIndex = 2;
@@ -128,9 +128,9 @@
             // 
             // btn_Sua
             // 
-            this.btn_Sua.Location = new System.Drawing.Point(111, 30);
+            this.btn_Sua.Location = new System.Drawing.Point(44, 52);
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(143, 23);
+            this.btn_Sua.Size = new System.Drawing.Size(168, 23);
             this.btn_Sua.TabIndex = 1;
             this.btn_Sua.Text = "&Sửa tên loại hàng";
             this.btn_Sua.UseVisualStyleBackColor = true;
@@ -149,9 +149,9 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(6, 30);
+            this.btnThem.Location = new System.Drawing.Point(44, 23);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(99, 23);
+            this.btnThem.Size = new System.Drawing.Size(168, 23);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "&Thêm loại hàng";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -165,7 +165,7 @@
             this.btnLuu.Text = "&Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             // 
-            // LoaiHangGUI
+            // frm_LoaiHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -177,7 +177,7 @@
             this.Controls.Add(this.grb_DanhSachLoaiHang);
             this.Controls.Add(this.grb_ThaoTac);
             this.MaximizeBox = false;
-            this.Name = "LoaiHangGUI";
+            this.Name = "frm_LoaiHang";
             this.Text = "Quan ly cac Loai hang";
             this.grb_ThongTin.ResumeLayout(false);
             this.grb_ThongTin.PerformLayout();

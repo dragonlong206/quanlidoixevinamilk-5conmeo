@@ -110,5 +110,35 @@ namespace GUI
             frm_LoaiDiaDiem frm = new frm_LoaiDiaDiem();
             frm.Show();
         }
+
+        private void quảnLýtrọngTảiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_QuanLyTrongTai frm = new frm_QuanLyTrongTai();
+            frm.Show();
+        }
+
+        private void quảnLýLoạiHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_LoaiHang frm = new frm_LoaiHang();
+            frm.Show();
+        }
+
+        private void nhậpMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_ThemMatHang frm = new frm_ThemMatHang();
+            frm.Show();
+        }
+
+        private void chỉnhSửaThôngTinMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CapNhatMatHang frm = new frm_CapNhatMatHang();
+            frm.Show();
+        }
+
+        private void xóaMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_XoaMatHang frm = new frm_XoaMatHang();
+            frm.Show();
+        }
     }
 }
