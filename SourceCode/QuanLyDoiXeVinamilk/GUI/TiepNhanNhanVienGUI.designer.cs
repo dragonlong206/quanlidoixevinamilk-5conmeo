@@ -30,7 +30,7 @@
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.grb_DanhSachNhanVien = new System.Windows.Forms.GroupBox();
-            this.dgv_DanhSachNhanVien = new System.Windows.Forms.DataGridView();
+            this.dtgv_DanhSachNhanVien = new System.Windows.Forms.DataGridView();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,7 +38,7 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.btn_Import = new System.Windows.Forms.Button();
             this.grb_DanhSachNhanVien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_DanhSachNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -55,7 +55,7 @@
             // 
             // grb_DanhSachNhanVien
             // 
-            this.grb_DanhSachNhanVien.Controls.Add(this.dgv_DanhSachNhanVien);
+            this.grb_DanhSachNhanVien.Controls.Add(this.dtgv_DanhSachNhanVien);
             this.grb_DanhSachNhanVien.Location = new System.Drawing.Point(38, 51);
             this.grb_DanhSachNhanVien.Name = "grb_DanhSachNhanVien";
             this.grb_DanhSachNhanVien.Size = new System.Drawing.Size(391, 347);
@@ -63,19 +63,21 @@
             this.grb_DanhSachNhanVien.TabStop = false;
             this.grb_DanhSachNhanVien.Text = "Danh sách nhân viên";
             // 
-            // dgv_DanhSachNhanVien
+            // dtgv_DanhSachNhanVien
             // 
-            this.dgv_DanhSachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DanhSachNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgv_DanhSachNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_DanhSachNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.TenNhanVien,
             this.DienThoai});
-            this.dgv_DanhSachNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_DanhSachNhanVien.Location = new System.Drawing.Point(3, 16);
-            this.dgv_DanhSachNhanVien.Name = "dgv_DanhSachNhanVien";
-            this.dgv_DanhSachNhanVien.RowHeadersVisible = false;
-            this.dgv_DanhSachNhanVien.Size = new System.Drawing.Size(385, 328);
-            this.dgv_DanhSachNhanVien.TabIndex = 0;
+            this.dtgv_DanhSachNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgv_DanhSachNhanVien.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dtgv_DanhSachNhanVien.Location = new System.Drawing.Point(3, 16);
+            this.dtgv_DanhSachNhanVien.Name = "dtgv_DanhSachNhanVien";
+            this.dtgv_DanhSachNhanVien.RowHeadersVisible = false;
+            this.dtgv_DanhSachNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dtgv_DanhSachNhanVien.Size = new System.Drawing.Size(385, 328);
+            this.dtgv_DanhSachNhanVien.TabIndex = 0;
             // 
             // STT
             // 
@@ -137,7 +139,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhap nhan vien";
             this.grb_DanhSachNhanVien.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_DanhSachNhanVien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,7 +149,7 @@
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.GroupBox grb_DanhSachNhanVien;
-        private System.Windows.Forms.DataGridView dgv_DanhSachNhanVien;
+        private System.Windows.Forms.DataGridView dtgv_DanhSachNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn DienThoai;

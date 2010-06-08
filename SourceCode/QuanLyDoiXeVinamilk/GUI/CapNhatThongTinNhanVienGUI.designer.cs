@@ -89,8 +89,11 @@
             this.STT,
             this.TenNhanVien,
             this.DienThoai});
+            this.dgv_DanhSachNhanVien.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgv_DanhSachNhanVien.Location = new System.Drawing.Point(7, 20);
             this.dgv_DanhSachNhanVien.Name = "dgv_DanhSachNhanVien";
+            this.dgv_DanhSachNhanVien.RowHeadersVisible = false;
+            this.dgv_DanhSachNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgv_DanhSachNhanVien.Size = new System.Drawing.Size(371, 321);
             this.dgv_DanhSachNhanVien.TabIndex = 0;
             // 
