@@ -56,9 +56,9 @@ namespace BUS
             return blnKetQua;
         }
 
-        public static List<DTO.XeDTO> DocDanhSachXe()
+        public static List<DTO.XeDTO> DocDanhSachXe(String strTieuChiTimKiem)
         {
-            List<DTO.XeDTO> lstXe = DAO.XeDAO.DocDanhSachXe();
+            List<DTO.XeDTO> lstXe = DAO.XeDAO.DocDanhSachXe(strTieuChiTimKiem);
             return lstXe;
         }
     }

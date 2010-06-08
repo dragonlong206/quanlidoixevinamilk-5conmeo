@@ -128,11 +128,11 @@ namespace DAO
 
         #region 4.Select
 
-        public static List<XeDTO> DocDanhSachXe()
+        public static List<XeDTO> DocDanhSachXe(String strTieuChiTimKiem)
         {
             List<XeDTO> dsXe = new List<XeDTO>();
 
-            String strCommand = "Select * from XE";
+            String strCommand = "Select * from XE" + strTieuChiTimKiem;
             DataTable table = SqlDataAccessHelper.ExcuteQuery(strCommand, null);
 
             foreach (DataRow aDong in table.Rows)
