@@ -41,7 +41,7 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.chk_ChonTatCa = new System.Windows.Forms.CheckBox();
             this.lbl_Title = new System.Windows.Forms.Label();
-            this.btnThoat = new System.Windows.Forms.Button();
+            this.btn_Thoat = new System.Windows.Forms.Button();
             this.grb_TieuChiTimKiem.SuspendLayout();
             this.grb_KetQuaTongQuan.SuspendLayout();
             this.SuspendLayout();
@@ -177,21 +177,21 @@
             this.lbl_Title.TabIndex = 27;
             this.lbl_Title.Text = "XÓA ĐỊA ĐIỂM";
             // 
-            // btnThoat
+            // btn_Thoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(607, 448);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
-            this.btnThoat.TabIndex = 2;
-            this.btnThoat.Text = "&Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btn_Thoat.Location = new System.Drawing.Point(607, 448);
+            this.btn_Thoat.Name = "btn_Thoat";
+            this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
+            this.btn_Thoat.TabIndex = 2;
+            this.btn_Thoat.Text = "&Thoát";
+            this.btn_Thoat.UseVisualStyleBackColor = true;
             // 
             // XoaDiaDiemGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 482);
-            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btn_Thoat);
             this.Controls.Add(this.grb_TieuChiTimKiem);
             this.Controls.Add(this.grb_KetQuaTongQuan);
             this.Controls.Add(this.lbl_Title);
@@ -222,6 +222,6 @@
         private System.Windows.Forms.CheckBox chc_TimChinhXac;
         private System.Windows.Forms.CheckBox chk_ChonTatCa;
         private System.Windows.Forms.Button btn_Xoa;
-        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btn_Thoat;
     }
 }

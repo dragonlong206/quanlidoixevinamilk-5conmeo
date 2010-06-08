@@ -88,6 +88,13 @@ namespace GUI.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Import_Data_Blue {
+            get {
+                object obj = ResourceManager.GetObject("Import Data Blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap logo_vinamilk {
             get {
                 object obj = ResourceManager.GetObject("logo vinamilk", resourceCulture);

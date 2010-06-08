@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frm_LoaiHang : Form
+    public partial class frm_XoaMatHang : Form
     {
-        public frm_LoaiHang()
+        public frm_XoaMatHang()
         {
             InitializeComponent();
         }

@@ -117,9 +117,11 @@
             // 
             // btn_Import
             // 
+            this.btn_Import.Image = global::GUI.Properties.Resources.Import_Data_Blue;
+            this.btn_Import.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Import.Location = new System.Drawing.Point(41, 406);
             this.btn_Import.Name = "btn_Import";
-            this.btn_Import.Size = new System.Drawing.Size(75, 23);
+            this.btn_Import.Size = new System.Drawing.Size(95, 23);
             this.btn_Import.TabIndex = 10;
             this.btn_Import.Text = "&Import";
             this.btn_Import.UseVisualStyleBackColor = true;

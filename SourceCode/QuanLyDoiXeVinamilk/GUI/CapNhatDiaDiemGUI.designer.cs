@@ -38,8 +38,8 @@
             this.lbl_TenDiaDiem = new System.Windows.Forms.Label();
             this.btn_TimKiem = new System.Windows.Forms.Button();
             this.grb_KetQuaTongQuan = new System.Windows.Forms.GroupBox();
-            this.btn_Luu = new System.Windows.Forms.Button();
             this.grb_ThongTinDiaDiem = new System.Windows.Forms.GroupBox();
+            this.btn_Luu = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lbl_ASign = new System.Windows.Forms.Label();
             this.cbo_LoaiDiaDiem = new System.Windows.Forms.ComboBox();
@@ -49,7 +49,7 @@
             this.txt_SoDienThoai = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.txt_Email = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_TenDiaDiem_ThongTin = new System.Windows.Forms.TextBox();
             this.lbl_NguoiLienHe = new System.Windows.Forms.Label();
             this.lbl_ToaDoX = new System.Windows.Forms.Label();
             this.lbl_Email = new System.Windows.Forms.Label();
@@ -167,19 +167,9 @@
             this.grb_KetQuaTongQuan.TabStop = false;
             this.grb_KetQuaTongQuan.Text = "Danh sách địa điểm";
             // 
-            // btn_Luu
-            // 
-            this.btn_Luu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Luu.Enabled = false;
-            this.btn_Luu.Location = new System.Drawing.Point(307, 443);
-            this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(75, 23);
-            this.btn_Luu.TabIndex = 2;
-            this.btn_Luu.Text = "Lưu";
-            this.btn_Luu.UseVisualStyleBackColor = true;
-            // 
             // grb_ThongTinDiaDiem
             // 
+            this.grb_ThongTinDiaDiem.Controls.Add(this.btn_Luu);
             this.grb_ThongTinDiaDiem.Controls.Add(this.comboBox1);
             this.grb_ThongTinDiaDiem.Controls.Add(this.lbl_ASign);
             this.grb_ThongTinDiaDiem.Controls.Add(this.cbo_LoaiDiaDiem);
@@ -189,7 +179,7 @@
             this.grb_ThongTinDiaDiem.Controls.Add(this.txt_SoDienThoai);
             this.grb_ThongTinDiaDiem.Controls.Add(this.textBox2);
             this.grb_ThongTinDiaDiem.Controls.Add(this.txt_Email);
-            this.grb_ThongTinDiaDiem.Controls.Add(this.textBox3);
+            this.grb_ThongTinDiaDiem.Controls.Add(this.txt_TenDiaDiem_ThongTin);
             this.grb_ThongTinDiaDiem.Controls.Add(this.lbl_NguoiLienHe);
             this.grb_ThongTinDiaDiem.Controls.Add(this.lbl_ToaDoX);
             this.grb_ThongTinDiaDiem.Controls.Add(this.lbl_Email);
@@ -200,10 +190,21 @@
             this.grb_ThongTinDiaDiem.Controls.Add(this.label2);
             this.grb_ThongTinDiaDiem.Location = new System.Drawing.Point(18, 280);
             this.grb_ThongTinDiaDiem.Name = "grb_ThongTinDiaDiem";
-            this.grb_ThongTinDiaDiem.Size = new System.Drawing.Size(664, 157);
+            this.grb_ThongTinDiaDiem.Size = new System.Drawing.Size(664, 178);
             this.grb_ThongTinDiaDiem.TabIndex = 1;
             this.grb_ThongTinDiaDiem.TabStop = false;
             this.grb_ThongTinDiaDiem.Text = "Thông tin địa điểm";
+            // 
+            // btn_Luu
+            // 
+            this.btn_Luu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Luu.Enabled = false;
+            this.btn_Luu.Location = new System.Drawing.Point(294, 150);
+            this.btn_Luu.Name = "btn_Luu";
+            this.btn_Luu.Size = new System.Drawing.Size(75, 23);
+            this.btn_Luu.TabIndex = 46;
+            this.btn_Luu.Text = "Lưu";
+            this.btn_Luu.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -275,12 +276,12 @@
             this.txt_Email.Size = new System.Drawing.Size(132, 20);
             this.txt_Email.TabIndex = 7;
             // 
-            // textBox3
+            // txt_TenDiaDiem_ThongTin
             // 
-            this.textBox3.Location = new System.Drawing.Point(91, 32);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(101, 20);
-            this.textBox3.TabIndex = 0;
+            this.txt_TenDiaDiem_ThongTin.Location = new System.Drawing.Point(91, 32);
+            this.txt_TenDiaDiem_ThongTin.Name = "txt_TenDiaDiem_ThongTin";
+            this.txt_TenDiaDiem_ThongTin.Size = new System.Drawing.Size(101, 20);
+            this.txt_TenDiaDiem_ThongTin.TabIndex = 0;
             // 
             // lbl_NguoiLienHe
             // 
@@ -357,7 +358,7 @@
             // btn_Thoat
             // 
             this.btn_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Thoat.Location = new System.Drawing.Point(607, 443);
+            this.btn_Thoat.Location = new System.Drawing.Point(607, 464);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
             this.btn_Thoat.TabIndex = 3;
@@ -368,11 +369,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 471);
+            this.ClientSize = new System.Drawing.Size(695, 499);
             this.Controls.Add(this.lbl_Title);
             this.Controls.Add(this.grb_TieuChiTimKiem);
             this.Controls.Add(this.grb_KetQuaTongQuan);
-            this.Controls.Add(this.btn_Luu);
             this.Controls.Add(this.grb_ThongTinDiaDiem);
             this.Controls.Add(this.btn_Thoat);
             this.Name = "frm_CapNhatDiaDiem";
@@ -395,7 +395,6 @@
         private System.Windows.Forms.GroupBox grb_TieuChiTimKiem;
         private System.Windows.Forms.Button btn_TimKiem;
         private System.Windows.Forms.GroupBox grb_KetQuaTongQuan;
-        private System.Windows.Forms.Button btn_Luu;
         private System.Windows.Forms.GroupBox grb_ThongTinDiaDiem;
         private System.Windows.Forms.Button btn_Thoat;
         private System.Windows.Forms.CheckBox chc_TimChinhXac;
@@ -412,7 +411,7 @@
         private System.Windows.Forms.TextBox txt_SoDienThoai;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txt_Email;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_TenDiaDiem_ThongTin;
         private System.Windows.Forms.Label lbl_NguoiLienHe;
         private System.Windows.Forms.Label lbl_ToaDoX;
         private System.Windows.Forms.Label lbl_Email;
@@ -421,5 +420,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_SoDienThoai;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_Luu;
     }
 }
