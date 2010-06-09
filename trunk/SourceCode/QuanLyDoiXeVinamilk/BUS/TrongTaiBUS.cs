@@ -7,7 +7,7 @@ namespace BUS
 {
     public class TrongTaiBUS
     {
-        //Tam thoi dung ham nay: chinh sua truy xuat CSDL sau.
+       //Tam thoi dung ham nay: chinh sua truy xuat CSDL sau.
         public static int GetMaTrongTai(String strTrongTai)
         {
             switch(strTrongTai)
@@ -38,8 +38,58 @@ namespace BUS
                 case 4:
                     return "5 Tấn";
                 default:
-                    return "erorr!";
+                    return "error!";
             }
+        }
+
+        public static Boolean ThemTrongTai(DTO.TrongTaiDTO aTrongTai)
+        {
+            Boolean blnKetQua = false;
+            try
+            {
+                blnKetQua = DAO.TrongTaiDAO.ThemTrongTai(aTrongTai);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return blnKetQua;
+        }
+
+        public static Boolean XoaTrongTai(DTO.TrongTaiDTO aTrongTai)
+        {
+            Boolean blnKetQua = false;
+            try
+            {
+                blnKetQua = DAO.TrongTaiDAO.XoaTrongTai(aTrongTai);
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+            return blnKetQua;
+        }
+
+        public static bool CapNhatTrongTai(DTO.TrongTaiDTO aTrongTai)
+        {
+            Boolean blnKetQua = false;
+            try
+            {
+                blnKetQua = DAO.TrongTaiDAO.CapNhatTrongTai(aTrongTai);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return blnKetQua;
+        }
+
+        public static List<DTO.TrongTaiDTO> DocDanhSachTrongTai(String strTieuChiTimKiem)
+        {
+            List<DTO.TrongTaiDTO> lstTrongTai = DAO.TrongTaiDAO.DocDanhSachTrongTai(strTieuChiTimKiem);
+            return lstTrongTai;
         }
     }
 }

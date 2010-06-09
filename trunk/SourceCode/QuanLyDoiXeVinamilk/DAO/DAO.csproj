@@ -49,6 +49,7 @@
     <Compile Include="HangXeDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlDataAccessHelper.cs" />
+    <Compile Include="TrongTaiDAO.cs" />
     <Compile Include="XeDAO.cs" />
   </ItemGroup>
   <ItemGroup>

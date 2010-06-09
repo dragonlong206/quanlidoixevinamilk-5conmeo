@@ -10,7 +10,7 @@ namespace DAO
 {
    public class HangXeDAO
     {
-        #region 1.Insert
+       #region 1.Insert
        public static Boolean ThemHangXe(HangXeDTO HangXe)
        {
            Boolean blnKetQua = false;
@@ -36,7 +36,7 @@ namespace DAO
        }
         #endregion
 
-        #region 2.Delete
+       #region 2.Delete
        public static Boolean XoaHangXeDAO(HangXeDTO aHangXe)
        {
            Boolean blnKetQua = false;
@@ -46,7 +46,7 @@ namespace DAO
                List<OleDbParameter> arrParams = new List<OleDbParameter>();
                arrParams.Add(new OleDbParameter("@MaHang", aHangXe.MaHang));
                String strCommand = @"Delete from HANG_XE
-                                      Where MaHang = ?";
+                                     Where MaHang = ?";
 
                int nRecord = SqlDataAccessHelper.ExcuteNonQuery(strCommand, arrParams);
                if (nRecord == 1)
@@ -63,15 +63,16 @@ namespace DAO
        }
         #endregion
 
-        #region 3.Update
+       #region 3.Update
+
        public static bool CapNhatHangXe(HangXeDTO aHangXe)
        {
            Boolean blnKetQua = false;
            try
-           {               
+           {
                List<OleDbParameter> arrParams = new List<OleDbParameter>();
                arrParams.Add(new OleDbParameter("@TenHang", aHangXe.TenHang));
-               arrParams.Add(new OleDbParameter("@MaHang", aHangXe.MaHang));                           
+               arrParams.Add(new OleDbParameter("@MaHang", aHangXe.MaHang));
                String strCommand = @"Update HANG_XE 
                                      Set TenHang = ? 
                                      Where MaHang = ?";
@@ -88,9 +89,10 @@ namespace DAO
            }
            return blnKetQua;
        }
-        #endregion
 
-        #region 4.Select 
+       #endregion
+
+       #region 4.Select 
 
         public static List<DTO.HangXeDTO> DocDanhSachHangXe(String strTieuChiTimKiem)
         {
