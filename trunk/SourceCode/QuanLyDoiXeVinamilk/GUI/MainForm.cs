@@ -119,7 +119,7 @@ namespace GUI
 
         private void quảnLýLoạiHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_LoaiHang frm = new frm_LoaiHang();
+            QuanLyLoaiHangGUI frm = new QuanLyLoaiHangGUI();
             frm.Show();
         }
 

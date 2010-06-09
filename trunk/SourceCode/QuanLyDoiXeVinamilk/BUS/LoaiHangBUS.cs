@@ -1,14 +1,19 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
+using System.Data.OleDb;
+using DAO;
+using DTO;
 
 namespace BUS
 {
     public class LoaiHangBUS
     {        
         public static int GetMaLoaiHang(String strLoaiHang)
-        {
+        {            
             //Tam thoi dung ham nay: chinh sua truy xuat CSDL sau.
             switch(strLoaiHang)
             {
@@ -35,8 +40,57 @@ namespace BUS
                 case 3:
                     return "Hàng Lạnh";
                 default:
-                    return "Erorr!";
+                    return "Error!";
             }
+        }        
+
+        public static Boolean ThemLoaihang(DTO.LoaiHangDTO LoaiHang)
+        {
+            Boolean blnDaThemDuoc = false;
+            try
+            {
+                blnDaThemDuoc = LoaiHangDAO.ThemLoaiHang(LoaiHang);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return blnDaThemDuoc;
         }
-    }
+
+        public static Boolean XoaLoaiHang(LoaiHangDTO LoaiHang)
+        {
+            Boolean blnKetQua = false;
+            try
+            {
+                blnKetQua = LoaiHangDAO.XoaLoaiHang(LoaiHang);
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+            return blnKetQua;
+        }
+
+        public static bool CapNhatLoaiHang(DTO.LoaiHangDTO aLoaiHang)
+        {
+            Boolean blnKetQua = false;
+            try
+            {
+                blnKetQua = DAO.LoaiHangDAO.CapNhatLoaiHang(aLoaiHang);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return blnKetQua;
+        }
+
+        public static List<LoaiHangDTO> DocDanhSachLoaiHang(String strTieuChiTimKiem)
+        {
+            List<LoaiHangDTO> lstLoaiHang = LoaiHangDAO.DocDanhSachLoaiHang(strTieuChiTimKiem);
+            return lstLoaiHang;
+        }
+    }   
 }
