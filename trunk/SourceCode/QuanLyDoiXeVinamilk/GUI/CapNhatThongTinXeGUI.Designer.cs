@@ -31,6 +31,8 @@
             this.lbl_Title = new System.Windows.Forms.Label();
             this.lbl_BienSo = new System.Windows.Forms.Label();
             this.grb_ThongTinXe = new System.Windows.Forms.GroupBox();
+            this.txt_BienSo = new System.Windows.Forms.TextBox();
+            this.lbl_BienSo2 = new System.Windows.Forms.Label();
             this.txt_SoMay = new System.Windows.Forms.TextBox();
             this.lbl_SoMay = new System.Windows.Forms.Label();
             this.dtp_NgayTiepNhan = new System.Windows.Forms.DateTimePicker();
@@ -72,9 +74,7 @@
             this.HieuXe = new System.Windows.Forms.ColumnHeader();
             this.LoaiHang = new System.Windows.Forms.ColumnHeader();
             this.TrongTai = new System.Windows.Forms.ColumnHeader();
-            this.DinhMucNhienLieu = new System.Windows.Forms.ColumnHeader();
-            this.lbl_BienSo2 = new System.Windows.Forms.Label();
-            this.txt_BienSo = new System.Windows.Forms.TextBox();
+            this.NhanVienTiepNhan = new System.Windows.Forms.ColumnHeader();
             this.grb_ThongTinXe.SuspendLayout();
             this.grb_TieuChiTimKiem.SuspendLayout();
             this.SuspendLayout();
@@ -134,6 +134,22 @@
             this.grb_ThongTinXe.TabIndex = 1;
             this.grb_ThongTinXe.TabStop = false;
             this.grb_ThongTinXe.Text = "Thông tin xe";
+            // 
+            // txt_BienSo
+            // 
+            this.txt_BienSo.Location = new System.Drawing.Point(102, 35);
+            this.txt_BienSo.Name = "txt_BienSo";
+            this.txt_BienSo.Size = new System.Drawing.Size(101, 20);
+            this.txt_BienSo.TabIndex = 48;
+            // 
+            // lbl_BienSo2
+            // 
+            this.lbl_BienSo2.AutoSize = true;
+            this.lbl_BienSo2.Location = new System.Drawing.Point(18, 38);
+            this.lbl_BienSo2.Name = "lbl_BienSo2";
+            this.lbl_BienSo2.Size = new System.Drawing.Size(44, 13);
+            this.lbl_BienSo2.TabIndex = 47;
+            this.lbl_BienSo2.Text = "Biển Số";
             // 
             // txt_SoMay
             // 
@@ -466,8 +482,9 @@
             this.HieuXe,
             this.LoaiHang,
             this.TrongTai,
-            this.DinhMucNhienLieu});
+            this.NhanVienTiepNhan});
             this.lsv_DanhSachXe.FullRowSelect = true;
+            this.lsv_DanhSachXe.GridLines = true;
             this.lsv_DanhSachXe.Location = new System.Drawing.Point(31, 133);
             this.lsv_DanhSachXe.Name = "lsv_DanhSachXe";
             this.lsv_DanhSachXe.Size = new System.Drawing.Size(652, 106);
@@ -506,26 +523,10 @@
             this.TrongTai.Text = "Trọng Tải";
             this.TrongTai.Width = 77;
             // 
-            // DinhMucNhienLieu
+            // NhanVienTiepNhan
             // 
-            this.DinhMucNhienLieu.Text = "Định Mức Nhiên Liệu";
-            this.DinhMucNhienLieu.Width = 117;
-            // 
-            // lbl_BienSo2
-            // 
-            this.lbl_BienSo2.AutoSize = true;
-            this.lbl_BienSo2.Location = new System.Drawing.Point(18, 38);
-            this.lbl_BienSo2.Name = "lbl_BienSo2";
-            this.lbl_BienSo2.Size = new System.Drawing.Size(44, 13);
-            this.lbl_BienSo2.TabIndex = 47;
-            this.lbl_BienSo2.Text = "Biển Số";
-            // 
-            // txt_BienSo
-            // 
-            this.txt_BienSo.Location = new System.Drawing.Point(102, 35);
-            this.txt_BienSo.Name = "txt_BienSo";
-            this.txt_BienSo.Size = new System.Drawing.Size(101, 20);
-            this.txt_BienSo.TabIndex = 48;
+            this.NhanVienTiepNhan.Text = "Nhân viên tiếp nhận";
+            this.NhanVienTiepNhan.Width = 117;
             // 
             // CapNhatThongTinXeGUI
             // 
@@ -599,7 +600,7 @@
         private System.Windows.Forms.ColumnHeader HieuXe;
         private System.Windows.Forms.ColumnHeader LoaiHang;
         private System.Windows.Forms.ColumnHeader TrongTai;
-        private System.Windows.Forms.ColumnHeader DinhMucNhienLieu;
+        private System.Windows.Forms.ColumnHeader NhanVienTiepNhan;
         private System.Windows.Forms.TextBox txt_BienSo;
         private System.Windows.Forms.Label lbl_BienSo2;
     }
