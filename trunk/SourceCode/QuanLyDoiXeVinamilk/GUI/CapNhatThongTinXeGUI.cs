@@ -14,12 +14,7 @@ namespace GUI
         public CapNhatThongTinXeGUI()
         {
             InitializeComponent();
-        }
-
-        private void btn_Thoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        }        
 
         #region XuatThongTinXe
 
@@ -286,5 +281,10 @@ namespace GUI
         }
 
         #endregion
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

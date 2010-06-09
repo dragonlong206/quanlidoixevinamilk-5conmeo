@@ -410,7 +410,7 @@
             // btn_Luu
             // 
             this.btn_Luu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Luu.Location = new System.Drawing.Point(301, 520);
+            this.btn_Luu.Location = new System.Drawing.Point(512, 520);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(75, 23);
             this.btn_Luu.TabIndex = 2;

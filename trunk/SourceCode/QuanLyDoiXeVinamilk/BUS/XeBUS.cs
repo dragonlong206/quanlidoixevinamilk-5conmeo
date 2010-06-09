@@ -14,32 +14,32 @@ namespace BUS
     {
         public static Boolean ThemXe(XeDTO xe)
         {
-            Boolean blnDaThemDuoc = false;
+            Boolean blnKetQua = false;
             try
             {
-                blnDaThemDuoc = XeDAO.ThemXe(xe);
+                blnKetQua = XeDAO.ThemXe(xe);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
 
-            return blnDaThemDuoc;
+            return blnKetQua;
         }
 
         public static Boolean CapNhatXe(DTO.XeDTO aXe)
         {
-            Boolean blnDaThemDuoc = false;
+            Boolean blnKetQua = false;
             try
             {
-                blnDaThemDuoc = XeDAO.CapNhatXe(aXe);
+                blnKetQua = XeDAO.CapNhatXe(aXe);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
 
-            return blnDaThemDuoc;
+            return blnKetQua;
         }
 
         public static Boolean XoaXe(DTO.XeDTO aXe)

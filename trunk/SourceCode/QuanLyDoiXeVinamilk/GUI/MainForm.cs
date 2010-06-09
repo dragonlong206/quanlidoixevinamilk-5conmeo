@@ -77,7 +77,7 @@ namespace GUI
 
         private void quảnLýThôngTinhãngXeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_QuanLyHangXe frm = new frm_QuanLyHangXe();
+            QuanLyHangXeGUI frm = new QuanLyHangXeGUI();
             frm.Show();
         }
 
