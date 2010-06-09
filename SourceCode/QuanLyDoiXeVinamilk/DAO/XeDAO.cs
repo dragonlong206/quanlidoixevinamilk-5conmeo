@@ -15,7 +15,7 @@ namespace DAO
 
         public static Boolean ThemXe(DTO.XeDTO aXe)
         {
-            Boolean blnDaThemDuoc = false;
+            Boolean blnKetQua = false;
 
             try
             {
@@ -41,7 +41,7 @@ namespace DAO
                 int nRecord = SqlDataAccessHelper.ExcuteNonQuery(strCommand, arrParams);
                 if (nRecord == 1) // Số dòng insert được
                 {
-                    blnDaThemDuoc = true;
+                    blnKetQua = true;
                 }
             }
             catch (Exception ex)
@@ -49,7 +49,7 @@ namespace DAO
                 throw ex;
             }
 
-            return blnDaThemDuoc;
+            return blnKetQua;
         }
 
         #endregion
@@ -85,7 +85,7 @@ namespace DAO
 
         public static Boolean CapNhatXe(DTO.XeDTO aXe)
         {
-            Boolean blnDaThemDuoc = false;
+            Boolean blnKetQua = false;
 
             try
             {
@@ -108,12 +108,12 @@ namespace DAO
                                       Set DinhMuc = ?, DungTichBinh = ?, HieuXe = ?, MaHangXe = ?, MaLoaiHang = ?,
                                           MaNhanVienTiepNhan = ?, MaTrongTai = ?, NamSanXuat = ?, NgayDangKiem = ?,
                                           NgayTiepNhan = ?, SoKhung = ?, SoMay = ?
-                                      Where BienSo = aXe.BienSo";   
+                                      Where BienSo = ?";   
 
                 int nRecord = SqlDataAccessHelper.ExcuteNonQuery(strCommand, arrParams);
                 if (nRecord == 1) // Số dòng insert được
                 {
-                    blnDaThemDuoc = true;
+                    blnKetQua = true;
                 }
             }
             catch (Exception ex)
@@ -121,7 +121,7 @@ namespace DAO
                 throw ex;
             }
 
-            return blnDaThemDuoc;
+            return blnKetQua;
         }
 
         #endregion
@@ -130,17 +130,17 @@ namespace DAO
 
         public static List<XeDTO> DocDanhSachXe(String strTieuChiTimKiem)
         {
-            List<XeDTO> dsXe = new List<XeDTO>();
+            List<XeDTO> lstXe = new List<XeDTO>();
 
             String strCommand = "Select * from XE" + strTieuChiTimKiem;
             DataTable table = SqlDataAccessHelper.ExcuteQuery(strCommand, null);
 
             foreach (DataRow aDong in table.Rows)
             {                
-                dsXe.Add(KhoiTao(aDong));
+                lstXe.Add(KhoiTao(aDong));
             }
 
-            return dsXe;
+            return lstXe;
         }
 
         public static DTO.XeDTO KhoiTao(DataRow aDong)
@@ -162,39 +162,7 @@ namespace DAO
             aXe.SoMay = aDong["SoMay"].ToString();
 
             return aXe;
-        }
-
-        public static XeDTO LayXeTheoBienSo(String strBienSo)
-        {
-            XeDTO xe = null;
-
-            String strCommand = "Select * from XE where BienSo = ?";
-            OleDbParameter param = new OleDbParameter("@BienSo", strBienSo);
-            List<OleDbParameter> arrParams = new List<OleDbParameter>();
-            arrParams.Add(param);
-
-            DataTable table = SqlDataAccessHelper.ExcuteQuery(strCommand, arrParams);
-
-            if (table.Rows.Count > 0)
-            {
-                xe = new XeDTO();
-                xe.BienSo = table.Rows[0]["BienSo"].ToString();
-                xe.DinhMuc = float.Parse(table.Rows[0]["DinhMuc"].ToString());
-                xe.DungTichBinh = float.Parse(table.Rows[0]["DungTichBinh"].ToString());
-                xe.HieuXe = table.Rows[0]["HieuXe"].ToString();
-                xe.MaHangXe = int.Parse(table.Rows[0]["MaHangXe"].ToString());
-                xe.MaLoaiHang = int.Parse(table.Rows[0]["MaLoaiHang"].ToString());
-                xe.MaNhanVienTiepNhan = int.Parse(table.Rows[0]["MaNhanVienTiepNhan"].ToString());
-                xe.MaTrongTai = int.Parse(table.Rows[0]["MaTrongTai"].ToString());
-                xe.NamSanXuat = int.Parse(table.Rows[0]["NamSanXuat"].ToString());
-                xe.NgayDangKiem = DateTime.Parse(table.Rows[0]["NgayDangKiem"].ToString());
-                xe.NgayTiepNhan = DateTime.Parse(table.Rows[0]["NgayTiepNhan"].ToString());
-                xe.SoKhung = table.Rows[0]["SoKhung"].ToString();
-                xe.SoMay = table.Rows[0]["SoMay"].ToString();
-            }
-
-            return xe;
-        }
+        }        
 
         #endregion
     }

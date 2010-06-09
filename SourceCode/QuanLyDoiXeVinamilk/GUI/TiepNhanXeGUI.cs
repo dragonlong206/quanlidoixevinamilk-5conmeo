@@ -16,6 +16,8 @@ namespace GUI
             InitializeComponent();
         }
 
+        #region Them Xe
+
         private void btn_Luu_Click(object sender, EventArgs e)
         {
             DTO.XeDTO aXe = NhapXe();
@@ -141,10 +143,7 @@ namespace GUI
             return blnKetQua;
         }
 
-        private void btn_Thoat_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        #endregion        
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
@@ -160,6 +159,11 @@ namespace GUI
             cbo_NhanVienTiepNhan.Text = String.Empty;
             cbo_TrongTai.Text = String.Empty;
             dtp_NgayDangKiem.Text = String.Empty;
-        }              
+        }
+
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }                 
     }
 }

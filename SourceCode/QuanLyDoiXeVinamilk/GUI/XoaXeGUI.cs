@@ -60,16 +60,16 @@ namespace GUI
             //Cac truong sau khong the hien ra, nhung luu lai vao ListView
             //De tien cho viec the hien thong tin chi tiet o cac TextBox.            
             itemKetQua.SubItems.Add(BUS.HangXeBUS.GetTenHangXe(aXe.MaHangXe));
-            itemKetQua.SubItems.Add(aXe.HieuXe);
+            itemKetQua.SubItems.Add(BUS.NhanVienBUS.GetTenNhanVien(aXe.MaNhanVienTiepNhan));
             itemKetQua.SubItems.Add(BUS.LoaiHangBUS.GetTenLoaiHang(aXe.MaLoaiHang));
             itemKetQua.SubItems.Add(BUS.TrongTaiBUS.GetTenTrongTai(aXe.MaTrongTai));
-            itemKetQua.SubItems.Add(BUS.NhanVienBUS.GetTenNhanVien(aXe.MaNhanVienTiepNhan));
-            itemKetQua.SubItems.Add(aXe.DinhMuc.ToString());
-            itemKetQua.SubItems.Add(aXe.NgayTiepNhan.ToString());
-            itemKetQua.SubItems.Add(aXe.NgayDangKiem.ToString());
+            itemKetQua.SubItems.Add(aXe.HieuXe);
             itemKetQua.SubItems.Add(aXe.NamSanXuat.ToString());
             itemKetQua.SubItems.Add(aXe.DungTichBinh.ToString());
-            itemKetQua.SubItems.Add(aXe.SoKhung);
+            itemKetQua.SubItems.Add(aXe.DinhMuc.ToString());                     
+            itemKetQua.SubItems.Add(aXe.NgayTiepNhan.ToString());
+            itemKetQua.SubItems.Add(aXe.NgayDangKiem.ToString());
+            itemKetQua.SubItems.Add(aXe.SoKhung);   
             itemKetQua.SubItems.Add(aXe.SoMay);   
 
             return itemKetQua;
@@ -88,17 +88,18 @@ namespace GUI
         private void XuatChiTietXe(DTO.XeDTO aXe)
         {
             txt_BienSo.Text = aXe.BienSo;
-            txt_DinhMucNhienLieu.Text = aXe.DinhMuc.ToString();
-            txt_DungTichBinh.Text = aXe.DungTichBinh.ToString();
             txt_HangXe.Text = BUS.HangXeBUS.GetTenHangXe(aXe.MaHangXe);
-            txt_HieuXe.Text = aXe.HieuXe;
-            txt_LoaiHang.Text = BUS.LoaiHangBUS.GetTenLoaiHang(aXe.MaLoaiHang);
-            txt_NamSanXuat.Text = aXe.NamSanXuat.ToString();
-            txt_NgayDangKiem.Text = aXe.NgayDangKiem.ToString();
             txt_NhanVien.Text = BUS.NhanVienBUS.GetTenNhanVien(aXe.MaNhanVienTiepNhan);
-            txt_SoKhung.Text = aXe.SoKhung;
-            txt_SoMay.Text = aXe.SoMay;
+            txt_LoaiHang.Text = BUS.LoaiHangBUS.GetTenLoaiHang(aXe.MaLoaiHang);
             txt_TrongTai.Text = BUS.TrongTaiBUS.GetTenTrongTai(aXe.MaTrongTai);
+            txt_HieuXe.Text = aXe.HieuXe.ToString();            
+            txt_NamSanXuat.Text = aXe.NamSanXuat.ToString();
+            txt_DinhMucNhienLieu.Text = aXe.DinhMuc.ToString();
+            txt_DungTichBinh.Text = aXe.DungTichBinh.ToString();                        
+            txt_NgayDangKiem.Text = aXe.NgayDangKiem.ToString("MM/dd/yyyy");        
+            txt_NgayTiepNhan.Text = aXe.NgayTiepNhan.ToString("MM/dd/yyyy");
+            txt_SoKhung.Text = aXe.SoKhung;
+            txt_SoMay.Text = aXe.SoMay;            
         }
         #endregion
 
@@ -129,9 +130,60 @@ namespace GUI
             }
         }
         #endregion
+
+
+        #region Tra cuu xe theo BienSo.       
+
+        private void btn_TimKiem_Click(object sender, EventArgs e)
+        {
+            String strTieuChiTimKiem = NhapThamSoTimKiem();
+
+            try
+            {
+                List<DTO.XeDTO> lstXe = BUS.XeBUS.DocDanhSachXe(strTieuChiTimKiem);
+                XuatDanhSachXe(lstXe);
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex.Message);
+            }   
+        }
+
+        private String NhapThamSoTimKiem()
+        {
+            String strTieuChiTimKiem = String.Empty;
+
+            Boolean blnKiemTra = false;
+            if (txt_BienSo_TimKiem.Text != String.Empty)
+            {
+                strTieuChiTimKiem += " BienSo Like '%" + txt_BienSo_TimKiem.Text + "%'";
+                blnKiemTra = true;
+            }
+            if (txt_HieuXe_TimKiem.Text != String.Empty)
+            {
+                if (blnKiemTra)
+                    strTieuChiTimKiem += " And";
+                strTieuChiTimKiem += " HieuXe Like '" + txt_HieuXe_TimKiem.Text + "%'";
+                blnKiemTra = true;
+            }
+            if (cbo_HangXe_TimKiem.Text != String.Empty)
+            {
+                if (blnKiemTra)
+                    strTieuChiTimKiem += " And";
+                strTieuChiTimKiem += " MaHangXe = " + BUS.HangXeBUS.GetMaHangXe(cbo_HangXe_TimKiem.Text);
+                blnKiemTra = true;
+            }
+            if (blnKiemTra)
+                strTieuChiTimKiem = " Where" + strTieuChiTimKiem;
+
+            return strTieuChiTimKiem;
+        }
+
+        #endregion
+
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        }                     
     }
 }
