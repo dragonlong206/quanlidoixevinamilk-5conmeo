@@ -11,7 +11,7 @@ namespace DAO
 {
     public class XeDAO
     {
-        #region 1.Thêm
+        #region 1.Thêm Xe
 
         public static Boolean ThemXe(DTO.XeDTO aXe)
         {
@@ -54,7 +54,7 @@ namespace DAO
 
         #endregion
 
-        #region 2.Xoá
+        #region 2.Xoá Xe
         public static Boolean XoaXe(DTO.XeDTO aXe)
         {
             Boolean blnKetQua = false;
@@ -81,7 +81,7 @@ namespace DAO
         }
         #endregion
 
-        #region 3.Cập nhật.
+        #region 3.Cập nhật Xe.
 
         public static Boolean CapNhatXe(DTO.XeDTO aXe)
         {
@@ -126,7 +126,7 @@ namespace DAO
 
         #endregion
 
-        #region 4.Select
+        #region 4. Đọc danh sách Xe.
 
         public static List<XeDTO> DocDanhSachXe(String strTieuChiTimKiem)
         {

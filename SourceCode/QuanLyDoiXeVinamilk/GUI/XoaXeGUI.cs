@@ -36,11 +36,8 @@ namespace GUI
 
         private void XuatDanhSachXe(List<DTO.XeDTO> lstXe)
         {
-            DTO.XeDTO aXe = lstXe[0];
-            if (aXe != null)
-            {
-                XuatChiTietXe(aXe);
-            }
+            if (lstXe == null)
+                return;     //Khong lam gi ca.
 
             lsv_DanhSachXe.Items.Clear();
             int nSoThuTu = 1;
@@ -126,11 +123,29 @@ namespace GUI
             }
             else
             {
-                MessageBox.Show("Chua co xe nao duoc chon");
+                if (lsv_DanhSachXe.SelectedItems.Count > 0)
+                {
+                    try
+                    {
+                        foreach (ListViewItem itemXe in lsv_DanhSachXe.SelectedItems)
+                        {
+                            XeDTO aXe = (XeDTO)itemXe.Tag;
+                            if (XeBUS.XoaXe(aXe))
+                            {
+                                lsv_DanhSachXe.Items.Remove(itemXe);
+                            }
+                        }
+                    }
+                    catch (System.Exception ex)
+                    {
+                        MessageBox.Show("Exception: " + ex.Message);
+                    }
+                }
+                else
+                    MessageBox.Show("Chua co xe nao duoc chon");
             }
         }
         #endregion
-
 
         #region Tra cuu xe theo BienSo.       
 

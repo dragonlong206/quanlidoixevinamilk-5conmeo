@@ -91,7 +91,7 @@ namespace GUI
                 }
                 else
                 {
-                    MessageBox.Show("Loi ghi du lieu. Vui long kiem tra du lieu nhap");
+                    MessageBox.Show("Vui long kiem tra du lieu nhap");
                 }                
             }
             catch (System.Exception ex)
@@ -147,8 +147,7 @@ namespace GUI
                         HangXeDTO aHangXe =(HangXeDTO) itemHangXe.Tag;
                         if (HangXeBUS.XoaHangXe(aHangXe))
                         {
-                            lsv_DanhSachHangXe.Items.Remove(itemHangXe);
-                          
+                            lsv_DanhSachHangXe.Items.Remove(itemHangXe);                          
                         }
                     }
                 }
@@ -185,7 +184,7 @@ namespace GUI
 
         #endregion
 
-        #region Sua HangXe.
+        #region Cap nhat HangXe.
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
@@ -194,8 +193,11 @@ namespace GUI
                 try
                 {
                     ListViewItem itemHangXe = lsv_DanhSachHangXe.SelectedItems[0];
-                    HangXeDTO aHangXe = (HangXeDTO)itemHangXe.Tag;
-                    aHangXe.TenHang = txt_TenHang.Text;
+                    HangXeDTO aHangXeTam = (HangXeDTO)itemHangXe.Tag;
+                    HangXeDTO aHangXe = NhapHangXe();
+                    if (aHangXe == null)
+                        return; //khong lam gi ca.
+                    aHangXe.MaHang = aHangXeTam.MaHang;
 
                     if (HangXeBUS.CapNhatHangXe(aHangXe))
                     {                        

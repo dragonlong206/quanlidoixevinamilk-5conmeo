@@ -35,13 +35,7 @@ namespace GUI
         {
             if (lstXe == null)
                 return;     //khong lam gi ca.
-
-            DTO.XeDTO aXe = lstXe[0];
-            if (aXe != null)
-            {
-                XuatChiTietXe(aXe);
-            }
-
+            
             lsv_DanhSachXe.Items.Clear();
             int nSoThuTu = 1;
             foreach (DTO.XeDTO aXeTam in lstXe)

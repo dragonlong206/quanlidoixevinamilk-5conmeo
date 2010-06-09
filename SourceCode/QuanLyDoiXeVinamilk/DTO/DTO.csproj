@@ -48,6 +48,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="HangXeDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrongTaiDTO.cs" />
     <Compile Include="XeDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -113,7 +113,7 @@ namespace GUI
 
         private void quảnLýtrọngTảiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_QuanLyTrongTai frm = new frm_QuanLyTrongTai();
+            QuanLyTrongTaiGUI frm = new QuanLyTrongTaiGUI();
             frm.Show();
         }
 

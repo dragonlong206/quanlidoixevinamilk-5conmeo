@@ -155,6 +155,7 @@
             this.TrangThai_BCTTGiaoHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbo_Thang = new System.Windows.Forms.ComboBox();
             this.lbl_Thang = new System.Windows.Forms.Label();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuHopDen.SuspendLayout();
             this.grbDanhSachHopDen.SuspendLayout();
             this.tabMainTab.SuspendLayout();
@@ -298,6 +299,7 @@
             this.tiếpNhậnXeMớiToolStripMenuItem,
             this.cậpNhậtThôngTinXeToolStripMenuItem,
             this.xóaXeToolStripMenuItem,
+            this.toolStripSeparator1,
             this.quảnLýThôngTinhãngXeToolStripMenuItem,
             this.quảnLýtrọngTảiToolStripMenuItem});
             this.quảnLýXeToolStripMenuItem.Name = "quảnLýXeToolStripMenuItem";
@@ -1339,6 +1341,11 @@
             this.lbl_Thang.TabIndex = 20;
             this.lbl_Thang.Text = "Tháng";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(176, 6);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1519,5 +1526,6 @@
         private System.Windows.Forms.ToolStripMenuItem chỉnhSửaThôngTinMặtHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xóaMặtHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýLoạiHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
