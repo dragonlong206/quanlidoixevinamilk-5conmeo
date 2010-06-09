@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{91E11A85-E0AE-4BE3-AB4C-794DAD236234}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -154,6 +154,9 @@
       <DependentUpon>QuanLyHangXeGUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyLoaiHangGUI.resx">
+      <DependentUpon>QuanLyLoaiHangGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTrongTaiGUI.resx">
       <DependentUpon>QuanLyTrongTaiGUI.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -199,6 +202,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QuanLyLoaiHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyLoaiHangGUI.designer.cs">
+      <DependentUpon>QuanLyLoaiHangGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyTrongTaiGUI.cs">
       <SubType>Form</SubType>

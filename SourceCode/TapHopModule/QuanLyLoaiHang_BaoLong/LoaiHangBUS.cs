@@ -14,14 +14,16 @@ namespace BUS
     {        
         public static int GetMaLoaiHang(String strLoaiHang)
         {
+            public static int GetMaLoaiHang(String strLoaiHang)
+        {
             //Tam thoi dung ham nay: chinh sua truy xuat CSDL sau.
             switch(strLoaiHang)
             {
-                case "hàng thường":
+                case "Hàng Thường":
                     return 1;
-                case "hàng nóng":
+                case "Hàng Nóng":
                     return 2;
-                case "hàng lạnh":
+                case "Hàng Lạnh":
                     return 3;
                 default:
                     return -1;
@@ -34,14 +36,15 @@ namespace BUS
             switch(nMaLoaiHang)
             {
                 case 1:
-                    return "hàng thường";
+                    return "Hàng Thường";
                 case 2:
-                    return "hàng nóng";
+                    return "Hàng Nóng";
                 case 3:
-                    return "hàng lạnh";
+                    return "Hàng Lạnh";
                 default:
-                    return "erorr!";
+                    return "Erorr!";
             }
+        }
         }
 
         public static Boolean ThemLoaihang(LoaiHangDTO LoaiHang)

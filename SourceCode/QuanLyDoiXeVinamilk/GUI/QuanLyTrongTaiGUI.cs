@@ -67,6 +67,7 @@ namespace GUI
                 XuatChiTietTrongTai(aTrongTai);
             }
         }
+
         private void XuatChiTietTrongTai(DTO.TrongTaiDTO aTrongTai)
         {
             txt_GiaTri.Text = aTrongTai.GiaTri.ToString();
@@ -162,8 +163,8 @@ namespace GUI
                     {
                         foreach (ListViewItem itemTrongTai in lsv_DanhSachTrongTai.SelectedItems)
                         {
-                            TrongTaiDTO aTrongTai = (TrongTaiDTO)itemTrongTai.Tag;
-                            if (TrongTaiBUS.XoaTrongTai(aTrongTai))
+                            DTO.TrongTaiDTO aTrongTai = (DTO.TrongTaiDTO)itemTrongTai.Tag;
+                            if (BUS.TrongTaiBUS.XoaTrongTai(aTrongTai))
                             {
                                 lsv_DanhSachTrongTai.Items.Remove(itemTrongTai);
 
@@ -189,13 +190,13 @@ namespace GUI
                 try
                 {
                     ListViewItem itemTrongTai = lsv_DanhSachTrongTai.SelectedItems[0];
-                    TrongTaiDTO aTrongTaiTam = (TrongTaiDTO)itemTrongTai.Tag;
-                    TrongTaiDTO aTrongTai = NhapTrongTai();
+                    DTO.TrongTaiDTO aTrongTaiTam = (DTO.TrongTaiDTO)itemTrongTai.Tag;
+                    DTO.TrongTaiDTO aTrongTai = NhapTrongTai();
                     if (aTrongTai == null)                    
                         return; //khong lam gi ca.                                        
                     aTrongTai.MaTrongTai = aTrongTaiTam.MaTrongTai;
 
-                    if (TrongTaiBUS.CapNhatTrongTai(aTrongTai))
+                    if (BUS.TrongTaiBUS.CapNhatTrongTai(aTrongTai))
                     {
                         QuanLyTrongTaiGUI_Load(sender, e);
                     }
