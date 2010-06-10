@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="HangXeBUS.cs" />
+    <Compile Include="LoaiDiaDiemBUS.cs" />
     <Compile Include="LoaiHangBUS.cs" />
     <Compile Include="NhanVienBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

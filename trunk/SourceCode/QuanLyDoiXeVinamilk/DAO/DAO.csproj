@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="HangXeDAO.cs" />
+    <Compile Include="LoaiDiaDiemDAO.cs" />
     <Compile Include="LoaiHangDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlDataAccessHelper.cs" />

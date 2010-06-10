@@ -113,7 +113,7 @@ namespace GUI
             blnKetQua &= !String.IsNullOrEmpty(txt_TenLoaiHang.Text);            
             if (!blnKetQua)
             {
-                MessageBox.Show("Vui long kiem tra du lieu nhap");
+                MessageBox.Show("Du lieu nhap vao khong day du\r\nVui long kiem tra lai");
                 return blnKetQua;
             }
 
@@ -156,7 +156,6 @@ namespace GUI
                             if (BUS.LoaiHangBUS.XoaLoaiHang(aLoaiHang))
                             {
                                 lsv_DanhSachLoaiHang.Items.Remove(itemLoaiHang);
-
                             }
                         }
                     }
@@ -196,6 +195,10 @@ namespace GUI
                 {
                     MessageBox.Show("Exception: " + ex.Message);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Chua co du lieu nao dc chon");
             }
         }
 
