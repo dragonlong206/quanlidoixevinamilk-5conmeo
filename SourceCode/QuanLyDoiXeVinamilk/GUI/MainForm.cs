@@ -107,7 +107,7 @@ namespace GUI
 
         private void quảnLýLoạiĐịaĐiểmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_LoaiDiaDiem frm = new frm_LoaiDiaDiem();
+            LoaiDiaDiemGUI frm = new LoaiDiaDiemGUI();
             frm.Show();
         }
 
