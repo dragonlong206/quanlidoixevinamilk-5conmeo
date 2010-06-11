@@ -143,6 +143,21 @@ namespace DAO
             return lstXe;
         }
 
+        // Dùng cho kết bảng
+        public static DataTable LayDanhSachXeLinhHoat(String strCommand, List<OleDbParameter> lstParams)
+        {
+            DataTable table = null;
+            try
+            {
+                table = SqlDataAccessHelper.ExcuteQuery(strCommand, lstParams);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return table;
+        }
+
         public static DTO.XeDTO KhoiTao(DataRow aDong)
         {
             DTO.XeDTO aXe = new DTO.XeDTO();

@@ -2,11 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DTO;
+using DAO;
 
 namespace BUS
 {
     public class NhanVienBUS
     {
+        #region Select
+        public static List<NhanVienDTO> LayDanhSachNhanVien()
+        {
+            List<NhanVienDTO> lstDanhSachNhanVien = null;
+            try
+            {
+                lstDanhSachNhanVien = NhanVienDAO.LayDanhSachNhanVien();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return lstDanhSachNhanVien;
+        }
+        #endregion
+
         //Tam thoi dung ham nay: chinh sua truy xuat CSDL sau.
         public static int GetMaNhanVien(String strTenNhanVien)
         {

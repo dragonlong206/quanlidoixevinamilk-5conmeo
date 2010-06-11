@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mnuHopDen = new System.Windows.Forms.MenuStrip();
             this.quảnLýhộpĐenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cậpNhậtThôngTinHộpĐenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,10 +93,11 @@
             this.MucXang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLoaiTinHieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPhanCong = new System.Windows.Forms.TabPage();
-            this.btn_In_PhanCong = new System.Windows.Forms.Button();
+            this.lbl_Title = new System.Windows.Forms.Label();
+            this.cbo_NhanVienPhanCong = new System.Windows.Forms.ComboBox();
             this.grb_DanhSachPhanCong = new System.Windows.Forms.GroupBox();
             this.dtgv_DanhSachPhanCong = new System.Windows.Forms.DataGridView();
-            this.dtpNgayThachDau = new System.Windows.Forms.DateTimePicker();
+            this.dtp_NgayPhanCong = new System.Windows.Forms.DateTimePicker();
             this.lbl_NhanVien = new System.Windows.Forms.Label();
             this.lbl_NgayPhanCong = new System.Windows.Forms.Label();
             this.btn_Luu_PhanCong = new System.Windows.Forms.Button();
@@ -154,12 +157,10 @@
             this.cbo_Thang = new System.Windows.Forms.ComboBox();
             this.lbl_Thang = new System.Windows.Forms.Label();
             this.STT_PhanCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaXe_PhanCong = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.MaNhanVien_PhanCong = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Xe_PhanCong = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.TaiXe_PhanCong = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ThoiGianBatDau_PhanCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThoiGianKetThuc_PhanCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbo_NhanVienPhanCong = new System.Windows.Forms.ComboBox();
-            this.lbl_Title = new System.Windows.Forms.Label();
             this.mnuHopDen.SuspendLayout();
             this.grbDanhSachHopDen.SuspendLayout();
             this.tabMainTab.SuspendLayout();
@@ -772,9 +773,8 @@
             this.tabPhanCong.BackColor = System.Drawing.Color.SkyBlue;
             this.tabPhanCong.Controls.Add(this.lbl_Title);
             this.tabPhanCong.Controls.Add(this.cbo_NhanVienPhanCong);
-            this.tabPhanCong.Controls.Add(this.btn_In_PhanCong);
             this.tabPhanCong.Controls.Add(this.grb_DanhSachPhanCong);
-            this.tabPhanCong.Controls.Add(this.dtpNgayThachDau);
+            this.tabPhanCong.Controls.Add(this.dtp_NgayPhanCong);
             this.tabPhanCong.Controls.Add(this.lbl_NhanVien);
             this.tabPhanCong.Controls.Add(this.lbl_NgayPhanCong);
             this.tabPhanCong.Controls.Add(this.btn_Luu_PhanCong);
@@ -785,23 +785,37 @@
             this.tabPhanCong.Size = new System.Drawing.Size(874, 563);
             this.tabPhanCong.TabIndex = 1;
             this.tabPhanCong.Text = "Phân công giao hàng";
+            this.tabPhanCong.Enter += new System.EventHandler(this.tabPhanCong_Enter);
             // 
-            // btn_In_PhanCong
+            // lbl_Title
             // 
-            this.btn_In_PhanCong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_In_PhanCong.Location = new System.Drawing.Point(533, 531);
-            this.btn_In_PhanCong.Name = "btn_In_PhanCong";
-            this.btn_In_PhanCong.Size = new System.Drawing.Size(75, 23);
-            this.btn_In_PhanCong.TabIndex = 3;
-            this.btn_In_PhanCong.Text = "&In";
-            this.btn_In_PhanCong.UseVisualStyleBackColor = true;
+            this.lbl_Title.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_Title.AutoSize = true;
+            this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbl_Title.Location = new System.Drawing.Point(271, 16);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(278, 25);
+            this.lbl_Title.TabIndex = 20;
+            this.lbl_Title.Text = "PHÂN CÔNG XE - TÀI XẾ";
+            // 
+            // cbo_NhanVienPhanCong
+            // 
+            this.cbo_NhanVienPhanCong.FormattingEnabled = true;
+            this.cbo_NhanVienPhanCong.Location = new System.Drawing.Point(600, 57);
+            this.cbo_NhanVienPhanCong.Name = "cbo_NhanVienPhanCong";
+            this.cbo_NhanVienPhanCong.Size = new System.Drawing.Size(144, 21);
+            this.cbo_NhanVienPhanCong.TabIndex = 1;
             // 
             // grb_DanhSachPhanCong
             // 
+            this.grb_DanhSachPhanCong.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.grb_DanhSachPhanCong.Controls.Add(this.dtgv_DanhSachPhanCong);
-            this.grb_DanhSachPhanCong.Location = new System.Drawing.Point(28, 92);
+            this.grb_DanhSachPhanCong.Location = new System.Drawing.Point(28, 84);
             this.grb_DanhSachPhanCong.Name = "grb_DanhSachPhanCong";
-            this.grb_DanhSachPhanCong.Size = new System.Drawing.Size(815, 433);
+            this.grb_DanhSachPhanCong.Size = new System.Drawing.Size(815, 441);
             this.grb_DanhSachPhanCong.TabIndex = 2;
             this.grb_DanhSachPhanCong.TabStop = false;
             this.grb_DanhSachPhanCong.Text = "Danh sách phân công";
@@ -811,31 +825,35 @@
             this.dtgv_DanhSachPhanCong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv_DanhSachPhanCong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT_PhanCong,
-            this.MaXe_PhanCong,
-            this.MaNhanVien_PhanCong,
+            this.Xe_PhanCong,
+            this.TaiXe_PhanCong,
             this.ThoiGianBatDau_PhanCong,
             this.ThoiGianKetThuc_PhanCong});
+            this.dtgv_DanhSachPhanCong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgv_DanhSachPhanCong.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dtgv_DanhSachPhanCong.Location = new System.Drawing.Point(7, 19);
+            this.dtgv_DanhSachPhanCong.Location = new System.Drawing.Point(3, 16);
             this.dtgv_DanhSachPhanCong.Name = "dtgv_DanhSachPhanCong";
             this.dtgv_DanhSachPhanCong.RowHeadersVisible = false;
             this.dtgv_DanhSachPhanCong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dtgv_DanhSachPhanCong.Size = new System.Drawing.Size(802, 442);
+            this.dtgv_DanhSachPhanCong.Size = new System.Drawing.Size(809, 422);
             this.dtgv_DanhSachPhanCong.TabIndex = 0;
+            this.dtgv_DanhSachPhanCong.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_DanhSachPhanCong_CellValueChanged);
+            this.dtgv_DanhSachPhanCong.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dtgv_DanhSachPhanCong_RowsAdded);
             // 
-            // dtpNgayThachDau
+            // dtp_NgayPhanCong
             // 
-            this.dtpNgayThachDau.CustomFormat = "dd/MM/yyyy";
-            this.dtpNgayThachDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgayThachDau.Location = new System.Drawing.Point(252, 55);
-            this.dtpNgayThachDau.Name = "dtpNgayThachDau";
-            this.dtpNgayThachDau.Size = new System.Drawing.Size(141, 20);
-            this.dtpNgayThachDau.TabIndex = 0;
+            this.dtp_NgayPhanCong.CustomFormat = "dd/MM/yyyy";
+            this.dtp_NgayPhanCong.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_NgayPhanCong.Location = new System.Drawing.Point(205, 56);
+            this.dtp_NgayPhanCong.Name = "dtp_NgayPhanCong";
+            this.dtp_NgayPhanCong.ShowUpDown = true;
+            this.dtp_NgayPhanCong.Size = new System.Drawing.Size(141, 20);
+            this.dtp_NgayPhanCong.TabIndex = 0;
             // 
             // lbl_NhanVien
             // 
             this.lbl_NhanVien.AutoSize = true;
-            this.lbl_NhanVien.Location = new System.Drawing.Point(482, 62);
+            this.lbl_NhanVien.Location = new System.Drawing.Point(502, 60);
             this.lbl_NhanVien.Name = "lbl_NhanVien";
             this.lbl_NhanVien.Size = new System.Drawing.Size(56, 13);
             this.lbl_NhanVien.TabIndex = 19;
@@ -853,12 +871,13 @@
             // btn_Luu_PhanCong
             // 
             this.btn_Luu_PhanCong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Luu_PhanCong.Location = new System.Drawing.Point(647, 531);
+            this.btn_Luu_PhanCong.Location = new System.Drawing.Point(669, 531);
             this.btn_Luu_PhanCong.Name = "btn_Luu_PhanCong";
             this.btn_Luu_PhanCong.Size = new System.Drawing.Size(75, 23);
             this.btn_Luu_PhanCong.TabIndex = 4;
             this.btn_Luu_PhanCong.Text = "&Lưu";
             this.btn_Luu_PhanCong.UseVisualStyleBackColor = true;
+            this.btn_Luu_PhanCong.Click += new System.EventHandler(this.btn_Luu_PhanCong_Click);
             // 
             // btn_Thoat_PhanCong
             // 
@@ -869,6 +888,7 @@
             this.btn_Thoat_PhanCong.TabIndex = 5;
             this.btn_Thoat_PhanCong.Text = "&Thoát";
             this.btn_Thoat_PhanCong.UseVisualStyleBackColor = true;
+            this.btn_Thoat_PhanCong.Click += new System.EventHandler(this.btn_Thoat_PhanCong_Click_1);
             // 
             // tabCapNhienLieu
             // 
@@ -1341,53 +1361,40 @@
             this.STT_PhanCong.Name = "STT_PhanCong";
             this.STT_PhanCong.Width = 30;
             // 
-            // MaXe_PhanCong
+            // Xe_PhanCong
             // 
-            this.MaXe_PhanCong.HeaderText = "Xe";
-            this.MaXe_PhanCong.Name = "MaXe_PhanCong";
-            this.MaXe_PhanCong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaXe_PhanCong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.MaXe_PhanCong.Width = 150;
+            this.Xe_PhanCong.HeaderText = "Xe";
+            this.Xe_PhanCong.Name = "Xe_PhanCong";
+            this.Xe_PhanCong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Xe_PhanCong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Xe_PhanCong.Width = 150;
             // 
-            // MaNhanVien_PhanCong
+            // TaiXe_PhanCong
             // 
-            this.MaNhanVien_PhanCong.HeaderText = "Tài xế";
-            this.MaNhanVien_PhanCong.Name = "MaNhanVien_PhanCong";
-            this.MaNhanVien_PhanCong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.MaNhanVien_PhanCong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.MaNhanVien_PhanCong.Width = 150;
+            this.TaiXe_PhanCong.HeaderText = "Tài xế";
+            this.TaiXe_PhanCong.Name = "TaiXe_PhanCong";
+            this.TaiXe_PhanCong.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.TaiXe_PhanCong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.TaiXe_PhanCong.Width = 150;
             // 
             // ThoiGianBatDau_PhanCong
             // 
+            dataGridViewCellStyle1.Format = "t";
+            dataGridViewCellStyle1.NullValue = null;
+            this.ThoiGianBatDau_PhanCong.DefaultCellStyle = dataGridViewCellStyle1;
             this.ThoiGianBatDau_PhanCong.HeaderText = "Thời gian bắt đầu";
             this.ThoiGianBatDau_PhanCong.Name = "ThoiGianBatDau_PhanCong";
+            this.ThoiGianBatDau_PhanCong.ToolTipText = "Nhập theo định dạng hh:mm";
             this.ThoiGianBatDau_PhanCong.Width = 150;
             // 
             // ThoiGianKetThuc_PhanCong
             // 
             this.ThoiGianKetThuc_PhanCong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Format = "t";
+            this.ThoiGianKetThuc_PhanCong.DefaultCellStyle = dataGridViewCellStyle2;
             this.ThoiGianKetThuc_PhanCong.HeaderText = "Thời gian kết thúc";
             this.ThoiGianKetThuc_PhanCong.Name = "ThoiGianKetThuc_PhanCong";
-            // 
-            // cbo_NhanVienPhanCong
-            // 
-            this.cbo_NhanVienPhanCong.FormattingEnabled = true;
-            this.cbo_NhanVienPhanCong.Location = new System.Drawing.Point(598, 55);
-            this.cbo_NhanVienPhanCong.Name = "cbo_NhanVienPhanCong";
-            this.cbo_NhanVienPhanCong.Size = new System.Drawing.Size(144, 21);
-            this.cbo_NhanVienPhanCong.TabIndex = 1;
-            // 
-            // lbl_Title
-            // 
-            this.lbl_Title.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_Title.AutoSize = true;
-            this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Title.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lbl_Title.Location = new System.Drawing.Point(271, 16);
-            this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(278, 25);
-            this.lbl_Title.TabIndex = 20;
-            this.lbl_Title.Text = "PHÂN CÔNG XE - TÀI XẾ";
+            this.ThoiGianKetThuc_PhanCong.ToolTipText = "Nhập theo định dạng hh:mm";
             // 
             // MainForm
             // 
@@ -1485,7 +1492,7 @@
         private System.Windows.Forms.ToolStripMenuItem phânCôngXetàiXếToolStripMenuItem;
         private System.Windows.Forms.GroupBox grb_DanhSachPhanCong;
         private System.Windows.Forms.DataGridView dtgv_DanhSachPhanCong;
-        private System.Windows.Forms.DateTimePicker dtpNgayThachDau;
+        private System.Windows.Forms.DateTimePicker dtp_NgayPhanCong;
         private System.Windows.Forms.Label lbl_NhanVien;
         private System.Windows.Forms.Label lbl_NgayPhanCong;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiDiem;
@@ -1494,7 +1501,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn VanToc;
         private System.Windows.Forms.DataGridViewTextBoxColumn MucXang;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiTinHieu;
-        private System.Windows.Forms.Button btn_In_PhanCong;
         private System.Windows.Forms.TabPage tabCapNhienLieu;
         private System.Windows.Forms.TabPage tabBCQuangDuongXeChay;
         private System.Windows.Forms.TabPage tabBCSuDungNhienLieuThang;
@@ -1567,12 +1573,12 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT_PhanCong;
-        private System.Windows.Forms.DataGridViewComboBoxColumn MaXe_PhanCong;
-        private System.Windows.Forms.DataGridViewComboBoxColumn MaNhanVien_PhanCong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianBatDau_PhanCong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianKetThuc_PhanCong;
         private System.Windows.Forms.ComboBox cbo_NhanVienPhanCong;
         private System.Windows.Forms.Label lbl_Title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT_PhanCong;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Xe_PhanCong;
+        private System.Windows.Forms.DataGridViewComboBoxColumn TaiXe_PhanCong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianBatDau_PhanCong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianKetThuc_PhanCong;
     }
 }

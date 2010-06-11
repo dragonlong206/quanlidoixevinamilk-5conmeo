@@ -61,5 +61,43 @@ namespace BUS
             List<DTO.XeDTO> lstXe = DAO.XeDAO.DocDanhSachXe(strTieuChiTimKiem);
             return lstXe;
         }
+
+        public static DataTable LayDanhSachXeLinhHoat(String strCommand, List<OleDbParameter> lstParams)
+        {
+            DataTable table = null;
+            try
+            {
+                table = DAO.XeDAO.LayDanhSachXeLinhHoat(strCommand, lstParams);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return table;
+        }
+
+        public static DataTable LayDanhSachXeCoThePhanCong()
+        {
+            String strCommand = @"Select BienSo
+                                  From Xe, Trong_Tai
+                                  Where Xe.MaTrongTai = Trong_Tai.MaTrongTai
+                                  And Trong_Tai.GiaTri >= @TrongTaiNhoNhatDuocPhanCong";
+// Chỗ này phải đọc từ CSDL
+            int iTrongTaiNhoNhatDuocPhanCong = 5;
+            List<OleDbParameter> lstParams = new List<OleDbParameter>();
+            lstParams.Add(new OleDbParameter("@TrongTaiNhoNhatDuocPhanCong", iTrongTaiNhoNhatDuocPhanCong));
+
+            DataTable tblKetQua = null;
+            try
+            {
+                tblKetQua = XeDAO.LayDanhSachXeLinhHoat(strCommand, lstParams);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return tblKetQua;
+        }
     }
 }
