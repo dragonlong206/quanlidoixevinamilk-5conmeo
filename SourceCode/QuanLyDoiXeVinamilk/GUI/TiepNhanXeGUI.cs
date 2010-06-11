@@ -26,7 +26,7 @@ namespace GUI
             
             try
             {
-                String strThongBao = "Bi loi ghi du lieu: vui long kiem tra du lieu nhap";
+                String strThongBao = "Loi ghi du lieu: vui long kiem tra du lieu nhap";
                 if (BUS.XeBUS.ThemXe(aXe))
                 {
                     strThongBao = "Tiep nhan xe thanh cong";
@@ -42,7 +42,7 @@ namespace GUI
         private DTO.XeDTO NhapXe()
         {
             DTO.XeDTO aXe = new DTO.XeDTO();
-            if (!KiemTraNhap())  //Cac dong thong bao cu the duoc thuc hien trong KiemTraNhap()                          
+            if (!KiemTraNhap())  
                 return null;            
 
             #region Gan gia tri tu giao dienvao aXe

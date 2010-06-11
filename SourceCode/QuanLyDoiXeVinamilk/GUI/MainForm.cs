@@ -129,19 +129,19 @@ namespace GUI
 
         private void nhậpMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_ThemMatHang frm = new frm_ThemMatHang();
+            NhapMatHangGUI frm = new NhapMatHangGUI();
             frm.Show();
         }
 
         private void chỉnhSửaThôngTinMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_CapNhatMatHang frm = new frm_CapNhatMatHang();
+            CapNhatMatHangGUI frm = new CapNhatMatHangGUI();
             frm.Show();
         }
 
         private void xóaMặtHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_XoaMatHang frm = new frm_XoaMatHang();
+            XoaMatHangGUI frm = new XoaMatHangGUI();
             frm.Show();
         }
 
