@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{0BAA7134-FE74-41E9-89A3-24A3FDAC8E00}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -49,6 +49,7 @@
     <Compile Include="HangXeDTO.cs" />
     <Compile Include="LoaiDiaDiemDTO.cs" />
     <Compile Include="LoaiHangDTO.cs" />
+    <Compile Include="MatHangDTO.cs" />
     <Compile Include="NhanVienDTO.cs" />
     <Compile Include="PhanCongXeTaiXeDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

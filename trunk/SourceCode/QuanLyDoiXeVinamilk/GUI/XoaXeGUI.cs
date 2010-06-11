@@ -31,14 +31,10 @@ namespace GUI
             {
                 MessageBox.Show("Exception: " + ex.Message);
             }
-
         }
 
         private void XuatDanhSachXe(List<DTO.XeDTO> lstXe)
         {
-            if (lstXe == null)
-                return;     //Khong lam gi ca.
-
             lsv_DanhSachXe.Items.Clear();
             int nSoThuTu = 1;
             foreach (DTO.XeDTO aXeTam in lstXe)

@@ -102,6 +102,12 @@
     <Compile Include="NhapMatHangFrm.Designer.cs">
       <DependentUpon>NhapMatHangFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhapMatHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapMatHangGUI.designer.cs">
+      <DependentUpon>NhapMatHangGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhapNhanVienFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     <EmbeddedResource Include="NhapMatHangFrm.resx">
       <DependentUpon>NhapMatHangFrm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapMatHangGUI.resx">
+      <DependentUpon>NhapMatHangGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapNhanVienFrm.resx">
       <DependentUpon>NhapNhanVienFrm.cs</DependentUpon>
