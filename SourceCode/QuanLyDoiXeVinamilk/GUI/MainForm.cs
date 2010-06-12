@@ -391,5 +391,10 @@ namespace GUI
         {
             this.Close();
         }
+
+        private void thêmPhânCôngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.tabMainTab.SelectedTab = this.tabPhanCong;
+        }
     }
 }
