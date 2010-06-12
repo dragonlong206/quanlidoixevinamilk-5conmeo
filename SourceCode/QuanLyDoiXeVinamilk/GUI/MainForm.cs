@@ -280,7 +280,7 @@ namespace GUI
                 }
                 else
                 {
-                    throw new Exception("Bạn chưa chọn xe");
+                    throw new Exception("Dòng " + aRow.Index + 1 + ":\r\nBạn chưa chọn xe");
                 }
 
                 if (aRow.Cells["TaiXe_PhanCong"].Value != null)
@@ -289,7 +289,7 @@ namespace GUI
                 }
                 else
                 {
-                    throw new Exception("Bạn chưa chọn tài xế");
+                    throw new Exception("Dòng " + aRow.Index + 1 + ":\r\nBạn chưa chọn tài xế");
                 }
                 
                 TimeSpan ThoiGianBatDau = new TimeSpan();
@@ -301,7 +301,7 @@ namespace GUI
                     blnCoTheParse = TimeSpan.TryParse(aRow.Cells["ThoiGianBatDau_PhanCong"].Value.ToString(), out ThoiGianBatDau);
                     if (blnCoTheParse == false)
                     {
-                        throw new Exception("Thời gian bắt đầu nhập sai định dạng");
+                        throw new Exception("Dòng " + aRow.Index + 1 + ":\r\nThời gian bắt đầu nhập sai định dạng");
                     }
                     else
                     {
@@ -311,7 +311,7 @@ namespace GUI
                 else
                 {
                     LuaChon = MessageBox.Show("Bạn chưa chọn thời gian bắt đầu\r\nBạn có muốn tiếp tục?",
-                        "Thieu du lieu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        "Dòng " + aRow.Index + 1, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (LuaChon == DialogResult.No)
                     {
                         return null;
@@ -324,13 +324,13 @@ namespace GUI
                     blnCoTheParse = TimeSpan.TryParse(aRow.Cells["ThoiGianKetThuc_PhanCong"].Value.ToString(), out ThoiGianKetThuc);
                     if (blnCoTheParse == false)
                     {
-                        throw new Exception("Thời gian kết thúc nhập sai định dạng");
+                        throw new Exception("Dòng " + aRow.Index + 1 + ":\r\nThời gian kết thúc nhập sai định dạng");
                     }
                     else
                     {
                         if (ThoiGianKetThuc < ThoiGianBatDau)
                         {
-                            throw new Exception("Thời gian kết thúc phải lớn hơn thời gian bắt đầu");
+                            throw new Exception("Dòng " + aRow.Index + 1 + ":\r\nThời gian kết thúc phải lớn hơn thời gian bắt đầu");
                         }
                         aChiTietPhanCong.ThoiGianKetThuc = ThoiGianKetThuc.ToString();
                         KetQua = new ChiTietPCXe_TaiXeDTO();
@@ -340,10 +340,16 @@ namespace GUI
                 else
                 {
                     LuaChon = MessageBox.Show("Bạn chưa chọn thời gian kết thúc\r\nBạn có muốn tiếp tục?",
-                        "Thieu du lieu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        "Dòng " + aRow.Index + 1, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
                     if (LuaChon == DialogResult.No)
                     {
                         return null;
+                    }
+                    else
+                    {
+                        KetQua = new ChiTietPCXe_TaiXeDTO();
+                        KetQua = aChiTietPhanCong;
                     }
                 }
             }
@@ -375,7 +381,6 @@ namespace GUI
                 catch (Exception ex)
                 {
                     blnLuuThanhCong = false;
-                    MessageBox.Show("Dòng " + (i + 1) + " bị lỗi: " + ex.Message, "Loi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
