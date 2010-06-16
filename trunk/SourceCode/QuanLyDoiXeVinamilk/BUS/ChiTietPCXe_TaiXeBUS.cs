@@ -31,5 +31,67 @@ namespace BUS
             return blnDaThemDuoc;
         }
         #endregion
+
+        #region 2.Update
+        public static bool CapNhatChiTiet(ChiTietPCXe_TaiXeDTO aChiTiet)
+        {
+            bool blnCapNhatThanhCong = false;
+
+            try
+            {
+                int nSoDongCapNhatDuoc = ChiTietPCXe_TaiXeDAO.CapNhatChiTiet(aChiTiet);
+
+                if (nSoDongCapNhatDuoc == 1)
+                {
+                    blnCapNhatThanhCong = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return blnCapNhatThanhCong;
+        }
+        #endregion
+
+        #region 3.Delete
+        public static bool XoaChiTiet(int iMaChiTiet)
+        {
+            bool blnDaXoaDuoc = false;
+
+            try
+            {
+                int nSoDongXoaDuoc = ChiTietPCXe_TaiXeDAO.XoaChiTiet(iMaChiTiet);
+
+                if (iMaChiTiet == 1)
+                {
+                    blnDaXoaDuoc = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return blnDaXoaDuoc;
+        }
+        #endregion
+
+        #region 4.Select
+        public static DataTable LayDanhSachChiTietTheoMaPhanCong(int iMaPhanCong)
+        {
+            DataTable KetQua = null;
+            try
+            {
+                KetQua = ChiTietPCXe_TaiXeDAO.LayDanhSachChiTietTheoMaPhanCong(iMaPhanCong);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return KetQua;
+        }
+        #endregion
     }
 }

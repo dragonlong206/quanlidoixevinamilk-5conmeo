@@ -82,8 +82,9 @@ namespace BUS
                                   From Xe, Trong_Tai
                                   Where Xe.MaTrongTai = Trong_Tai.MaTrongTai
                                   And Trong_Tai.GiaTri >= @TrongTaiNhoNhatDuocPhanCong";
-// Chỗ này phải đọc từ CSDL
-            int iTrongTaiNhoNhatDuocPhanCong = 5;
+
+            DataTable ThamSoTrongTai = ThamSoBUS.LayThamSo("TrongTaiNhoNhat");
+            int iTrongTaiNhoNhatDuocPhanCong = int.Parse(ThamSoTrongTai.Rows[0][0].ToString());
             List<OleDbParameter> lstParams = new List<OleDbParameter>();
             lstParams.Add(new OleDbParameter("@TrongTaiNhoNhatDuocPhanCong", iTrongTaiNhoNhatDuocPhanCong));
 
@@ -98,6 +99,6 @@ namespace BUS
             }
 
             return tblKetQua;
-        }
+        }        
     }
 }
