@@ -99,6 +99,40 @@ namespace DAO
 
             return aPhanCong;
         }
+
+        public static DataTable LayDanhSachPhanCongLinhHoat(String strCommand, List<OleDbParameter> lstParams)
+        {
+            DataTable KetQua = null;
+
+            try
+            {
+                KetQua = SqlDataAccessHelper.ExcuteQuery(strCommand, lstParams);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return KetQua;
+        }
+
+        public static DataTable LayDanhSachNgayPhanCong()
+        {
+            DataTable KetQua = null;
+
+            try
+            {
+                String strCommand = "Select MaPhanCong, NgayPhanCong from PHANCONGXE_TAIXE";
+
+                KetQua = SqlDataAccessHelper.ExcuteQuery(strCommand, null);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return KetQua;
+        }        
         #endregion
     }
 }
