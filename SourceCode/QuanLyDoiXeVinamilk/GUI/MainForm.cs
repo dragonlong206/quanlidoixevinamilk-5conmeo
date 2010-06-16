@@ -158,21 +158,16 @@ namespace GUI
         {
             try
             {
-                // Lấy danh sách nhân viên phân công và tài xế
-                List<NhanVienDTO> lstDanhSachNhanVien = NhanVienBUS.LayDanhSachNhanVien();
-                if (lstDanhSachNhanVien.Count > 0)
-                {
-                    this.cbo_NhanVienPhanCong.DataSource = lstDanhSachNhanVien;
-                    this.cbo_NhanVienPhanCong.ValueMember = "MaNhanVien";
-                    this.cbo_NhanVienPhanCong.DisplayMember = "TenNhanVien";
+                DataTable DanhSachQuanLy = PhanCongXeTaiXeBUS.LayDanhSachNhanVienPhanCong();
+                this.cbo_NhanVienPhanCong.DataSource = DanhSachQuanLy;
+                this.cbo_NhanVienPhanCong.ValueMember = "MaNhanVien";
+                this.cbo_NhanVienPhanCong.DisplayMember = "TenNhanVien";
 
-                    // Ở đây không phân loại tài xế hay nhân viên nên dùng chung dữ liệu
-                    List<NhanVienDTO> lstDanhSachTaiXe = new List<NhanVienDTO>(lstDanhSachNhanVien);
-                    DataGridViewComboBoxColumn clmTaiXe = (DataGridViewComboBoxColumn)this.dtgv_DanhSachPhanCong.Columns["TaiXe_PhanCong"];
-                    clmTaiXe.DataSource = lstDanhSachTaiXe;
-                    clmTaiXe.ValueMember = "MaNhanVien";
-                    clmTaiXe.DisplayMember = "TenNhanVien";
-                }
+                DataTable DanhSachTaiXe = PhanCongXeTaiXeBUS.LayDanhSachTaiXeCoThePhanCong();
+                DataGridViewComboBoxColumn clmTaiXe = (DataGridViewComboBoxColumn)this.dtgv_DanhSachPhanCong.Columns["TaiXe_PhanCong"];
+                clmTaiXe.DataSource = DanhSachTaiXe;
+                clmTaiXe.ValueMember = "MaNhanVien";
+                clmTaiXe.DisplayMember = "TenNhanVien";
 
                 // Lấy danh sách xe
                 DataTable tblDanhSachXe = XeBUS.LayDanhSachXeCoThePhanCong();
@@ -324,13 +319,13 @@ namespace GUI
                     blnCoTheParse = TimeSpan.TryParse(aRow.Cells["ThoiGianKetThuc_PhanCong"].Value.ToString(), out ThoiGianKetThuc);
                     if (blnCoTheParse == false)
                     {
-                        throw new Exception("Dòng " + aRow.Index + 1 + ":\r\nThời gian kết thúc nhập sai định dạng");
+                        throw new Exception("Dòng " + (aRow.Index + 1) + ":\r\nThời gian kết thúc nhập sai định dạng");
                     }
                     else
                     {
                         if (ThoiGianKetThuc < ThoiGianBatDau)
                         {
-                            throw new Exception("Dòng " + aRow.Index + 1 + ":\r\nThời gian kết thúc phải lớn hơn thời gian bắt đầu");
+                            throw new Exception("Dòng " + (aRow.Index + 1) + ":\r\nThời gian kết thúc phải lớn hơn thời gian bắt đầu");
                         }
                         aChiTietPhanCong.ThoiGianKetThuc = ThoiGianKetThuc.ToString();
                         KetQua = new ChiTietPCXe_TaiXeDTO();
@@ -395,6 +390,18 @@ namespace GUI
         private void thêmPhânCôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.tabMainTab.SelectedTab = this.tabPhanCong;
+        }
+
+        private void cậpNhậtPhânCôngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CapNhatPhanCong frm = new frm_CapNhatPhanCong();
+            frm.Show();
+        }
+
+        private void xóaPhâncôngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_XoaPhanCong frm = new frm_XoaPhanCong();
+            frm.Show();
         }
     }
 }
