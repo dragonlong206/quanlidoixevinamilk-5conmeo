@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChiTietPCXe_TaiXeBUS.cs" />
+    <Compile Include="DiaDiemBUS.cs" />
     <Compile Include="HangXeBUS.cs" />
     <Compile Include="LoaiDiaDiemBUS.cs" />
     <Compile Include="LoaiHangBUS.cs" />

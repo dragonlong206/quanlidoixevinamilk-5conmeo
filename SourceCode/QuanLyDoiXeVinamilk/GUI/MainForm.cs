@@ -93,7 +93,7 @@ namespace GUI
 
         private void cậpNhậtThôngTinĐịaĐiểmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_CapNhatDiaDiem frm = new frm_CapNhatDiaDiem();
+            CapNhatDiaDiemGUI frm = new CapNhatDiaDiemGUI();
             frm.Show();
         }
 
