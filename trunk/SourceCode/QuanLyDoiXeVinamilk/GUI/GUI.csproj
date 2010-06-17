@@ -125,6 +125,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhapHoaDonGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapHoaDonGUI.Designer.cs">
+      <DependentUpon>NhapHoaDonGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhapMatHangFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapHoaDonGUI.resx">
+      <DependentUpon>NhapHoaDonGUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapMatHangFrm.resx">
