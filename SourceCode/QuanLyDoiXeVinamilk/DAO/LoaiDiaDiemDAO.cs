@@ -113,7 +113,33 @@ namespace DAO
             aLoaiDiaDiem.MaLoai = int.Parse(aDong["MaLoai"].ToString());
             aLoaiDiaDiem.TenLoai = aDong["TenLoai"].ToString();
             return aLoaiDiaDiem;
-        }        
+        }
+
+        public static List<LoaiDiaDiemDTO> LayDanhSachTatCaDiaDiem()
+        {
+            List<LoaiDiaDiemDTO> DanhSachLoaiDiaDiem = null;
+
+            try
+            {
+                string strCommand = "Select * from Loai_Dia_Diem";
+
+                DataTable table = SqlDataAccessHelper.ExcuteQuery(strCommand, null);
+                if (table.Rows.Count > 0)
+                {
+                    DanhSachLoaiDiaDiem = new List<LoaiDiaDiemDTO>();
+                    foreach (DataRow aRow in table.Rows)
+                    {
+                        DanhSachLoaiDiaDiem.Add(KhoiTao(aRow));
+                    }                    
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return DanhSachLoaiDiaDiem;
+        }
         #endregion
     }
 }
