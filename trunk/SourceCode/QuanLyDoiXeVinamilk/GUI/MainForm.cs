@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using BUS;
 using DTO;
+using System.Data.OleDb;
+using System.Configuration;
 
 namespace GUI
 {
@@ -402,6 +404,44 @@ namespace GUI
         {
             frm_XoaPhanCong frm = new frm_XoaPhanCong();
             frm.Show();
+        }
+
+        private void btn_XemBaoCao_BaoCaoGiaoHang_Click(object sender, EventArgs e)
+        {
+            Db_QuanLyDoiXeVinamilkDataSet QLDX = new Db_QuanLyDoiXeVinamilkDataSet();
+            String connString = ConfigurationManager.ConnectionStrings["GUI.Properties.Settings.Db_QuanLyDoiXeVinamilkConnectionString"].ToString();
+            OleDbConnection conn = new OleDbConnection(connString);
+            try
+            {
+                conn.Open();
+                String strCommand1 = "Select * from Hoa_Don where DatePart('m', NgayLap) = ?";
+                int iThangBaoCao = this.dtp_Thang_BaoCaoGiaoHang.Value.Month;
+                OleDbParameter param = new OleDbParameter("@Thang", iThangBaoCao);
+                OleDbCommand command = new OleDbCommand(strCommand1, conn);
+                command.Parameters.Add(param);
+                String strCommand2 = "Select * from ChiTiet_HoaDon";
+                String strCommand3 = "Select * from Trang_Thai";
+                String strCommand4 = "Select * from Mat_Hang";
+                
+                OleDbDataAdapter HoaDonAdapter = new OleDbDataAdapter(command);
+                OleDbDataAdapter ChiTietHoaDonAdapter = new OleDbDataAdapter(strCommand2, conn);
+                OleDbDataAdapter TrangThaiAdapter = new OleDbDataAdapter(strCommand3, conn);
+                OleDbDataAdapter MatHangAdapter = new OleDbDataAdapter(strCommand4, conn);
+
+                HoaDonAdapter.Fill(QLDX, "Hoa_Don");
+                ChiTietHoaDonAdapter.Fill(QLDX, "ChiTiet_HoaDon");
+                TrangThaiAdapter.Fill(QLDX, "Trang_Thai");
+                MatHangAdapter.Fill(QLDX, "Mat_Hang");
+
+                BaoCao BaoCaoGiaoHang = new BaoCao();
+                BaoCaoGiaoHang.SetDataSource(QLDX);
+                BaoCaoGiaoHang.SetParameterValue("@Thang", this.dtp_Thang_BaoCaoGiaoHang.Value);
+                this.crv_BaoCaoGiaoHang.ReportSource = BaoCaoGiaoHang;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
