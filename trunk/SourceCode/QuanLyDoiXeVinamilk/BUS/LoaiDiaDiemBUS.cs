@@ -99,6 +99,23 @@ namespace BUS
             List<DTO.LoaiDiaDiemDTO> lstLoaiDiaDiem = DAO.LoaiDiaDiemDAO.DocDanhSachLoaiDiaDiem(strTieuChiTimKiem);
             return lstLoaiDiaDiem;
         }
+
+        public static List<LoaiDiaDiemDTO> LayDanhSachTatCaLoaiDiaDiem()
+        {
+            List<LoaiDiaDiemDTO> KetQua = null;
+            try
+            {
+                KetQua = new List<LoaiDiaDiemDTO>();
+
+                KetQua = LoaiDiaDiemDAO.LayDanhSachTatCaDiaDiem();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return KetQua;
+        }
         #endregion
     }
 }
