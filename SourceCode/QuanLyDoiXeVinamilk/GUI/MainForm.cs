@@ -450,5 +450,11 @@ namespace GUI
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void nhậpHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_NhapHoaDon frm = new frm_NhapHoaDon();
+            frm.Show();
+        }
     }
 }
