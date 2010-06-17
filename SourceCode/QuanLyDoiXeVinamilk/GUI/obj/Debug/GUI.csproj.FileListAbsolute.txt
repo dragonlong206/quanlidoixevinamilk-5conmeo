@@ -2,11 +2,8 @@ D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\ob
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.CapNhatThongTinNhanVienGUI.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.CapNhatThongTinXeGUI.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.LapHoaDonGiaoHangFrm.resources
-D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.frm_LoaiDiaDiem.resources
-D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.frm_LoaiHang.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.MainForm.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.NhapMatHangFrm.resources
-D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.NhapNhanVienFrm.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.Properties.Resources.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.QuanLyHangXeGUI.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.QuanLyLoaiHangGUI.resources
@@ -36,3 +33,7 @@ D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\ob
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.frm_CapNhatPhanCong.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.frm_XoaPhanCong.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.CapNhatDiaDiemGUI.resources
+D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\GUI.exe.config
+D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\Db_QuanLyDoiXeVinamilk.accdb
+D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.frm_NhapHoaDon.resources
+D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.NhapNhanVienGUI.resources
