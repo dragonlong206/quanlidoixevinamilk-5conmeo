@@ -45,9 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietHoaDonDAO.cs" />
     <Compile Include="ChiTietPCXe_TaiXeDAO.cs" />
     <Compile Include="DiaDiemDAO.cs" />
     <Compile Include="HangXeDAO.cs" />
+    <Compile Include="HoaDonDAO.cs" />
     <Compile Include="LoaiDiaDiemDAO.cs" />
     <Compile Include="LoaiHangDAO.cs" />
     <Compile Include="MatHangDAO.cs" />
@@ -57,6 +59,7 @@
     <Compile Include="SqlDataAccessHelper.cs" />
     <Compile Include="TenMienEmailDAO.cs" />
     <Compile Include="ThamSoDAO.cs" />
+    <Compile Include="TrangThaiDAO.cs" />
     <Compile Include="TrongTaiDAO.cs" />
     <Compile Include="XeDAO.cs" />
   </ItemGroup>
