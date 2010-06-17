@@ -189,16 +189,10 @@
             // cbo_Email
             // 
             this.cbo_Email.FormattingEnabled = true;
-            this.cbo_Email.Items.AddRange(new object[] {
-            "gmail.com",
-            "gmail.com.vn",
-            "yahoo.com",
-            "yahoo.com.vn"});
             this.cbo_Email.Location = new System.Drawing.Point(548, 81);
             this.cbo_Email.Name = "cbo_Email";
             this.cbo_Email.Size = new System.Drawing.Size(101, 21);
             this.cbo_Email.TabIndex = 5;
-            this.cbo_Email.Text = "gmail.com";
             // 
             // lbl_ASign
             // 
@@ -212,11 +206,6 @@
             // cbo_LoaiDiaDiem
             // 
             this.cbo_LoaiDiaDiem.FormattingEnabled = true;
-            this.cbo_LoaiDiaDiem.Items.AddRange(new object[] {
-            "Đại Lý",
-            "Khách Sạn",
-            "Kho",
-            "Gara"});
             this.cbo_LoaiDiaDiem.Location = new System.Drawing.Point(102, 81);
             this.cbo_LoaiDiaDiem.Name = "cbo_LoaiDiaDiem";
             this.cbo_LoaiDiaDiem.Size = new System.Drawing.Size(166, 21);
