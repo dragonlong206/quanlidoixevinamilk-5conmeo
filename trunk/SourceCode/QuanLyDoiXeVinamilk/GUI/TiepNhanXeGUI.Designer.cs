@@ -134,6 +134,7 @@
             // 
             // cbo_TrongTai
             // 
+            this.cbo_TrongTai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_TrongTai.FormattingEnabled = true;
             this.cbo_TrongTai.Items.AddRange(new object[] {
             "1 Tấn",
@@ -144,10 +145,10 @@
             this.cbo_TrongTai.Name = "cbo_TrongTai";
             this.cbo_TrongTai.Size = new System.Drawing.Size(101, 21);
             this.cbo_TrongTai.TabIndex = 1;
-            this.cbo_TrongTai.Text = "3 Tấn";
             // 
             // cbo_LoaiHang
             // 
+            this.cbo_LoaiHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_LoaiHang.FormattingEnabled = true;
             this.cbo_LoaiHang.Items.AddRange(new object[] {
             "Hàng Thường",
@@ -157,10 +158,10 @@
             this.cbo_LoaiHang.Name = "cbo_LoaiHang";
             this.cbo_LoaiHang.Size = new System.Drawing.Size(101, 21);
             this.cbo_LoaiHang.TabIndex = 6;
-            this.cbo_LoaiHang.Text = "Hàng Thường";
             // 
             // cbo_HangXe
             // 
+            this.cbo_HangXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_HangXe.FormattingEnabled = true;
             this.cbo_HangXe.Items.AddRange(new object[] {
             "TOYOTA",
@@ -170,7 +171,6 @@
             this.cbo_HangXe.Name = "cbo_HangXe";
             this.cbo_HangXe.Size = new System.Drawing.Size(101, 21);
             this.cbo_HangXe.TabIndex = 3;
-            this.cbo_HangXe.Text = "TOYOTA";
             // 
             // txt_SoMay
             // 

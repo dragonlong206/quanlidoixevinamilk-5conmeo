@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class CapNhatThongTinNhanVienGUI
+    partial class NhapNhanVienGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btn_Thoat = new System.Windows.Forms.Button();
+            this.btn_NhapNhanVien = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btn_Import = new System.Windows.Forms.Button();
             this.grb_DanhSachNhanVien = new System.Windows.Forms.GroupBox();
             this.lsv_DanhSachNhanVien = new System.Windows.Forms.ListView();
             this.STT = new System.Windows.Forms.ColumnHeader();
@@ -46,15 +48,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_DienThoai = new System.Windows.Forms.TextBox();
             this.txt_TenNhanVien = new System.Windows.Forms.TextBox();
-            this.btn_CapNhatNhanVien = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_TenNhanVien_TimKiem = new System.Windows.Forms.TextBox();
-            this.btn_Tim = new System.Windows.Forms.Button();
-            this.chk_TimChinhXac = new System.Windows.Forms.CheckBox();
+            this.btn_Huy = new System.Windows.Forms.Button();
             this.grb_DanhSachNhanVien.SuspendLayout();
             this.ThongTinNhanVien.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -63,29 +59,50 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblTitle.Location = new System.Drawing.Point(89, 9);
+            this.lblTitle.Location = new System.Drawing.Point(169, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(352, 24);
-            this.lblTitle.TabIndex = 8;
-            this.lblTitle.Text = "CẬP NHẬT THÔNG TIN NHÂN VIÊN";
+            this.lblTitle.Size = new System.Drawing.Size(186, 24);
+            this.lblTitle.TabIndex = 9;
+            this.lblTitle.Text = "NHẬP NHÂN VIÊN";
             // 
-            // btn_Thoat
+            // btn_NhapNhanVien
             // 
-            this.btn_Thoat.Location = new System.Drawing.Point(429, 440);
-            this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 13;
-            this.btn_Thoat.Text = "&Thoát";
-            this.btn_Thoat.UseVisualStyleBackColor = true;
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
+            this.btn_NhapNhanVien.Location = new System.Drawing.Point(417, 119);
+            this.btn_NhapNhanVien.Name = "btn_NhapNhanVien";
+            this.btn_NhapNhanVien.Size = new System.Drawing.Size(75, 23);
+            this.btn_NhapNhanVien.TabIndex = 1;
+            this.btn_NhapNhanVien.Text = "&Lưu";
+            this.btn_NhapNhanVien.UseVisualStyleBackColor = true;
+            this.btn_NhapNhanVien.Click += new System.EventHandler(this.btn_NhapNhanVien_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(429, 437);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.TabIndex = 2;
+            this.btnThoat.Text = "&Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btn_Import
+            // 
+            this.btn_Import.Image = global::GUI.Properties.Resources.Import_Data_Blue;
+            this.btn_Import.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Import.Location = new System.Drawing.Point(15, 437);
+            this.btn_Import.Name = "btn_Import";
+            this.btn_Import.Size = new System.Drawing.Size(95, 23);
+            this.btn_Import.TabIndex = 10;
+            this.btn_Import.Text = "&Import";
+            this.btn_Import.UseVisualStyleBackColor = true;
             // 
             // grb_DanhSachNhanVien
             // 
             this.grb_DanhSachNhanVien.Controls.Add(this.lsv_DanhSachNhanVien);
-            this.grb_DanhSachNhanVien.Location = new System.Drawing.Point(12, 120);
+            this.grb_DanhSachNhanVien.Location = new System.Drawing.Point(12, 53);
             this.grb_DanhSachNhanVien.Name = "grb_DanhSachNhanVien";
-            this.grb_DanhSachNhanVien.Size = new System.Drawing.Size(506, 160);
-            this.grb_DanhSachNhanVien.TabIndex = 12;
+            this.grb_DanhSachNhanVien.Size = new System.Drawing.Size(506, 224);
+            this.grb_DanhSachNhanVien.TabIndex = 0;
             this.grb_DanhSachNhanVien.TabStop = false;
             this.grb_DanhSachNhanVien.Text = "Danh sách nhân viên";
             // 
@@ -102,11 +119,10 @@
             this.lsv_DanhSachNhanVien.GridLines = true;
             this.lsv_DanhSachNhanVien.Location = new System.Drawing.Point(3, 16);
             this.lsv_DanhSachNhanVien.Name = "lsv_DanhSachNhanVien";
-            this.lsv_DanhSachNhanVien.Size = new System.Drawing.Size(500, 141);
+            this.lsv_DanhSachNhanVien.Size = new System.Drawing.Size(500, 205);
             this.lsv_DanhSachNhanVien.TabIndex = 1;
             this.lsv_DanhSachNhanVien.UseCompatibleStateImageBehavior = false;
             this.lsv_DanhSachNhanVien.View = System.Windows.Forms.View.Details;
-            this.lsv_DanhSachNhanVien.SelectedIndexChanged += new System.EventHandler(this.lsv_DanhSachNhanVien_SelectedIndexChanged);
             // 
             // STT
             // 
@@ -145,13 +161,14 @@
             this.ThongTinNhanVien.Controls.Add(this.label1);
             this.ThongTinNhanVien.Controls.Add(this.txt_DienThoai);
             this.ThongTinNhanVien.Controls.Add(this.txt_TenNhanVien);
-            this.ThongTinNhanVien.Controls.Add(this.btn_CapNhatNhanVien);
-            this.ThongTinNhanVien.Location = new System.Drawing.Point(12, 286);
+            this.ThongTinNhanVien.Controls.Add(this.btn_Huy);
+            this.ThongTinNhanVien.Controls.Add(this.btn_NhapNhanVien);
+            this.ThongTinNhanVien.Location = new System.Drawing.Point(12, 283);
             this.ThongTinNhanVien.Name = "ThongTinNhanVien";
             this.ThongTinNhanVien.Size = new System.Drawing.Size(506, 148);
-            this.ThongTinNhanVien.TabIndex = 14;
+            this.ThongTinNhanVien.TabIndex = 11;
             this.ThongTinNhanVien.TabStop = false;
-            this.ThongTinNhanVien.Text = "Cập nhật thông tin nhân viên";
+            this.ThongTinNhanVien.Text = "Thêm nhân viên mới";
             // 
             // dtp_NgayVaoCongTy
             // 
@@ -224,85 +241,34 @@
             this.txt_TenNhanVien.Size = new System.Drawing.Size(142, 20);
             this.txt_TenNhanVien.TabIndex = 2;
             // 
-            // btn_CapNhatNhanVien
+            // btn_Huy
             // 
-            this.btn_CapNhatNhanVien.Location = new System.Drawing.Point(417, 119);
-            this.btn_CapNhatNhanVien.Name = "btn_CapNhatNhanVien";
-            this.btn_CapNhatNhanVien.Size = new System.Drawing.Size(75, 23);
-            this.btn_CapNhatNhanVien.TabIndex = 1;
-            this.btn_CapNhatNhanVien.Text = "&Lưu";
-            this.btn_CapNhatNhanVien.UseVisualStyleBackColor = true;
-            this.btn_CapNhatNhanVien.Click += new System.EventHandler(this.btn_CapNhatNhanVien_Click);
+            this.btn_Huy.Location = new System.Drawing.Point(327, 119);
+            this.btn_Huy.Name = "btn_Huy";
+            this.btn_Huy.Size = new System.Drawing.Size(75, 23);
+            this.btn_Huy.TabIndex = 1;
+            this.btn_Huy.Text = "&Hủy";
+            this.btn_Huy.UseVisualStyleBackColor = true;
+            this.btn_Huy.Click += new System.EventHandler(this.btn_Huy_Click);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.chk_TimChinhXac);
-            this.groupBox1.Controls.Add(this.txt_TenNhanVien_TimKiem);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.btn_Tim);
-            this.groupBox1.Location = new System.Drawing.Point(12, 45);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(506, 69);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tìm kiếm";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Họ tên nhân viên";
-            // 
-            // txt_TenNhanVien_TimKiem
-            // 
-            this.txt_TenNhanVien_TimKiem.Location = new System.Drawing.Point(118, 34);
-            this.txt_TenNhanVien_TimKiem.Name = "txt_TenNhanVien_TimKiem";
-            this.txt_TenNhanVien_TimKiem.Size = new System.Drawing.Size(142, 20);
-            this.txt_TenNhanVien_TimKiem.TabIndex = 1;
-            // 
-            // btn_Tim
-            // 
-            this.btn_Tim.Location = new System.Drawing.Point(295, 32);
-            this.btn_Tim.Name = "btn_Tim";
-            this.btn_Tim.Size = new System.Drawing.Size(75, 23);
-            this.btn_Tim.TabIndex = 1;
-            this.btn_Tim.Text = "Tìm";
-            this.btn_Tim.UseVisualStyleBackColor = true;
-            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
-            // 
-            // chk_TimChinhXac
-            // 
-            this.chk_TimChinhXac.AutoSize = true;
-            this.chk_TimChinhXac.Location = new System.Drawing.Point(389, 36);
-            this.chk_TimChinhXac.Name = "chk_TimChinhXac";
-            this.chk_TimChinhXac.Size = new System.Drawing.Size(94, 17);
-            this.chk_TimChinhXac.TabIndex = 32;
-            this.chk_TimChinhXac.Text = "Tì&m chính xác";
-            this.chk_TimChinhXac.UseVisualStyleBackColor = true;
-            // 
-            // CapNhatThongTinNhanVienGUI
+            // NhapNhanVienGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 468);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btn_Thoat);
+            this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.grb_DanhSachNhanVien);
-            this.Controls.Add(this.ThongTinNhanVien);
+            this.Controls.Add(this.btn_Import);
             this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.ThongTinNhanVien);
             this.MaximizeBox = false;
-            this.Name = "CapNhatThongTinNhanVienGUI";
+            this.Name = "NhapNhanVienGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cap nhat thong tin nhan vien";
-            this.Load += new System.EventHandler(this.CapNhatThongTinNhanVienGUI_Load);
+            this.Text = "Nhap nhan vien";
+            this.Load += new System.EventHandler(this.NhapNhanVienGUI_Load);
             this.grb_DanhSachNhanVien.ResumeLayout(false);
             this.ThongTinNhanVien.ResumeLayout(false);
             this.ThongTinNhanVien.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,28 +277,25 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.Button btn_NhapNhanVien;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btn_Import;
         private System.Windows.Forms.GroupBox grb_DanhSachNhanVien;
+        private System.Windows.Forms.GroupBox ThongTinNhanVien;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_DienThoai;
+        private System.Windows.Forms.TextBox txt_TenNhanVien;
+        private System.Windows.Forms.ComboBox cbo_LoaiNhanVien;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_Huy;
+        private System.Windows.Forms.DateTimePicker dtp_NgayVaoCongTy;
         private System.Windows.Forms.ListView lsv_DanhSachNhanVien;
         private System.Windows.Forms.ColumnHeader STT;
         private System.Windows.Forms.ColumnHeader TenNhanVien;
         private System.Windows.Forms.ColumnHeader LoaiNhanVien;
         private System.Windows.Forms.ColumnHeader DienThoai;
         private System.Windows.Forms.ColumnHeader NgayVaoCongTy;
-        private System.Windows.Forms.GroupBox ThongTinNhanVien;
-        private System.Windows.Forms.DateTimePicker dtp_NgayVaoCongTy;
-        private System.Windows.Forms.ComboBox cbo_LoaiNhanVien;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_DienThoai;
-        private System.Windows.Forms.TextBox txt_TenNhanVien;
-        private System.Windows.Forms.Button btn_CapNhatNhanVien;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txt_TenNhanVien_TimKiem;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btn_Tim;
-        private System.Windows.Forms.CheckBox chk_TimChinhXac;
     }
 }

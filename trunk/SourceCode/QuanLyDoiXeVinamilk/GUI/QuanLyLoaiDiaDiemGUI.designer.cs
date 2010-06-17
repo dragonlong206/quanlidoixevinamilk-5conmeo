@@ -37,13 +37,13 @@
             this.btn_SuaLoaiDiaDiem = new System.Windows.Forms.Button();
             this.btn_ThemLoaiDiaDiem = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
-            this.grb_TrongTaiHienCo = new System.Windows.Forms.GroupBox();
+            this.grb_DanhSachLoaiDiaDiem = new System.Windows.Forms.GroupBox();
             this.chk_ChonTatCa = new System.Windows.Forms.CheckBox();
             this.lsv_DanhSachLoaiDiaDiem = new System.Windows.Forms.ListView();
             this.STT = new System.Windows.Forms.ColumnHeader();
             this.TenLoaiDiaDiem = new System.Windows.Forms.ColumnHeader();
             this.grb_ThaoTac.SuspendLayout();
-            this.grb_TrongTaiHienCo.SuspendLayout();
+            this.grb_DanhSachLoaiDiaDiem.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Title
@@ -141,16 +141,16 @@
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
-            // grb_TrongTaiHienCo
+            // grb_DanhSachLoaiDiaDiem
             // 
-            this.grb_TrongTaiHienCo.Controls.Add(this.chk_ChonTatCa);
-            this.grb_TrongTaiHienCo.Controls.Add(this.lsv_DanhSachLoaiDiaDiem);
-            this.grb_TrongTaiHienCo.Location = new System.Drawing.Point(12, 63);
-            this.grb_TrongTaiHienCo.Name = "grb_TrongTaiHienCo";
-            this.grb_TrongTaiHienCo.Size = new System.Drawing.Size(194, 228);
-            this.grb_TrongTaiHienCo.TabIndex = 25;
-            this.grb_TrongTaiHienCo.TabStop = false;
-            this.grb_TrongTaiHienCo.Text = "Danh sách loại địa điểm";
+            this.grb_DanhSachLoaiDiaDiem.Controls.Add(this.chk_ChonTatCa);
+            this.grb_DanhSachLoaiDiaDiem.Controls.Add(this.lsv_DanhSachLoaiDiaDiem);
+            this.grb_DanhSachLoaiDiaDiem.Location = new System.Drawing.Point(12, 63);
+            this.grb_DanhSachLoaiDiaDiem.Name = "grb_DanhSachLoaiDiaDiem";
+            this.grb_DanhSachLoaiDiaDiem.Size = new System.Drawing.Size(194, 228);
+            this.grb_DanhSachLoaiDiaDiem.TabIndex = 25;
+            this.grb_DanhSachLoaiDiaDiem.TabStop = false;
+            this.grb_DanhSachLoaiDiaDiem.Text = "Danh sách loại địa điểm";
             // 
             // chk_ChonTatCa
             // 
@@ -196,7 +196,7 @@
             this.ClientSize = new System.Drawing.Size(429, 339);
             this.Controls.Add(this.grb_ThaoTac);
             this.Controls.Add(this.btn_Thoat);
-            this.Controls.Add(this.grb_TrongTaiHienCo);
+            this.Controls.Add(this.grb_DanhSachLoaiDiaDiem);
             this.Controls.Add(this.lbl_Title);
             this.MaximizeBox = false;
             this.Name = "LoaiDiaDiemGUI";
@@ -205,8 +205,8 @@
             this.Load += new System.EventHandler(this.LoaiDiaDiemGUI_Load);
             this.grb_ThaoTac.ResumeLayout(false);
             this.grb_ThaoTac.PerformLayout();
-            this.grb_TrongTaiHienCo.ResumeLayout(false);
-            this.grb_TrongTaiHienCo.PerformLayout();
+            this.grb_DanhSachLoaiDiaDiem.ResumeLayout(false);
+            this.grb_DanhSachLoaiDiaDiem.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,7 +223,7 @@
         private System.Windows.Forms.Button btn_SuaLoaiDiaDiem;
         private System.Windows.Forms.Button btn_ThemLoaiDiaDiem;
         private System.Windows.Forms.Button btn_Thoat;
-        private System.Windows.Forms.GroupBox grb_TrongTaiHienCo;
+        private System.Windows.Forms.GroupBox grb_DanhSachLoaiDiaDiem;
         private System.Windows.Forms.CheckBox chk_ChonTatCa;
         private System.Windows.Forms.ListView lsv_DanhSachLoaiDiaDiem;
         private System.Windows.Forms.ColumnHeader STT;

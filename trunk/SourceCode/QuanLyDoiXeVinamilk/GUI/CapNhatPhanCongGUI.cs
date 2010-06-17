@@ -34,7 +34,7 @@ namespace GUI
                 this.cbo_BienSoXe.DisplayMember = "BienSo";
                 this.cbo_BienSoXe.ValueMember = "BienSo";
 
-                List<NhanVienDTO> DSNhanVien = NhanVienBUS.LayDanhSachNhanVien();
+                List<NhanVienDTO> DSNhanVien = NhanVienBUS.DocDanhSachNhanVien(String.Empty);
                 this.cbo_TaiXe.DataSource = DSNhanVien;
                 this.cbo_TaiXe.DisplayMember = "TenNhanVien";
                 this.cbo_TaiXe.ValueMember = "MaNhanVien";

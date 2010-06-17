@@ -53,7 +53,7 @@ namespace GUI
 
         private void thêmNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TiepNhanNhanVienGUI frm = new TiepNhanNhanVienGUI();
+            NhapNhanVienGUI frm = new NhapNhanVienGUI();
             frm.Show();
         }
 

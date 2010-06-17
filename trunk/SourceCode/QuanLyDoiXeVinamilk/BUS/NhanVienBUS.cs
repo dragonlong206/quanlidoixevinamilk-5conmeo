@@ -8,24 +8,7 @@ using DAO;
 namespace BUS
 {
     public class NhanVienBUS
-    {
-        #region Select
-        public static List<NhanVienDTO> LayDanhSachNhanVien()
-        {
-            List<NhanVienDTO> lstDanhSachNhanVien = null;
-            try
-            {
-                lstDanhSachNhanVien = NhanVienDAO.LayDanhSachNhanVien();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            return lstDanhSachNhanVien;
-        }
-        #endregion
-
+    {        
         //Tam thoi dung ham nay: chinh sua truy xuat CSDL sau.
         public static int GetMaNhanVien(String strTenNhanVien)
         {
@@ -56,5 +39,64 @@ namespace BUS
                     return "Erorr!";
             }
         }
+
+        public static Boolean ThemNhanVien(NhanVienDTO NhanVien)
+        {
+            Boolean blnKetQua = false;
+            try
+            {
+                blnKetQua = NhanVienDAO.ThemNhanVien(NhanVien);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return blnKetQua;
+
+        }
+
+        public static Boolean XoaNhanVien(NhanVienDTO NhanVien)
+        {
+            Boolean blnKetQua = false;
+            try
+            {
+                blnKetQua = NhanVienDAO.XoaNhanVien(NhanVien);
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+            return blnKetQua;
+        }
+
+        public static bool CapNhatNhanVien(DTO.NhanVienDTO aNhanVien)
+        {
+            Boolean blnKetQua = false;
+            try
+            {
+                blnKetQua = DAO.NhanVienDAO.CapNhatNhanVien(aNhanVien);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return blnKetQua;
+        }
+        
+        public static List<NhanVienDTO> DocDanhSachNhanVien(String strTieuChiTimKiem)
+        {
+            List<NhanVienDTO> lstDanhSachNhanVien = null;
+            try
+            {
+                lstDanhSachNhanVien = NhanVienDAO.DocDanhSachNhanVien(strTieuChiTimKiem);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return lstDanhSachNhanVien;
+        }        
     }
 }

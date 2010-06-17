@@ -10,7 +10,9 @@ namespace DTO
         #region 1.ThuocTinh
         int m_iMaNhanVien;
         String m_strTenNhanVien;
+        int m_nMaLoaiNhanVien;
         String m_strSoDienThoai;
+        DateTime m_timeNgayVaoCongTy;
         #endregion
 
         #region 2.PhuongThucTruyXuat
@@ -25,7 +27,16 @@ namespace DTO
             get { return m_strTenNhanVien; }
             set { m_strTenNhanVien = value; }
         }
-
+        public int MaLoaiNhanVien
+        {
+            get { return m_nMaLoaiNhanVien; }
+            set { m_nMaLoaiNhanVien = value; }
+        }
+        public DateTime NgayVaoCongTy
+        {
+            get { return m_timeNgayVaoCongTy; }
+            set { m_timeNgayVaoCongTy = value; }
+        }
         public String SoDienThoai
         {
             get { return m_strSoDienThoai; }
@@ -37,8 +48,10 @@ namespace DTO
         public NhanVienDTO()
         {
             m_iMaNhanVien = -1;
-            m_strSoDienThoai = String.Empty;
             m_strTenNhanVien = String.Empty;
+            m_nMaLoaiNhanVien = -1;
+            m_strSoDienThoai = String.Empty;
+            m_timeNgayVaoCongTy = DateTime.MaxValue;
         }
         #endregion
     }
