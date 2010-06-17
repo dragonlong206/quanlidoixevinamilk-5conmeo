@@ -31,9 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -48,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCao.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CapNhatDiaDiemGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +95,11 @@
     </Compile>
     <Compile Include="CapNhatThongTinXeGUI.designer.cs">
       <DependentUpon>CapNhatThongTinXeGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Db_QuanLyDoiXeVinamilkDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Db_QuanLyDoiXeVinamilkDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="LapHoaDonGiaoHangFrm.cs">
       <SubType>Form</SubType>
@@ -122,8 +145,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaoCao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BaoCao.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapNhatDiaDiemGUI.resx">
       <DependentUpon>CapNhatDiaDiemGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CapNhatMatHangGUI.resx">
       <DependentUpon>CapNhatMatHangGUI.cs</DependentUpon>
@@ -135,6 +163,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapNhatThongTinNhanVienGUI.resx">
       <DependentUpon>CapNhatThongTinNhanVienGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CapNhatThongTinXeGUI.resx">
       <DependentUpon>CapNhatThongTinXeGUI.cs</DependentUpon>
@@ -146,12 +175,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoaiDiaDiemGUI.resx">
       <DependentUpon>LoaiDiaDiemGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="LoaiHangGUI.resx">
       <DependentUpon>LoaiHangGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapMatHangFrm.resx">
       <DependentUpon>NhapMatHangFrm.cs</DependentUpon>
@@ -159,6 +191,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhapMatHangGUI.resx">
       <DependentUpon>NhapMatHangGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="NhapNhanVienFrm.resx">
       <DependentUpon>NhapNhanVienFrm.cs</DependentUpon>
@@ -175,9 +208,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyLoaiDiaDiemGUI.resx">
       <DependentUpon>QuanLyLoaiDiaDiemGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyLoaiHangGUI.resx">
       <DependentUpon>QuanLyLoaiHangGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyTrongTaiGUI.resx">
       <DependentUpon>QuanLyTrongTaiGUI.cs</DependentUpon>
@@ -189,9 +224,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TiepNhanDiaDiemGUI.resx">
       <DependentUpon>TiepNhanDiaDiemGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TiepNhanNhanVienGUI.resx">
       <DependentUpon>TiepNhanNhanVienGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TiepNhanXeGUI.resx">
       <DependentUpon>TiepNhanXeGUI.cs</DependentUpon>
@@ -199,6 +236,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XoaDiaDiemGUI.resx">
       <DependentUpon>XoaDiaDiemGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaMatHangGUI.resx">
       <DependentUpon>XoaMatHangGUI.cs</DependentUpon>
@@ -206,6 +244,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XoaNhanVienGUI.resx">
       <DependentUpon>XoaNhanVienGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaPhanCongGUI.resx">
       <DependentUpon>XoaPhanCongGUI.cs</DependentUpon>
@@ -343,7 +382,27 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Db_QuanLyDoiXeVinamilkDataSet.xsc">
+      <DependentUpon>Db_QuanLyDoiXeVinamilkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Db_QuanLyDoiXeVinamilkDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Db_QuanLyDoiXeVinamilkDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Db_QuanLyDoiXeVinamilkDataSet.xss">
+      <DependentUpon>Db_QuanLyDoiXeVinamilkDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Import Data Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Db_QuanLyDoiXeVinamilk.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
