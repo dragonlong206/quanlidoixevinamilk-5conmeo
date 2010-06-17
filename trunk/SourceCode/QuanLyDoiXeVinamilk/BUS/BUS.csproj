@@ -45,9 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietHoaDonBUS.cs" />
     <Compile Include="ChiTietPCXe_TaiXeBUS.cs" />
     <Compile Include="DiaDiemBUS.cs" />
     <Compile Include="HangXeBUS.cs" />
+    <Compile Include="HoaDonBUS.cs" />
     <Compile Include="LoaiDiaDiemBUS.cs" />
     <Compile Include="LoaiHangBUS.cs" />
     <Compile Include="MatHangBUS.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TenMienEmailBUS.cs" />
     <Compile Include="ThamSoBUS.cs" />
+    <Compile Include="TrangThaiBUS.cs" />
     <Compile Include="TrongTaiBUS.cs" />
     <Compile Include="XeBUS.cs" />
   </ItemGroup>
