@@ -429,14 +429,21 @@ namespace GUI
                 OleDbDataAdapter MatHangAdapter = new OleDbDataAdapter(strCommand4, conn);
 
                 HoaDonAdapter.Fill(QLDX, "Hoa_Don");
-                ChiTietHoaDonAdapter.Fill(QLDX, "ChiTiet_HoaDon");
-                TrangThaiAdapter.Fill(QLDX, "Trang_Thai");
-                MatHangAdapter.Fill(QLDX, "Mat_Hang");
+                if (QLDX.HOA_DON.Count > 0)
+                {
+                    ChiTietHoaDonAdapter.Fill(QLDX, "ChiTiet_HoaDon");
+                    TrangThaiAdapter.Fill(QLDX, "Trang_Thai");
+                    MatHangAdapter.Fill(QLDX, "Mat_Hang");
 
-                BaoCao BaoCaoGiaoHang = new BaoCao();
-                BaoCaoGiaoHang.SetDataSource(QLDX);
-                BaoCaoGiaoHang.SetParameterValue("@Thang", this.dtp_Thang_BaoCaoGiaoHang.Value);
-                this.crv_BaoCaoGiaoHang.ReportSource = BaoCaoGiaoHang;
+                    BaoCao BaoCaoGiaoHang = new BaoCao();
+                    BaoCaoGiaoHang.SetDataSource(QLDX);
+                    BaoCaoGiaoHang.SetParameterValue("@Thang", this.dtp_Thang_BaoCaoGiaoHang.Value);
+                    this.crv_BaoCaoGiaoHang.ReportSource = BaoCaoGiaoHang;
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu cho tháng này");
+                }
             }
             catch (Exception ex)
             {
