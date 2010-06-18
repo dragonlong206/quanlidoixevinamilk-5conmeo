@@ -37,3 +37,5 @@ D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bi
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\bin\Debug\Db_QuanLyDoiXeVinamilk.accdb
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.frm_NhapHoaDon.resources
 D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.NhapNhanVienGUI.resources
+D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.LoaiNhanVienGUI.resources
+D:\ViecTrongTuan\1_HocTap\9_DXViNa_Working\SourceCode\QuanLyDoiXeVinamilk\GUI\obj\Debug\GUI.QuanLyThamSoGUI.resources
