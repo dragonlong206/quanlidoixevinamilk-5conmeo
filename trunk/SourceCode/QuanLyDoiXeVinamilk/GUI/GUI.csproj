@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{91E11A85-E0AE-4BE3-AB4C-794DAD236234}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -78,10 +78,10 @@
     <Compile Include="CapNhatMatHangGUI.Designer.cs">
       <DependentUpon>CapNhatMatHangGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Properties\CapNhatPhanCongGUI.cs">
+    <Compile Include="CapNhatPhanCongGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Properties\CapNhatPhanCongGUI.Designer.cs">
+    <Compile Include="CapNhatPhanCongGUI.designer.cs">
       <DependentUpon>CapNhatPhanCongGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="CapNhatThongTinNhanVienGUI.cs">
@@ -145,7 +145,7 @@
       <DependentUpon>CapNhatMatHangGUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\CapNhatPhanCongGUI.resx">
+    <EmbeddedResource Include="CapNhatPhanCongGUI.resx">
       <DependentUpon>CapNhatPhanCongGUI.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>

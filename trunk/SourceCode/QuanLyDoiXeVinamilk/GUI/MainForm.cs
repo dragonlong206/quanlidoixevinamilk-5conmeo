@@ -25,30 +25,6 @@ namespace GUI
         private void pbThongKe_MainTab_MouseHover(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Hand;
-            this.lblThongKe_MainTab.BackColor = Color.LightGreen;
-        }
-
-        private void ptbThongKe_MainTab_MouseLeave(object sender, EventArgs e)
-        {
-            this.Cursor = Cursors.Default;
-            this.lblThongKe_MainTab.BackColor = Color.White;
-        }
-
-        private void ptbThongTinHopDen_MainTab_MouseHover(object sender, EventArgs e)
-        {
-            this.Cursor = Cursors.Hand;
-            this.lblHopDen_MainTab.BackColor = Color.LightGreen;
-        }
-
-        private void ptbThongTinHopDen_MainTab_MouseLeave(object sender, EventArgs e)
-        {
-            this.Cursor = Cursors.Default;
-            this.lblHopDen_MainTab.BackColor = Color.White;
-        }
-
-        private void ptbThongTinHopDen_MainTab_Click(object sender, EventArgs e)
-        {
-            tabMainTab.SelectedTab = tabHopDen;
         }
 
         private void thêmNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
