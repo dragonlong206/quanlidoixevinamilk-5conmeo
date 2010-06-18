@@ -456,5 +456,11 @@ namespace GUI
             frm_NhapHoaDon frm = new frm_NhapHoaDon();
             frm.Show();
         }
+
+        private void quảnLýLoạiNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoaiNhanVienGUI frm = new LoaiNhanVienGUI();
+            frm.Show();
+        }
     }
 }

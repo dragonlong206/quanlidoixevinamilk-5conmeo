@@ -161,6 +161,7 @@
             this.dtp_Thang_BaoCaoGiaoHang = new System.Windows.Forms.DateTimePicker();
             this.lbl_Thang = new System.Windows.Forms.Label();
             this.crv_BaoCaoGiaoHang = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.quảnLýLoạiNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHopDen.SuspendLayout();
             this.grbDanhSachHopDen.SuspendLayout();
             this.tabMainTab.SuspendLayout();
@@ -269,7 +270,8 @@
             this.cậpNhậtThôngTinNhânViênToolStripMenuItem,
             this.xóaNhânViênToolStripMenuItem,
             this.toolStripSeparator2,
-            this.phânCôngXetàiXếToolStripMenuItem});
+            this.phânCôngXetàiXếToolStripMenuItem,
+            this.quảnLýLoạiNhânViênToolStripMenuItem});
             this.quảnLýnhânViênToolStripMenuItem.Name = "quảnLýnhânViênToolStripMenuItem";
             this.quảnLýnhânViênToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.quảnLýnhânViênToolStripMenuItem.Text = "Quản lý &nhân viên";
@@ -1406,6 +1408,13 @@
             this.crv_BaoCaoGiaoHang.TabIndex = 25;
             this.crv_BaoCaoGiaoHang.ViewTimeSelectionFormula = "";
             // 
+            // quảnLýLoạiNhânViênToolStripMenuItem
+            // 
+            this.quảnLýLoạiNhânViênToolStripMenuItem.Name = "quảnLýLoạiNhânViênToolStripMenuItem";
+            this.quảnLýLoạiNhânViênToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.quảnLýLoạiNhânViênToolStripMenuItem.Text = "Quản lý loại nhân viên";
+            this.quảnLýLoạiNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLýLoạiNhânViênToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1587,5 +1596,6 @@
         private System.Windows.Forms.ToolStripMenuItem nhậpHóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cậpNhậtHóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xóaHóaĐơnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýLoạiNhânViênToolStripMenuItem;
     }
 }
