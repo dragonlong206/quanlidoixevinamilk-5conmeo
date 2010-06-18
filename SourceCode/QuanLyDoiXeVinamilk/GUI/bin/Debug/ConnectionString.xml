@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<connectionString>Provider=Microsoft.ACE.OLEDB.12.0;Data Source=..\..\..\DataBase\Db_QuanLyDoiXeVinamilk.accdb;Persist Security Info=False;</connectionString>
+<connectionString>Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Db_QuanLyDoiXeVinamilk.accdb;Persist Security Info=False;</connectionString>

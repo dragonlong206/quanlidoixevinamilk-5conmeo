@@ -218,7 +218,6 @@
             this.txt_NguoiLienHe.Name = "txt_NguoiLienHe";
             this.txt_NguoiLienHe.Size = new System.Drawing.Size(166, 20);
             this.txt_NguoiLienHe.TabIndex = 2;
-            this.txt_NguoiLienHe.Text = "Trần Văn B";
             // 
             // txt_ToaDoY
             // 
@@ -226,7 +225,6 @@
             this.txt_ToaDoY.Name = "txt_ToaDoY";
             this.txt_ToaDoY.Size = new System.Drawing.Size(32, 20);
             this.txt_ToaDoY.TabIndex = 8;
-            this.txt_ToaDoY.Text = "21";
             // 
             // lbl_ToaDoX
             // 
@@ -243,7 +241,6 @@
             this.txt_ToaDoX.Name = "txt_ToaDoX";
             this.txt_ToaDoX.Size = new System.Drawing.Size(31, 20);
             this.txt_ToaDoX.TabIndex = 7;
-            this.txt_ToaDoX.Text = "123";
             // 
             // txt_DienThoai
             // 
@@ -251,7 +248,6 @@
             this.txt_DienThoai.Name = "txt_DienThoai";
             this.txt_DienThoai.Size = new System.Drawing.Size(119, 20);
             this.txt_DienThoai.TabIndex = 6;
-            this.txt_DienThoai.Text = "0988196127";
             // 
             // txt_DiaChi
             // 
@@ -259,7 +255,6 @@
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.Size = new System.Drawing.Size(294, 20);
             this.txt_DiaChi.TabIndex = 3;
-            this.txt_DiaChi.Text = "109/01, Cao Thắng, Quận 3";
             // 
             // txt_Email
             // 
@@ -267,7 +262,6 @@
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(163, 20);
             this.txt_Email.TabIndex = 4;
-            this.txt_Email.Text = "vinhkim";
             // 
             // txt_TenDiaDiem
             // 
@@ -275,7 +269,6 @@
             this.txt_TenDiaDiem.Name = "txt_TenDiaDiem";
             this.txt_TenDiaDiem.Size = new System.Drawing.Size(166, 20);
             this.txt_TenDiaDiem.TabIndex = 0;
-            this.txt_TenDiaDiem.Text = "Vĩnh Kim";
             // 
             // lbl_NguoiLienHe
             // 
