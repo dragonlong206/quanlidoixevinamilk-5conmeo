@@ -101,34 +101,31 @@ namespace DAO
         #region 4.Select
         public static List<NhanVienDTO> DocDanhSachNhanVien(String strTieuChiTimKiem)
         {
-            List<NhanVienDTO> lstDanhSachNhanVien = null;
-            try
-            {
-                String strCommand = @"Select * From NHAN_VIEN" + strTieuChiTimKiem;
-                DataTable table = SqlDataAccessHelper.ExcuteQuery(strCommand, null);
-                if (table.Rows.Count > 0)
-                {
-                    lstDanhSachNhanVien = new List<NhanVienDTO>();
-                    foreach (DataRow aRow in table.Rows)
-                    {
-                        NhanVienDTO aNhanVien = new NhanVienDTO();
-                        aNhanVien.MaNhanVien = int.Parse(aRow["MaNhanVien"].ToString());
-                        aNhanVien.TenNhanVien = aRow["TenNhanVien"].ToString();
-                        aNhanVien.MaLoaiNhanVien = int.Parse(aRow["MaLoaiNhanVien"].ToString());
-                        aNhanVien.SoDienThoai = aRow["SoDienThoai"].ToString();
-                        aNhanVien.NgayVaoCongTy = DateTime.Parse(aRow["NgayVaoCongTy"].ToString());
+            List<NhanVienDTO> lstNhanVien = new List<NhanVienDTO>();
 
-                        lstDanhSachNhanVien.Add(aNhanVien);
-                    }
-                }
-            }
-            catch (Exception ex)
+            String strCommand = "Select * from NHAN_VIEN" + strTieuChiTimKiem;
+            DataTable table = SqlDataAccessHelper.ExcuteQuery(strCommand, null);
+
+            foreach (DataRow aDong in table.Rows)
             {
-                throw ex;
+                lstNhanVien.Add(KhoiTao(aDong));
             }
 
-            return lstDanhSachNhanVien;
+            return lstNhanVien;              
         }
+
+        public static DTO.NhanVienDTO KhoiTao(DataRow aDong)
+        {
+            DTO.NhanVienDTO aNhanVien = new DTO.NhanVienDTO();
+
+            aNhanVien.MaNhanVien = int.Parse(aDong["MaNhanVien"].ToString());
+            aNhanVien.TenNhanVien = aDong["TenNhanVien"].ToString();
+            aNhanVien.MaLoaiNhanVien = int.Parse(aDong["MaLoaiNhanVien"].ToString());
+            aNhanVien.SoDienThoai = aDong["SoDienThoai"].ToString();
+            aNhanVien.NgayVaoCongTy = DateTime.Parse(aDong["NgayVaoCongTy"].ToString());
+             
+            return aNhanVien;
+        }        
         #endregion
     }
 }

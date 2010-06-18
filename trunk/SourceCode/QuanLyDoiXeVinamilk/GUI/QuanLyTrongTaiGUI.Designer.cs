@@ -92,6 +92,7 @@
             this.chk_ChonTatCa.TabIndex = 1;
             this.chk_ChonTatCa.Text = "Chọn tất cả";
             this.chk_ChonTatCa.UseVisualStyleBackColor = true;
+            this.chk_ChonTatCa.CheckedChanged += new System.EventHandler(this.chk_ChonTatCa_CheckedChanged);
             // 
             // btn_ThemTrongTai
             // 

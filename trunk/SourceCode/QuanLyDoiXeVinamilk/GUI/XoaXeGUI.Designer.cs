@@ -70,6 +70,7 @@
             this.cbo_HangXe_TimKiem = new System.Windows.Forms.ComboBox();
             this.lbl_HieuXe_TimKiem = new System.Windows.Forms.Label();
             this.lbl_HangXe_TimKiem = new System.Windows.Forms.Label();
+            this.chk_ChonTatCa = new System.Windows.Forms.CheckBox();
             this.grb_DanhSachXe.SuspendLayout();
             this.grb_ThongTinXe.SuspendLayout();
             this.grb_TieuChiTimKiem.SuspendLayout();
@@ -89,6 +90,7 @@
             // 
             // grb_DanhSachXe
             // 
+            this.grb_DanhSachXe.Controls.Add(this.chk_ChonTatCa);
             this.grb_DanhSachXe.Controls.Add(this.lsv_DanhSachXe);
             this.grb_DanhSachXe.Location = new System.Drawing.Point(9, 133);
             this.grb_DanhSachXe.Name = "grb_DanhSachXe";
@@ -107,7 +109,7 @@
             this.lsv_DanhSachXe.GridLines = true;
             this.lsv_DanhSachXe.Location = new System.Drawing.Point(7, 20);
             this.lsv_DanhSachXe.Name = "lsv_DanhSachXe";
-            this.lsv_DanhSachXe.Size = new System.Drawing.Size(163, 300);
+            this.lsv_DanhSachXe.Size = new System.Drawing.Size(163, 277);
             this.lsv_DanhSachXe.TabIndex = 0;
             this.lsv_DanhSachXe.UseCompatibleStateImageBehavior = false;
             this.lsv_DanhSachXe.View = System.Windows.Forms.View.Details;
@@ -495,6 +497,17 @@
             this.lbl_HangXe_TimKiem.TabIndex = 19;
             this.lbl_HangXe_TimKiem.Text = "Hãng xe";
             // 
+            // chk_ChonTatCa
+            // 
+            this.chk_ChonTatCa.AutoSize = true;
+            this.chk_ChonTatCa.Location = new System.Drawing.Point(9, 302);
+            this.chk_ChonTatCa.Name = "chk_ChonTatCa";
+            this.chk_ChonTatCa.Size = new System.Drawing.Size(81, 17);
+            this.chk_ChonTatCa.TabIndex = 34;
+            this.chk_ChonTatCa.Text = "Chọn tất cả";
+            this.chk_ChonTatCa.UseVisualStyleBackColor = true;
+            this.chk_ChonTatCa.CheckedChanged += new System.EventHandler(this.chk_ChonTatCa_CheckedChanged);
+            // 
             // XoaXeGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -512,6 +525,7 @@
             this.Text = "XoaXeFrm";
             this.Load += new System.EventHandler(this.XoaXeGUI_Load);
             this.grb_DanhSachXe.ResumeLayout(false);
+            this.grb_DanhSachXe.PerformLayout();
             this.grb_ThongTinXe.ResumeLayout(false);
             this.grb_ThongTinXe.PerformLayout();
             this.grb_TieuChiTimKiem.ResumeLayout(false);
@@ -565,5 +579,6 @@
         private System.Windows.Forms.Label lbl_HangXe_TimKiem;
         private System.Windows.Forms.TextBox txt_NgayTiepNhan;
         private System.Windows.Forms.Label lbl_NgayTiepNhan;
+        private System.Windows.Forms.CheckBox chk_ChonTatCa;
     }
 }

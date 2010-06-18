@@ -19,11 +19,54 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void NhapMatHangFrm_Load(object sender, EventArgs e)
+        #region Xuat thong tin MatHang.
+        private void NhapMatHangGUI_Load(object sender, EventArgs e)
         {
+            try
+            {
+                List<DTO.MatHangDTO> lstMatHang = MatHangBUS.DocDanhSachMatHang(String.Empty);
+                XuatDanhSachMatHang(lstMatHang);
 
-        }        
+                // Load danh sach LoaiHang.
+                List<DTO.LoaiHangDTO> DanhSachLoaiHang = BUS.LoaiHangBUS.DocDanhSachLoaiHang(string.Empty);
+                if (DanhSachLoaiHang.Count > 0)
+                {
+                    this.cbo_LoaiHang.DataSource = DanhSachLoaiHang;
+                    this.cbo_LoaiHang.DisplayMember = "TenLoaiHang";
+                    this.cbo_LoaiHang.ValueMember = "MaLoaiHang";
+                }
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex.Message);
+            }
+        }
+        
+        private void XuatDanhSachMatHang(List<MatHangDTO> lstMatHang)
+        {
+            lsv_DanhSachMatHang.Items.Clear();
+            int nSoThuTu = 1;
+            foreach (MatHangDTO aMatHang in lstMatHang)
+            {
+                lsv_DanhSachMatHang.Items.Add(TheHienListItem(nSoThuTu, aMatHang));
+                nSoThuTu++;
+            }
+        }
 
+        private ListViewItem TheHienListItem(int nSoThuTu, MatHangDTO aMatHang)
+        {
+            ListViewItem itemKetQua = new ListViewItem(nSoThuTu.ToString());
+            itemKetQua.SubItems.Add(aMatHang.TenMatHang);
+            itemKetQua.SubItems.Add(aMatHang.SoLuong.ToString());
+            itemKetQua.SubItems.Add(aMatHang.DonViTinh);
+            itemKetQua.SubItems.Add(BUS.LoaiHangBUS.GetTenLoaiHang(aMatHang.MaLoai));
+            itemKetQua.Tag = aMatHang;
+
+            return itemKetQua;
+        }       
+        #endregion
+
+        #region Nhap MatHang.
         private void btn_Luu_Click(object sender, EventArgs e)
         {
             MatHangDTO aMatHang = NhapMatHang();
@@ -33,14 +76,9 @@ namespace GUI
             try
             {
 
-                Boolean blnDaThemDuoc = MatHangBUS.ThemMatHang(aMatHang);
-                if (blnDaThemDuoc == true)
+                if (MatHangBUS.ThemMatHang(aMatHang))
                 {
-                    MessageBox.Show("Thêm mặt hàng thành công");
-                }
-                else
-                {
-                    MessageBox.Show("Loi ghi du lieu.\r\n vui long kiem tra du lieu nhap");
+                    NhapMatHangGUI_Load(sender, e);
                 }
 
             }
@@ -48,7 +86,7 @@ namespace GUI
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        }         
 
         private MatHangDTO NhapMatHang()
         {
@@ -60,7 +98,7 @@ namespace GUI
             aMatHang.TenMatHang = txt_TenMatHang.Text;
             aMatHang.SoLuong = int.Parse(txt_SoLuong.Text);
             aMatHang.DonViTinh = txt_DonViTinh.Text;
-            aMatHang.MaLoai = BUS.LoaiHangBUS.GetMaLoaiHang(cbo_LoaiHang.Text);
+            aMatHang.MaLoai = int.Parse(cbo_LoaiHang.SelectedValue.ToString());
             #endregion
 
             return aMatHang;
@@ -85,18 +123,11 @@ namespace GUI
 
             return blnKetQua;
         }
+        #endregion
 
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-      
+        }                     
     }
-
-      
-
-        
-
-    
-
 }

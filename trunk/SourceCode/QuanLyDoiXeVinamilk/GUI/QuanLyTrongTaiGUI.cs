@@ -180,6 +180,24 @@ namespace GUI
                     MessageBox.Show("Chua co du lieu nao duoc chon");
             }
         }
+
+        private void chk_ChonTatCa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_ChonTatCa.CheckState == CheckState.Checked)
+            {
+                foreach (ListViewItem itemLoaiTrongTai in lsv_DanhSachTrongTai.Items)
+                {
+                    itemLoaiTrongTai.Checked = true;
+                }
+            }
+            else
+            {
+                foreach (ListViewItem itemLoaiTrongTai in lsv_DanhSachTrongTai.Items)
+                {
+                    itemLoaiTrongTai.Checked = false;
+                }
+            }
+        }
         #endregion              
 
         #region Cap Nhat Trong Tai
@@ -256,6 +274,6 @@ namespace GUI
         {
             this.Close();
         }
-        #endregion          
+        #endregion                  
     }
 }

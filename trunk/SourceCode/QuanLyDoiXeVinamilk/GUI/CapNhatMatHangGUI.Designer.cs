@@ -134,7 +134,6 @@
             // 
             // lsv_DanhSachMatHang
             // 
-            this.lsv_DanhSachMatHang.CheckBoxes = true;
             this.lsv_DanhSachMatHang.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.STT,
             this.TenMatHang,
@@ -206,11 +205,8 @@
             // 
             // cbo_LoaiHang
             // 
+            this.cbo_LoaiHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_LoaiHang.FormattingEnabled = true;
-            this.cbo_LoaiHang.Items.AddRange(new object[] {
-            "Hàng Thường",
-            "Hàng Nóng",
-            "Hàng Lạnh"});
             this.cbo_LoaiHang.Location = new System.Drawing.Point(379, 68);
             this.cbo_LoaiHang.Name = "cbo_LoaiHang";
             this.cbo_LoaiHang.Size = new System.Drawing.Size(136, 21);

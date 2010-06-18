@@ -36,7 +36,7 @@
             this.txt_SoMay = new System.Windows.Forms.TextBox();
             this.lbl_SoMay = new System.Windows.Forms.Label();
             this.dtp_NgayTiepNhan = new System.Windows.Forms.DateTimePicker();
-            this.cbo_NhanVien = new System.Windows.Forms.ComboBox();
+            this.cbo_NhanVienTiepNhan = new System.Windows.Forms.ComboBox();
             this.txt_SoKhung = new System.Windows.Forms.TextBox();
             this.lbl_SoKhung = new System.Windows.Forms.Label();
             this.cbo_TrongTai = new System.Windows.Forms.ComboBox();
@@ -107,7 +107,7 @@
             this.grb_ThongTinXe.Controls.Add(this.txt_SoMay);
             this.grb_ThongTinXe.Controls.Add(this.lbl_SoMay);
             this.grb_ThongTinXe.Controls.Add(this.dtp_NgayTiepNhan);
-            this.grb_ThongTinXe.Controls.Add(this.cbo_NhanVien);
+            this.grb_ThongTinXe.Controls.Add(this.cbo_NhanVienTiepNhan);
             this.grb_ThongTinXe.Controls.Add(this.txt_SoKhung);
             this.grb_ThongTinXe.Controls.Add(this.lbl_SoKhung);
             this.grb_ThongTinXe.Controls.Add(this.cbo_TrongTai);
@@ -137,6 +137,7 @@
             // 
             // txt_BienSo
             // 
+            this.txt_BienSo.Enabled = false;
             this.txt_BienSo.Location = new System.Drawing.Point(102, 35);
             this.txt_BienSo.Name = "txt_BienSo";
             this.txt_BienSo.Size = new System.Drawing.Size(101, 20);
@@ -176,17 +177,18 @@
             this.dtp_NgayTiepNhan.Size = new System.Drawing.Size(101, 20);
             this.dtp_NgayTiepNhan.TabIndex = 44;
             // 
-            // cbo_NhanVien
+            // cbo_NhanVienTiepNhan
             // 
-            this.cbo_NhanVien.FormattingEnabled = true;
-            this.cbo_NhanVien.Items.AddRange(new object[] {
+            this.cbo_NhanVienTiepNhan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_NhanVienTiepNhan.FormattingEnabled = true;
+            this.cbo_NhanVienTiepNhan.Items.AddRange(new object[] {
             "Bùi Kim Hoa",
             "Nguyễn Anh",
             "Nguyễn Khuyến"});
-            this.cbo_NhanVien.Location = new System.Drawing.Point(102, 220);
-            this.cbo_NhanVien.Name = "cbo_NhanVien";
-            this.cbo_NhanVien.Size = new System.Drawing.Size(101, 21);
-            this.cbo_NhanVien.TabIndex = 43;
+            this.cbo_NhanVienTiepNhan.Location = new System.Drawing.Point(102, 220);
+            this.cbo_NhanVienTiepNhan.Name = "cbo_NhanVienTiepNhan";
+            this.cbo_NhanVienTiepNhan.Size = new System.Drawing.Size(101, 21);
+            this.cbo_NhanVienTiepNhan.TabIndex = 43;
             // 
             // txt_SoKhung
             // 
@@ -206,6 +208,7 @@
             // 
             // cbo_TrongTai
             // 
+            this.cbo_TrongTai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_TrongTai.FormattingEnabled = true;
             this.cbo_TrongTai.Items.AddRange(new object[] {
             "1 Tấn",
@@ -219,6 +222,7 @@
             // 
             // cbo_LoaiHang
             // 
+            this.cbo_LoaiHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_LoaiHang.FormattingEnabled = true;
             this.cbo_LoaiHang.Items.AddRange(new object[] {
             "Hàng Thường",
@@ -231,6 +235,7 @@
             // 
             // cbo_HangXe
             // 
+            this.cbo_HangXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_HangXe.FormattingEnabled = true;
             this.cbo_HangXe.Items.AddRange(new object[] {
             "TOYOTA",
@@ -425,7 +430,7 @@
             this.grb_KetQuaTongQuan.Size = new System.Drawing.Size(664, 126);
             this.grb_KetQuaTongQuan.TabIndex = 24;
             this.grb_KetQuaTongQuan.TabStop = false;
-            this.grb_KetQuaTongQuan.Text = "Danh sách xe tương ứng";
+            this.grb_KetQuaTongQuan.Text = "Danh sách xe đã tiếp nhận";
             // 
             // grb_TieuChiTimKiem
             // 
@@ -589,7 +594,7 @@
         private System.Windows.Forms.Label lbl_HieuXe_TimKiem;
         private System.Windows.Forms.ComboBox cbo_HangXe;
         private System.Windows.Forms.Label lblHangXe;
-        private System.Windows.Forms.ComboBox cbo_NhanVien;
+        private System.Windows.Forms.ComboBox cbo_NhanVienTiepNhan;
         private System.Windows.Forms.DateTimePicker dtp_NgayTiepNhan;
         private System.Windows.Forms.TextBox txt_SoMay;
         private System.Windows.Forms.Label lbl_SoMay;

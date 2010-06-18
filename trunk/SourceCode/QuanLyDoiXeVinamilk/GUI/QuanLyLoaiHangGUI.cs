@@ -169,6 +169,23 @@ namespace GUI
             }
         }
 
+        private void chk_ChonTatCa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_ChonTatCa.CheckState == CheckState.Checked)
+            {
+                foreach (ListViewItem itemLoaiHang in lsv_DanhSachLoaiHang.Items)
+                {
+                    itemLoaiHang.Checked = true;
+                }
+            }
+            else
+            {
+                foreach (ListViewItem itemLoaiHang in lsv_DanhSachLoaiHang.Items)
+                {
+                    itemLoaiHang.Checked = false;
+                }
+            }
+        } 
         #endregion
 
         #region Sua thong tin LoaiHang.
@@ -237,6 +254,6 @@ namespace GUI
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }                           
+        }                                  
     }
 }

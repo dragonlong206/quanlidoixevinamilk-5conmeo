@@ -27,17 +27,15 @@ namespace BUS
 
         public static String GetTenNhanVien(int nMaNhanVien)
         {
-            switch(nMaNhanVien)
-            {
-                case 1:
-                    return "Bùi Kim Hoa";
-                case 2:
-                    return "Nguyễn Anh";
-                case 3:
-                    return "Nguyễn Khuyến";
-                default:
-                    return "Erorr!";
+            String strTieuChiTimKiem = " Where MaNhanVien = " + nMaNhanVien;
+            List<DTO.NhanVienDTO> lstNhanVien = DocDanhSachNhanVien(strTieuChiTimKiem);
+
+            String strTenNhanVien = "Không có";
+            if (lstNhanVien.Count > 0)
+            {                
+                strTenNhanVien = lstNhanVien[0].TenNhanVien;                
             }
+            return strTenNhanVien; 
         }
 
         public static Boolean ThemNhanVien(NhanVienDTO NhanVien)

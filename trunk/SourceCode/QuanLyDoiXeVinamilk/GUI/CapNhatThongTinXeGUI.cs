@@ -24,6 +24,42 @@ namespace GUI
             {                
                 List<DTO.XeDTO> lstXe = BUS.XeBUS.DocDanhSachXe(String.Empty);                
                 XuatDanhSachXe(lstXe);
+
+                // Load tên hãng xe
+                List<DTO.HangXeDTO> DanhSachHangXe = BUS.HangXeBUS.DocDanhSachHangXe(string.Empty);
+                if (DanhSachHangXe.Count > 0)
+                {
+                    this.cbo_HangXe.DataSource = DanhSachHangXe;
+                    this.cbo_HangXe.DisplayMember = "TenHang";
+                    this.cbo_HangXe.ValueMember = "MaHang";
+                }
+
+                // Load loại hàng
+                List<DTO.LoaiHangDTO> DanhSachLoaiHang = BUS.LoaiHangBUS.DocDanhSachLoaiHang(string.Empty);
+                if (DanhSachLoaiHang.Count > 0)
+                {
+                    this.cbo_LoaiHang.DataSource = DanhSachLoaiHang;
+                    this.cbo_LoaiHang.DisplayMember = "TenLoaiHang";
+                    this.cbo_LoaiHang.ValueMember = "MaLoaiHang";
+                }
+
+                // Load nhân viên tiếp nhận
+                List<DTO.NhanVienDTO> DanhSachNhanVien = BUS.NhanVienBUS.DocDanhSachNhanVien(String.Empty);
+                if (DanhSachNhanVien.Count > 0)
+                {
+                    this.cbo_NhanVienTiepNhan.DataSource = DanhSachNhanVien;
+                    this.cbo_NhanVienTiepNhan.DisplayMember = "TenNhanVien";
+                    this.cbo_NhanVienTiepNhan.ValueMember = "MaNhanVien";
+                }
+
+                // Load loại trọng tải
+                List<DTO.TrongTaiDTO> DanhSachTrongTai = BUS.TrongTaiBUS.DocDanhSachTrongTai(string.Empty);
+                if (DanhSachTrongTai.Count > 0)
+                {
+                    this.cbo_TrongTai.DataSource = DanhSachTrongTai;
+                    this.cbo_TrongTai.DisplayMember = "GiaTri";
+                    this.cbo_TrongTai.ValueMember = "MaTrongTai";
+                } 
             }
             catch (System.Exception ex)
             {
@@ -82,8 +118,8 @@ namespace GUI
             txt_BienSo.Text = aXe.BienSo;
             cbo_HangXe.Text = BUS.HangXeBUS.GetTenHangXe(aXe.MaHangXe);
             cbo_LoaiHang.Text = BUS.LoaiHangBUS.GetTenLoaiHang(aXe.MaLoaiHang);
-            cbo_TrongTai.Text = BUS.TrongTaiBUS.GetTenTrongTai(aXe.MaTrongTai);
-            cbo_NhanVien.Text = BUS.NhanVienBUS.GetTenNhanVien(aXe.MaNhanVienTiepNhan);
+            cbo_TrongTai.Text = BUS.TrongTaiBUS.GetTrongTai(aXe.MaTrongTai).ToString();
+            cbo_NhanVienTiepNhan.Text = BUS.NhanVienBUS.GetTenNhanVien(aXe.MaNhanVienTiepNhan);
             dtp_NgayDangKiem.Text = aXe.NgayDangKiem.ToString();
             dtp_NgayTiepNhan.Text = aXe.NgayTiepNhan.ToString();
             txt_DungTichBinh.Text = aXe.DungTichBinh.ToString();            
@@ -105,15 +141,12 @@ namespace GUI
                 return; //khong lam gi ca.            
 
             try
-            {
-                String strThongBao = "Bi loi ghi du lieu: vui long kiem tra du lieu nhap";
+            {                
                 if (BUS.XeBUS.CapNhatXe(aXe))
-                {
-                    strThongBao = "Cap nhat thong tin xe thanh cong";
+                {                    
                     CapNhatThongTinXeGUI_Load(sender, e);
                     
-                }
-                MessageBox.Show(strThongBao);
+                }                
             }
             catch (System.Exception ex)
             {
@@ -139,14 +172,10 @@ namespace GUI
                 aXe.SoMay = txt_SoMay.Text;
                 aXe.DungTichBinh = float.Parse(txt_DungTichBinh.Text);
                 aXe.DinhMuc = float.Parse(txt_DinhMucNhienLieu.Text);
-                aXe.MaHangXe = BUS.HangXeBUS.GetMaHangXe(cbo_HangXe.Text);                //Sua truy xuat qua CSDL
-                aXe.MaTrongTai = BUS.TrongTaiBUS.GetMaTrongTai(cbo_TrongTai.Text);        //Sua truy xuat qua CSDL
-                aXe.MaLoaiHang = BUS.LoaiHangBUS.GetMaLoaiHang(cbo_LoaiHang.Text);        //Sua truy xuat qua CSDL
-                aXe.MaNhanVienTiepNhan = BUS.NhanVienBUS.GetMaNhanVien(cbo_NhanVien.Text);//Sua truy xuat qua CSDL
-                //aXe.MaHangXe = this.cbo_HangXe.SelectedIndex;               //Chinh sua sau.
-                //aXe.MaLoaiHang = this.cbo_LoaiHang.SelectedIndex;
-                //aXe.MaNhanVienTiepNhan = this.cbo_NhanVienTiepNhan.SelectedIndex;
-                //aXe.MaTrongTai = this.cbo_TrongTai.SelectedIndex;
+                aXe.MaHangXe = int.Parse(cbo_HangXe.SelectedValue.ToString());
+                aXe.MaLoaiHang = int.Parse(cbo_LoaiHang.SelectedValue.ToString());
+                aXe.MaNhanVienTiepNhan = int.Parse(cbo_NhanVienTiepNhan.SelectedValue.ToString());
+                aXe.MaTrongTai = int.Parse(cbo_TrongTai.SelectedValue.ToString());
             }
             catch (System.Exception ex)
             {
@@ -176,7 +205,7 @@ namespace GUI
             blnKetQua &= !String.IsNullOrEmpty(cbo_HangXe.Text);
             blnKetQua &= !String.IsNullOrEmpty(cbo_TrongTai.Text);
             blnKetQua &= !String.IsNullOrEmpty(cbo_LoaiHang.Text);
-            blnKetQua &= !String.IsNullOrEmpty(cbo_NhanVien.Text);
+            blnKetQua &= !String.IsNullOrEmpty(cbo_NhanVienTiepNhan.Text);
             if (!blnKetQua)
             {
                 MessageBox.Show("Du lieu nhap vao khong day du\r\nVui long kiem tra lai");
@@ -265,7 +294,7 @@ namespace GUI
             {
                 if (blnKiemTra)
                     strTieuChiTimKiem += " And";
-                strTieuChiTimKiem += " MaHangXe = " + BUS.HangXeBUS.GetMaHangXe(cbo_HangXe_TimKiem.Text);
+                strTieuChiTimKiem += " MaHangXe = " + cbo_HangXe_TimKiem.SelectedValue.ToString();
                 blnKiemTra = true;
             }
             if (blnKiemTra)

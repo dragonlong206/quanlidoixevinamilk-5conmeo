@@ -183,9 +183,6 @@
             // 
             this.cbo_LoaiNhanVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_LoaiNhanVien.FormattingEnabled = true;
-            this.cbo_LoaiNhanVien.Items.AddRange(new object[] {
-            "Quản lý",
-            "Tài xế"});
             this.cbo_LoaiNhanVien.Location = new System.Drawing.Point(118, 79);
             this.cbo_LoaiNhanVien.Name = "cbo_LoaiNhanVien";
             this.cbo_LoaiNhanVien.Size = new System.Drawing.Size(142, 21);

@@ -44,6 +44,7 @@
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_ThemHangXe = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
+            this.chk_ChonTatCa = new System.Windows.Forms.CheckBox();
             this.grb_HangXeHienCo.SuspendLayout();
             this.cms_DanhSachHang.SuspendLayout();
             this.grb_ThaoTac.SuspendLayout();
@@ -64,6 +65,7 @@
             // 
             // grb_HangXeHienCo
             // 
+            this.grb_HangXeHienCo.Controls.Add(this.chk_ChonTatCa);
             this.grb_HangXeHienCo.Controls.Add(this.lsv_DanhSachHangXe);
             this.grb_HangXeHienCo.Location = new System.Drawing.Point(9, 56);
             this.grb_HangXeHienCo.Name = "grb_HangXeHienCo";
@@ -83,7 +85,7 @@
             this.lsv_DanhSachHangXe.Location = new System.Drawing.Point(5, 18);
             this.lsv_DanhSachHangXe.Margin = new System.Windows.Forms.Padding(2);
             this.lsv_DanhSachHangXe.Name = "lsv_DanhSachHangXe";
-            this.lsv_DanhSachHangXe.Size = new System.Drawing.Size(187, 205);
+            this.lsv_DanhSachHangXe.Size = new System.Drawing.Size(187, 182);
             this.lsv_DanhSachHangXe.TabIndex = 0;
             this.lsv_DanhSachHangXe.UseCompatibleStateImageBehavior = false;
             this.lsv_DanhSachHangXe.View = System.Windows.Forms.View.Details;
@@ -195,6 +197,17 @@
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click_1);
             // 
+            // chk_ChonTatCa
+            // 
+            this.chk_ChonTatCa.AutoSize = true;
+            this.chk_ChonTatCa.Location = new System.Drawing.Point(6, 205);
+            this.chk_ChonTatCa.Name = "chk_ChonTatCa";
+            this.chk_ChonTatCa.Size = new System.Drawing.Size(81, 17);
+            this.chk_ChonTatCa.TabIndex = 2;
+            this.chk_ChonTatCa.Text = "Chọn tất cả";
+            this.chk_ChonTatCa.UseVisualStyleBackColor = true;
+            this.chk_ChonTatCa.CheckedChanged += new System.EventHandler(this.chk_ChonTatCa_CheckedChanged);
+            // 
             // QuanLyHangXeGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +223,7 @@
             this.Text = "Quan ly hang xe";
             this.Load += new System.EventHandler(this.QuanLyHangXeGUI_Load);
             this.grb_HangXeHienCo.ResumeLayout(false);
+            this.grb_HangXeHienCo.PerformLayout();
             this.cms_DanhSachHang.ResumeLayout(false);
             this.grb_ThaoTac.ResumeLayout(false);
             this.grb_ThaoTac.PerformLayout();
@@ -235,5 +249,6 @@
         private System.Windows.Forms.ColumnHeader STT;
         private System.Windows.Forms.ColumnHeader TenHang;
         private System.Windows.Forms.Button btn_Tim;
+        private System.Windows.Forms.CheckBox chk_ChonTatCa;
     }
 }

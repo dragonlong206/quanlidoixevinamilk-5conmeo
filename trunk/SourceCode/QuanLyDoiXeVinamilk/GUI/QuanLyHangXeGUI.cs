@@ -182,6 +182,23 @@ namespace GUI
             }
         }
 
+        private void chk_ChonTatCa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_ChonTatCa.CheckState == CheckState.Checked)
+            {
+                foreach (ListViewItem itemHangXe in lsv_DanhSachHangXe.Items)
+                {
+                    itemHangXe.Checked = true;
+                }
+            }
+            else
+            {
+                foreach (ListViewItem itemHangXe in lsv_DanhSachHangXe.Items)
+                {
+                    itemHangXe.Checked = false;
+                }
+            }
+        }
         #endregion
 
         #region Cap nhat HangXe.
@@ -247,6 +264,6 @@ namespace GUI
         private void btn_Thoat_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }                       
+        }                               
     }
 }
