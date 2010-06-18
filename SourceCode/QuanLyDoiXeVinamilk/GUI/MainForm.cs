@@ -462,5 +462,11 @@ namespace GUI
             LoaiNhanVienGUI frm = new LoaiNhanVienGUI();
             frm.Show();
         }
+
+        private void quảnLýThamSốToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyThamSoGUI frm = new QuanLyThamSoGUI();
+            frm.Show();
+        }
     }
 }
