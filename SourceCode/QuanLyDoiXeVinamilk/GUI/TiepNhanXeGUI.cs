@@ -16,6 +16,94 @@ namespace GUI
             InitializeComponent();
         }
 
+        #region Xuat thong tin Xe.
+        private void TiepNhanXeGUI_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                List<DTO.XeDTO> lstXe = BUS.XeBUS.DocDanhSachXe(String.Empty);
+                XuatDanhSachXe(lstXe);
+
+
+                // Load tên hãng xe
+                List<DTO.HangXeDTO> DanhSachHangXe = BUS.HangXeBUS.DocDanhSachHangXe(string.Empty);
+                if (DanhSachHangXe.Count > 0)
+                {
+                    this.cbo_HangXe.DataSource = DanhSachHangXe;
+                    this.cbo_HangXe.DisplayMember = "TenHang";
+                    this.cbo_HangXe.ValueMember = "MaHang";
+                }
+                
+                // Load loại hàng
+                List<DTO.LoaiHangDTO> DanhSachLoaiHang = BUS.LoaiHangBUS.DocDanhSachLoaiHang(string.Empty);
+                if (DanhSachLoaiHang.Count > 0)
+                {
+                    this.cbo_LoaiHang.DataSource = DanhSachLoaiHang;
+                    this.cbo_LoaiHang.DisplayMember = "TenLoaiHang";
+                    this.cbo_LoaiHang.ValueMember = "MaLoaiHang";
+                }
+                
+                // Load nhân viên tiếp nhận
+                List<DTO.NhanVienDTO> DanhSachNhanVien = BUS.NhanVienBUS.DocDanhSachNhanVien(String.Empty);
+                if (DanhSachNhanVien.Count > 0)
+                {
+                    this.cbo_NhanVienTiepNhan.DataSource = DanhSachNhanVien;
+                    this.cbo_NhanVienTiepNhan.DisplayMember = "TenNhanVien";
+                    this.cbo_NhanVienTiepNhan.ValueMember = "MaNhanVien";
+                }
+                
+                // Load loại trọng tải
+                List<DTO.TrongTaiDTO> DanhSachTrongTai = BUS.TrongTaiBUS.DocDanhSachTrongTai(string.Empty);
+                if (DanhSachTrongTai.Count > 0)
+                {
+                    this.cbo_TrongTai.DataSource = DanhSachTrongTai;
+                    this.cbo_TrongTai.DisplayMember = "GiaTri";
+                    this.cbo_TrongTai.ValueMember = "MaTrongTai";
+                }                 
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Exception: " + ex.Message);
+            }
+        }         
+
+        private void XuatDanhSachXe(List<DTO.XeDTO> lstXe)
+        {
+            if (lstXe == null)
+                return;     //khong lam gi ca.          
+
+            lsv_DanhSachXe.Items.Clear();
+            int nSoThuTu = 1;
+            foreach (DTO.XeDTO aXeTemp in lstXe)
+            {
+                lsv_DanhSachXe.Items.Add(TheHienListItem(nSoThuTu, aXeTemp));
+                nSoThuTu++;
+            }
+        }
+
+        private ListViewItem TheHienListItem(int nSoThuTu, DTO.XeDTO aXe)
+        {
+            ListViewItem itemKetQua = new ListViewItem(nSoThuTu.ToString());
+            itemKetQua.SubItems.Add(aXe.BienSo);
+            itemKetQua.SubItems.Add(BUS.HangXeBUS.GetTenHangXe(aXe.MaHangXe));
+            itemKetQua.SubItems.Add(aXe.HieuXe);
+            itemKetQua.SubItems.Add(BUS.LoaiHangBUS.GetTenLoaiHang(aXe.MaLoaiHang));
+            itemKetQua.SubItems.Add(BUS.TrongTaiBUS.GetTenTrongTai(aXe.MaTrongTai));
+            itemKetQua.SubItems.Add(BUS.NhanVienBUS.GetTenNhanVien(aXe.MaNhanVienTiepNhan));
+            itemKetQua.SubItems.Add(aXe.DinhMuc.ToString());
+            itemKetQua.SubItems.Add(aXe.NgayTiepNhan.ToString());
+            itemKetQua.SubItems.Add(aXe.NgayDangKiem.ToString());
+            itemKetQua.SubItems.Add(aXe.NamSanXuat.ToString());
+            itemKetQua.SubItems.Add(aXe.DungTichBinh.ToString());
+            itemKetQua.SubItems.Add(aXe.SoKhung);
+            itemKetQua.SubItems.Add(aXe.SoMay);
+
+            itemKetQua.Tag = aXe;
+
+            return itemKetQua;
+        }
+        #endregion                                     
+
         #region Them Xe
 
         private void btn_Luu_Click(object sender, EventArgs e)
@@ -25,13 +113,11 @@ namespace GUI
                 return; //khong lam gi ca.            
             
             try
-            {
-                String strThongBao = "Loi ghi du lieu: vui long kiem tra du lieu nhap";
+            {                
                 if (BUS.XeBUS.ThemXe(aXe))
                 {
-                    strThongBao = "Tiep nhan xe thanh cong";
-                }
-                MessageBox.Show(strThongBao);
+                    TiepNhanXeGUI_Load(sender, e);                    
+                }                
             }
             catch (System.Exception ex)
             {
@@ -57,14 +143,10 @@ namespace GUI
                 aXe.SoMay = txt_SoMay.Text;
                 aXe.DungTichBinh = float.Parse(txt_DungTichBinh.Text);
                 aXe.DinhMuc = float.Parse(txt_DinhMucNhienLieu.Text);
-                aXe.MaHangXe = BUS.HangXeBUS.GetMaHangXe(cbo_HangXe.Text);                //Sua truy xuat qua CSDL
-                aXe.MaTrongTai = BUS.TrongTaiBUS.GetMaTrongTai(cbo_TrongTai.Text);        //Sua truy xuat qua CSDL
-                aXe.MaLoaiHang = BUS.LoaiHangBUS.GetMaLoaiHang(cbo_LoaiHang.Text);        //Sua truy xuat qua CSDL
-                aXe.MaNhanVienTiepNhan = BUS.NhanVienBUS.GetMaNhanVien(cbo_NhanVienTiepNhan.Text);//Sua truy xuat qua CSDL
-                //aXe.MaHangXe = this.cbo_HangXe.SelectedIndex;               //Chinh sua sau.
-                //aXe.MaLoaiHang = this.cbo_LoaiHang.SelectedIndex;
-                //aXe.MaNhanVienTiepNhan = this.cbo_NhanVienTiepNhan.SelectedIndex;
-                //aXe.MaTrongTai = this.cbo_TrongTai.SelectedIndex;
+                aXe.MaHangXe = int.Parse(cbo_HangXe.SelectedValue.ToString());
+                aXe.MaLoaiHang = int.Parse(cbo_LoaiHang.SelectedValue.ToString());
+                aXe.MaNhanVienTiepNhan = int.Parse(cbo_NhanVienTiepNhan.SelectedValue.ToString());
+                aXe.MaTrongTai = int.Parse(cbo_TrongTai.SelectedValue.ToString());
             }
             catch (System.Exception ex)
             {
@@ -164,6 +246,6 @@ namespace GUI
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
-        }                 
+        }                      
     }
 }

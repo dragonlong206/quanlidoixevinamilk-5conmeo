@@ -23,6 +23,15 @@ namespace GUI
             {
                 List<DTO.NhanVienDTO> lstNhanVien = BUS.NhanVienBUS.DocDanhSachNhanVien(String.Empty);
                 XuatDanhSachNhanVien(lstNhanVien);
+
+                // Load danh sach loai nhan vien.
+                List<DTO.LoaiNhanVienDTO> DanhSachLoaiNhanVien = BUS.LoaiNhanVienBUS.DocDanhSachLoaiNhanVien(string.Empty);
+                if (DanhSachLoaiNhanVien.Count > 0)
+                {
+                    this.cbo_LoaiNhanVien.DataSource = DanhSachLoaiNhanVien;
+                    this.cbo_LoaiNhanVien.DisplayMember = "TenLoai";
+                    this.cbo_LoaiNhanVien.ValueMember = "MaLoai";
+                }
             }
             catch (System.Exception ex)
             {
@@ -113,7 +122,7 @@ namespace GUI
                 return null;
 
             aNhanVien.TenNhanVien = txt_TenNhanVien.Text;
-            aNhanVien.MaLoaiNhanVien = BUS.LoaiNhanVienBUS.GetMaLoaiNhanVien(cbo_LoaiNhanVien.Text);
+            aNhanVien.MaLoaiNhanVien = int.Parse(cbo_LoaiNhanVien.SelectedValue.ToString());
             aNhanVien.SoDienThoai = txt_DienThoai.Text;
             aNhanVien.NgayVaoCongTy = DateTime.Parse(dtp_NgayVaoCongTy.Text);
 

@@ -181,7 +181,7 @@ namespace GUI
             {
                 if (blnKiemTra)
                     strTieuChiTimKiem += " And";
-                strTieuChiTimKiem += " MaHangXe = " + BUS.HangXeBUS.GetMaHangXe(cbo_HangXe_TimKiem.Text);
+                strTieuChiTimKiem += " MaHangXe = " + cbo_HangXe_TimKiem.SelectedValue.ToString();
                 blnKiemTra = true;
             }
             if (blnKiemTra)
@@ -195,6 +195,24 @@ namespace GUI
         private void btn_Thoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void chk_ChonTatCa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_ChonTatCa.CheckState == CheckState.Checked)
+            {
+                foreach (ListViewItem itemXe in lsv_DanhSachXe.Items)
+                {
+                    itemXe.Checked = true;
+                }
+            }
+            else
+            {
+                foreach (ListViewItem itemXe in lsv_DanhSachXe.Items)
+                {
+                    itemXe.Checked = false;
+                }
+            }
         }                     
     }
 }

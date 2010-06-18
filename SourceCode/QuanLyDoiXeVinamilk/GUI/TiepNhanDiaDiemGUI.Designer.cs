@@ -205,12 +205,12 @@
             // 
             // cbo_LoaiDiaDiem
             // 
+            this.cbo_LoaiDiaDiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_LoaiDiaDiem.FormattingEnabled = true;
             this.cbo_LoaiDiaDiem.Location = new System.Drawing.Point(102, 81);
             this.cbo_LoaiDiaDiem.Name = "cbo_LoaiDiaDiem";
             this.cbo_LoaiDiaDiem.Size = new System.Drawing.Size(166, 21);
             this.cbo_LoaiDiaDiem.TabIndex = 1;
-            this.cbo_LoaiDiaDiem.Text = "Đại Lý";
             // 
             // txt_NguoiLienHe
             // 

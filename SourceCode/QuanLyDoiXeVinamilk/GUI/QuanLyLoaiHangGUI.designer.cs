@@ -78,6 +78,7 @@
             this.chk_ChonTatCa.TabIndex = 1;
             this.chk_ChonTatCa.Text = "Chọn tất cả";
             this.chk_ChonTatCa.UseVisualStyleBackColor = true;
+            this.chk_ChonTatCa.CheckedChanged += new System.EventHandler(this.chk_ChonTatCa_CheckedChanged);
             // 
             // lsv_DanhSachLoaiHang
             // 
@@ -200,6 +201,7 @@
             this.Controls.Add(this.lbl_Title);
             this.MaximizeBox = false;
             this.Name = "QuanLyLoaiHangGUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quan ly cac Loai hang";
             this.Load += new System.EventHandler(this.QuanLyLoaiHangGUI_Load);
             this.grb_TrongTaiHienCo.ResumeLayout(false);

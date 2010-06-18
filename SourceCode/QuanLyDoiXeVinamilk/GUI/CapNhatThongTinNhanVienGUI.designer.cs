@@ -48,10 +48,10 @@
             this.txt_TenNhanVien = new System.Windows.Forms.TextBox();
             this.btn_CapNhatNhanVien = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_TenNhanVien_TimKiem = new System.Windows.Forms.TextBox();
-            this.btn_Tim = new System.Windows.Forms.Button();
             this.chk_TimChinhXac = new System.Windows.Forms.CheckBox();
+            this.txt_TenNhanVien_TimKiem = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btn_Tim = new System.Windows.Forms.Button();
             this.grb_DanhSachNhanVien.SuspendLayout();
             this.ThongTinNhanVien.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -166,9 +166,6 @@
             // 
             this.cbo_LoaiNhanVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_LoaiNhanVien.FormattingEnabled = true;
-            this.cbo_LoaiNhanVien.Items.AddRange(new object[] {
-            "Quản lý",
-            "Tài xế"});
             this.cbo_LoaiNhanVien.Location = new System.Drawing.Point(118, 79);
             this.cbo_LoaiNhanVien.Name = "cbo_LoaiNhanVien";
             this.cbo_LoaiNhanVien.Size = new System.Drawing.Size(142, 21);
@@ -247,6 +244,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
+            // chk_TimChinhXac
+            // 
+            this.chk_TimChinhXac.AutoSize = true;
+            this.chk_TimChinhXac.Location = new System.Drawing.Point(389, 36);
+            this.chk_TimChinhXac.Name = "chk_TimChinhXac";
+            this.chk_TimChinhXac.Size = new System.Drawing.Size(94, 17);
+            this.chk_TimChinhXac.TabIndex = 32;
+            this.chk_TimChinhXac.Text = "Tì&m chính xác";
+            this.chk_TimChinhXac.UseVisualStyleBackColor = true;
+            // 
+            // txt_TenNhanVien_TimKiem
+            // 
+            this.txt_TenNhanVien_TimKiem.Location = new System.Drawing.Point(118, 34);
+            this.txt_TenNhanVien_TimKiem.Name = "txt_TenNhanVien_TimKiem";
+            this.txt_TenNhanVien_TimKiem.Size = new System.Drawing.Size(142, 20);
+            this.txt_TenNhanVien_TimKiem.TabIndex = 1;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -255,13 +269,6 @@
             this.label5.Size = new System.Drawing.Size(89, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Họ tên nhân viên";
-            // 
-            // txt_TenNhanVien_TimKiem
-            // 
-            this.txt_TenNhanVien_TimKiem.Location = new System.Drawing.Point(118, 34);
-            this.txt_TenNhanVien_TimKiem.Name = "txt_TenNhanVien_TimKiem";
-            this.txt_TenNhanVien_TimKiem.Size = new System.Drawing.Size(142, 20);
-            this.txt_TenNhanVien_TimKiem.TabIndex = 1;
             // 
             // btn_Tim
             // 
@@ -272,16 +279,6 @@
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
             this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
-            // 
-            // chk_TimChinhXac
-            // 
-            this.chk_TimChinhXac.AutoSize = true;
-            this.chk_TimChinhXac.Location = new System.Drawing.Point(389, 36);
-            this.chk_TimChinhXac.Name = "chk_TimChinhXac";
-            this.chk_TimChinhXac.Size = new System.Drawing.Size(94, 17);
-            this.chk_TimChinhXac.TabIndex = 32;
-            this.chk_TimChinhXac.Text = "Tì&m chính xác";
-            this.chk_TimChinhXac.UseVisualStyleBackColor = true;
             // 
             // CapNhatThongTinNhanVienGUI
             // 

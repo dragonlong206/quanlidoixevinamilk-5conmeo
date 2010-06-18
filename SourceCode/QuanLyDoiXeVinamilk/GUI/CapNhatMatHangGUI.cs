@@ -25,6 +25,15 @@ namespace GUI
             {
                 List<DTO.MatHangDTO> lstMatHang = MatHangBUS.DocDanhSachMatHang(String.Empty);
                 XuatDanhSachMatHang(lstMatHang);
+
+                // Load danh sach LoaiHang.
+                List<DTO.LoaiHangDTO> DanhSachLoaiHang = BUS.LoaiHangBUS.DocDanhSachLoaiHang(string.Empty);
+                if (DanhSachLoaiHang.Count > 0)
+                {
+                    this.cbo_LoaiHang.DataSource = DanhSachLoaiHang;
+                    this.cbo_LoaiHang.DisplayMember = "TenLoaiHang";
+                    this.cbo_LoaiHang.ValueMember = "MaLoaiHang";
+                }
             }
             catch (System.Exception ex)
             {
@@ -114,7 +123,7 @@ namespace GUI
             aMatHang.TenMatHang = txt_TenMatHang.Text;
             aMatHang.SoLuong = int.Parse(txt_SoLuong.Text);
             aMatHang.DonViTinh = txt_DonViTinh.Text;
-            aMatHang.MaLoai = BUS.LoaiHangBUS.GetMaLoaiHang(cbo_LoaiHang.Text);
+            aMatHang.MaLoai = int.Parse(cbo_LoaiHang.SelectedValue.ToString());
             #endregion
 
             return aMatHang;

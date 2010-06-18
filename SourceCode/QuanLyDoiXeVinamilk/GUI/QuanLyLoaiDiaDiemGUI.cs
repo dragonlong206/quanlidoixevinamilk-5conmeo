@@ -161,6 +161,24 @@ namespace GUI
                     MessageBox.Show("Chua co du lieu nao duoc chon");
             }
         }
+
+        private void chk_ChonTatCa_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_ChonTatCa.CheckState == CheckState.Checked)
+            {
+                foreach (ListViewItem itemLoaiDiaDiem in lsv_DanhSachLoaiDiaDiem.Items)
+                {
+                    itemLoaiDiaDiem.Checked = true;
+                }
+            }
+            else
+            {
+                foreach (ListViewItem itemLoaiDiaDiem in lsv_DanhSachLoaiDiaDiem.Items)
+                {
+                    itemLoaiDiaDiem.Checked = false;
+                }
+            }
+        }
         #endregion               
 
         #region Cap nhat thong tin LoaiDiaDiem
@@ -228,6 +246,6 @@ namespace GUI
         {
             this.Close();
         }
-        #endregion                               
+        #endregion                                       
     }
 }

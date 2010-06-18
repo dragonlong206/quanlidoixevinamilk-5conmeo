@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DTO;
+using BUS;
 
 namespace GUI
 {
@@ -23,6 +25,24 @@ namespace GUI
             {
                 List<DTO.DiaDiemDTO> lstDiaDiem = BUS.DiaDiemBUS.DocDanhSachDiaDiem(String.Empty);
                 XuatDanhSachDiaDiem(lstDiaDiem);
+
+                // Load loại địa điểm
+                List<LoaiDiaDiemDTO> DanhSachDiaDiem = LoaiDiaDiemBUS.LayDanhSachTatCaLoaiDiaDiem();
+                if (DanhSachDiaDiem.Count > 0)
+                {
+                    this.cbo_LoaiDiaDiem.DataSource = DanhSachDiaDiem;
+                    this.cbo_LoaiDiaDiem.DisplayMember = "TenLoai";
+                    this.cbo_LoaiDiaDiem.ValueMember = "MaLoai";
+                }
+
+                // Load tên miền email
+                List<TenMienEmailDTO> DanhSachTenMienEmail = TenMienEmailBUS.LayDanhSachTenMien();
+                if (DanhSachTenMienEmail.Count > 0)
+                {
+                    this.cbo_Email.DataSource = DanhSachTenMienEmail;
+                    this.cbo_Email.DisplayMember = "TenMien";
+                    this.cbo_Email.ValueMember = "Ma";
+                }
             }
             catch (System.Exception ex)
             {
@@ -125,7 +145,7 @@ namespace GUI
                 return null;
 
             aDiaDiem.TenDiaDiem = txt_TenDiaDiem.Text;
-            aDiaDiem.MaLoaiDiaDiem = BUS.LoaiDiaDiemBUS.GetMaLoaiDiaDiem(cbo_LoaiDiaDiem.Text);
+            aDiaDiem.MaLoaiDiaDiem = int.Parse(cbo_LoaiDiaDiem.SelectedValue.ToString());
             aDiaDiem.NguoiLienHe = txt_NguoiLienHe.Text;
             aDiaDiem.DiaChi = txt_DiaChi.Text;
             aDiaDiem.Email = String.Concat(txt_Email.Text, "@", cbo_Email.Text);

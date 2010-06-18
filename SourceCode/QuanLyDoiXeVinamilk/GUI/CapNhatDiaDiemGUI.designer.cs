@@ -340,6 +340,7 @@
             // 
             // cbo_LoaiDiaDiem
             // 
+            this.cbo_LoaiDiaDiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_LoaiDiaDiem.FormattingEnabled = true;
             this.cbo_LoaiDiaDiem.Items.AddRange(new object[] {
             "Đại Lý",
