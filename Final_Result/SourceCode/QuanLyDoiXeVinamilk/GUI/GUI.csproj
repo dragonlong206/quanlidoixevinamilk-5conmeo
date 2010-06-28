@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91E11A85-E0AE-4BE3-AB4C-794DAD236234}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaoCao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaoCao.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CapNhatDiaDiemGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatDiaDiemGUI.designer.cs">
+      <DependentUpon>CapNhatDiaDiemGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatMatHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatMatHangGUI.Designer.cs">
+      <DependentUpon>CapNhatMatHangGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatPhanCongGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatPhanCongGUI.designer.cs">
+      <DependentUpon>CapNhatPhanCongGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatThongTinNhanVienGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatThongTinNhanVienGUI.designer.cs">
+      <DependentUpon>CapNhatThongTinNhanVienGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatThongTinXeGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapNhatThongTinXeGUI.designer.cs">
+      <DependentUpon>CapNhatThongTinXeGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Db_QuanLyDoiXeVinamilkDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Db_QuanLyDoiXeVinamilkDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LapHoaDonGiaoHangFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LapHoaDonGiaoHangFrm.Designer.cs">
+      <DependentUpon>LapHoaDonGiaoHangFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapHoaDonGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapHoaDonGUI.Designer.cs">
+      <DependentUpon>NhapHoaDonGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapMatHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapMatHangGUI.designer.cs">
+      <DependentUpon>NhapMatHangGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhapNhanVienGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapNhanVienGUI.designer.cs">
+      <DependentUpon>NhapNhanVienGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaoCao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BaoCao.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatDiaDiemGUI.resx">
+      <DependentUpon>CapNhatDiaDiemGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatMatHangGUI.resx">
+      <DependentUpon>CapNhatMatHangGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatPhanCongGUI.resx">
+      <DependentUpon>CapNhatPhanCongGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatThongTinNhanVienGUI.resx">
+      <DependentUpon>CapNhatThongTinNhanVienGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatThongTinXeGUI.resx">
+      <DependentUpon>CapNhatThongTinXeGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LapHoaDonGiaoHangFrm.resx">
+      <DependentUpon>LapHoaDonGiaoHangFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapHoaDonGUI.resx">
+      <DependentUpon>NhapHoaDonGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapMatHangGUI.resx">
+      <DependentUpon>NhapMatHangGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhapNhanVienGUI.resx">
+      <DependentUpon>NhapNhanVienGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyHangXeGUI.resx">
+      <DependentUpon>QuanLyHangXeGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyLoaiDiaDiemGUI.resx">
+      <DependentUpon>QuanLyLoaiDiaDiemGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyLoaiHangGUI.resx">
+      <DependentUpon>QuanLyLoaiHangGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyLoaiNhanVienGUI.resx">
+      <DependentUpon>QuanLyLoaiNhanVienGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThamSoGUI.resx">
+      <DependentUpon>QuanLyThamSoGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTrongTaiGUI.resx">
+      <DependentUpon>QuanLyTrongTaiGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TiepNhanDiaDiemGUI.resx">
+      <DependentUpon>TiepNhanDiaDiemGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TiepNhanNhanVienGUI.resx">
+      <DependentUpon>TiepNhanNhanVienGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TiepNhanXeGUI.resx">
+      <DependentUpon>TiepNhanXeGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaDiaDiemGUI.resx">
+      <DependentUpon>XoaDiaDiemGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaMatHangGUI.resx">
+      <DependentUpon>XoaMatHangGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaNhanVienGUI.resx">
+      <DependentUpon>XoaNhanVienGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaPhanCongGUI.resx">
+      <DependentUpon>XoaPhanCongGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaXeGUI.resx">
+      <DependentUpon>XoaXeGUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="QuanLyLoaiDiaDiemGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyLoaiDiaDiemGUI.designer.cs">
+      <DependentUpon>QuanLyLoaiDiaDiemGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyLoaiHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyLoaiHangGUI.designer.cs">
+      <DependentUpon>QuanLyLoaiHangGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyLoaiNhanVienGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyLoaiNhanVienGUI.designer.cs">
+      <DependentUpon>QuanLyLoaiNhanVienGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThamSoGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyThamSoGUI.designer.cs">
+      <DependentUpon>QuanLyThamSoGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyTrongTaiGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTrongTaiGUI.Designer.cs">
+      <DependentUpon>QuanLyTrongTaiGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyHangXeGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyHangXeGUI.Designer.cs">
+      <DependentUpon>QuanLyHangXeGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TiepNhanDiaDiemGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiepNhanDiaDiemGUI.designer.cs">
+      <DependentUpon>TiepNhanDiaDiemGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TiepNhanNhanVienGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiepNhanNhanVienGUI.designer.cs">
+      <DependentUpon>TiepNhanNhanVienGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TiepNhanXeGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiepNhanXeGUI.Designer.cs">
+      <DependentUpon>TiepNhanXeGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaDiaDiemGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaDiaDiemGUI.designer.cs">
+      <DependentUpon>XoaDiaDiemGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaMatHangGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaMatHangGUI.Designer.cs">
+      <DependentUpon>XoaMatHangGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaNhanVienGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaNhanVienGUI.designer.cs">
+      <DependentUpon>XoaNhanVienGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaPhanCongGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaPhanCongGUI.Designer.cs">
+      <DependentUpon>XoaPhanCongGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XoaXeGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaXeGUI.designer.cs">
+      <DependentUpon>XoaXeGUI.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo vinamilk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ThongKe1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XeTai3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{ABC0B368-ED22-4EB0-B2FD-C0829A755CE3}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{0BAA7134-FE74-41E9-89A3-24A3FDAC8E00}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Db_QuanLyDoiXeVinamilkDataSet.xsc">
+      <DependentUpon>Db_QuanLyDoiXeVinamilkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Db_QuanLyDoiXeVinamilkDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Db_QuanLyDoiXeVinamilkDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Db_QuanLyDoiXeVinamilkDataSet.xss">
+      <DependentUpon>Db_QuanLyDoiXeVinamilkDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Import Data Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Db_QuanLyDoiXeVinamilk.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
