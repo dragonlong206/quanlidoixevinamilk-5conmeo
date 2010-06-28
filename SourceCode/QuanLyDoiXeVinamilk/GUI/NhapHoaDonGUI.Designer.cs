@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.cbo_XeGiaoHang = new System.Windows.Forms.ComboBox();
             this.grb_ChiTietHoaDon = new System.Windows.Forms.GroupBox();
             this.dtgv_DanhSachPhanCong = new System.Windows.Forms.DataGridView();
+            this.STT_PhanCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnDiaDiem = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.clnMatHang = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.clnSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clnTrangThai = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dtp_NgayGiaoHang = new System.Windows.Forms.DateTimePicker();
             this.lbl_Xe = new System.Windows.Forms.Label();
             this.lbl_NgayGiaoHang = new System.Windows.Forms.Label();
@@ -41,11 +46,6 @@
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.lbl_NgayLapHoaDon = new System.Windows.Forms.Label();
             this.dtp_NgayLapHoaDon = new System.Windows.Forms.DateTimePicker();
-            this.STT_PhanCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnDiaDiem = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.clnMatHang = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.clnSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clnTrangThai = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.grb_ChiTietHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_DanhSachPhanCong)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +69,7 @@
             this.cbo_XeGiaoHang.Location = new System.Drawing.Point(317, 39);
             this.cbo_XeGiaoHang.Name = "cbo_XeGiaoHang";
             this.cbo_XeGiaoHang.Size = new System.Drawing.Size(105, 21);
-            this.cbo_XeGiaoHang.TabIndex = 22;
+            this.cbo_XeGiaoHang.TabIndex = 1;
             // 
             // grb_ChiTietHoaDon
             // 
@@ -77,7 +77,7 @@
             this.grb_ChiTietHoaDon.Location = new System.Drawing.Point(12, 66);
             this.grb_ChiTietHoaDon.Name = "grb_ChiTietHoaDon";
             this.grb_ChiTietHoaDon.Size = new System.Drawing.Size(649, 333);
-            this.grb_ChiTietHoaDon.TabIndex = 23;
+            this.grb_ChiTietHoaDon.TabIndex = 3;
             this.grb_ChiTietHoaDon.TabStop = false;
             this.grb_ChiTietHoaDon.Text = "Chi tiết hóa đơn";
             // 
@@ -100,6 +100,46 @@
             this.dtgv_DanhSachPhanCong.TabIndex = 0;
             this.dtgv_DanhSachPhanCong.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dtgv_DanhSachPhanCong_RowsAdded);
             // 
+            // STT_PhanCong
+            // 
+            this.STT_PhanCong.HeaderText = "STT";
+            this.STT_PhanCong.Name = "STT_PhanCong";
+            this.STT_PhanCong.Width = 30;
+            // 
+            // clnDiaDiem
+            // 
+            this.clnDiaDiem.HeaderText = "Địa điểm";
+            this.clnDiaDiem.Name = "clnDiaDiem";
+            this.clnDiaDiem.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clnDiaDiem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clnDiaDiem.Width = 200;
+            // 
+            // clnMatHang
+            // 
+            this.clnMatHang.HeaderText = "Mặt hàng";
+            this.clnMatHang.Name = "clnMatHang";
+            this.clnMatHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clnMatHang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clnMatHang.Width = 150;
+            // 
+            // clnSoLuong
+            // 
+            dataGridViewCellStyle1.Format = "t";
+            dataGridViewCellStyle1.NullValue = null;
+            this.clnSoLuong.DefaultCellStyle = dataGridViewCellStyle1;
+            this.clnSoLuong.HeaderText = "Số lượng";
+            this.clnSoLuong.Name = "clnSoLuong";
+            // 
+            // clnTrangThai
+            // 
+            this.clnTrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Format = "t";
+            this.clnTrangThai.DefaultCellStyle = dataGridViewCellStyle2;
+            this.clnTrangThai.HeaderText = "Trạng thái";
+            this.clnTrangThai.Name = "clnTrangThai";
+            this.clnTrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clnTrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // dtp_NgayGiaoHang
             // 
             this.dtp_NgayGiaoHang.CustomFormat = "dd/MM/yyyy";
@@ -107,7 +147,7 @@
             this.dtp_NgayGiaoHang.Location = new System.Drawing.Point(104, 38);
             this.dtp_NgayGiaoHang.Name = "dtp_NgayGiaoHang";
             this.dtp_NgayGiaoHang.Size = new System.Drawing.Size(99, 20);
-            this.dtp_NgayGiaoHang.TabIndex = 21;
+            this.dtp_NgayGiaoHang.TabIndex = 0;
             this.dtp_NgayGiaoHang.ValueChanged += new System.EventHandler(this.dtp_NgayGiaoHang_ValueChanged);
             // 
             // lbl_Xe
@@ -134,7 +174,7 @@
             this.btn_Luu.Location = new System.Drawing.Point(502, 405);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(75, 23);
-            this.btn_Luu.TabIndex = 24;
+            this.btn_Luu.TabIndex = 4;
             this.btn_Luu.Text = "&Lưu";
             this.btn_Luu.UseVisualStyleBackColor = true;
             this.btn_Luu.Click += new System.EventHandler(this.btn_Luu_Click);
@@ -144,7 +184,7 @@
             this.btn_Thoat.Location = new System.Drawing.Point(583, 405);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(75, 23);
-            this.btn_Thoat.TabIndex = 25;
+            this.btn_Thoat.TabIndex = 5;
             this.btn_Thoat.Text = "&Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
             this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_PhanCong_Click);
@@ -166,47 +206,7 @@
             this.dtp_NgayLapHoaDon.Name = "dtp_NgayLapHoaDon";
             this.dtp_NgayLapHoaDon.ShowUpDown = true;
             this.dtp_NgayLapHoaDon.Size = new System.Drawing.Size(99, 20);
-            this.dtp_NgayLapHoaDon.TabIndex = 21;
-            // 
-            // STT_PhanCong
-            // 
-            this.STT_PhanCong.HeaderText = "STT";
-            this.STT_PhanCong.Name = "STT_PhanCong";
-            this.STT_PhanCong.Width = 30;
-            // 
-            // clnDiaDiem
-            // 
-            this.clnDiaDiem.HeaderText = "Địa điểm";
-            this.clnDiaDiem.Name = "clnDiaDiem";
-            this.clnDiaDiem.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clnDiaDiem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.clnDiaDiem.Width = 200;
-            // 
-            // clnMatHang
-            // 
-            this.clnMatHang.HeaderText = "Mặt hàng";
-            this.clnMatHang.Name = "clnMatHang";
-            this.clnMatHang.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clnMatHang.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.clnMatHang.Width = 150;
-            // 
-            // clnSoLuong
-            // 
-            dataGridViewCellStyle11.Format = "t";
-            dataGridViewCellStyle11.NullValue = null;
-            this.clnSoLuong.DefaultCellStyle = dataGridViewCellStyle11;
-            this.clnSoLuong.HeaderText = "Số lượng";
-            this.clnSoLuong.Name = "clnSoLuong";
-            // 
-            // clnTrangThai
-            // 
-            this.clnTrangThai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.Format = "t";
-            this.clnTrangThai.DefaultCellStyle = dataGridViewCellStyle12;
-            this.clnTrangThai.HeaderText = "Trạng thái";
-            this.clnTrangThai.Name = "clnTrangThai";
-            this.clnTrangThai.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clnTrangThai.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dtp_NgayLapHoaDon.TabIndex = 2;
             // 
             // frm_NhapHoaDon
             // 
